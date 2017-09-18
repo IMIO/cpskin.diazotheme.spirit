@@ -18,12 +18,7 @@
                         </div>
                         <div id="top-slogan">
                             <div id="top-slogan-inner">
-                                <xsl:if test="$is_folder_view">
-                                    <xsl:copy-of select="//*[@id='cpskin-slogan']/*" />
-                                </xsl:if>
-                                <xsl:if test="not($is_folder_view)">
-                                    <xsl:copy-of select="//h1[1]" />
-                                </xsl:if>
+                                <xsl:copy-of select="//*[@id='cpskin-slogan']/*" />
                             </div>
                         </div>
                     </div>
@@ -63,7 +58,6 @@
         <drop css:content="#cpskin-banner" />
         <drop css:content="#minisite-search" />
         <drop css:content="#portal-breadcrumbs"/>
-        <drop content="//h1[1]"/>
         <drop css:content="#cpskin-slogan" />
         <drop css:content="#container-minisite-globalnav" />
         <drop css:content="#minisite-logo" />
