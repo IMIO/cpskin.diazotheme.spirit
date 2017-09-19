@@ -1,13 +1,25 @@
+#portal-header {
+    position: relative;
+    z-index: inherit;
+}
+.main-homepage #top-banner img.banner{
+    position: absolute;
+}
 #top-banner img.banner {
     max-height: @height-banner;
     max-width: 100%;
-    position: absolute;
+    position: relative;
     width: 100%;
     z-index: 1;
 }
+.main-homepage #top-logo-slogan-actions {
+    position: relative;
+}
 #top-logo-slogan-actions {
     color: @front;
-    position: relative;
+    position: absolute;
+    top:0;
+    width: 100%;
     z-index: 2;
 }
 #top-logo-slogan-actions-inner {
@@ -21,6 +33,7 @@
 #top-logo-slogan {
     display: flex;
     flex-flow: row nowrap;
+    margin-top:-1em;
 }
 #top-logo {
     margin-left: 1em;
@@ -29,9 +42,12 @@
 }
 #top-logo-inner {
     background-color: @front;
-    height: 100px;
+    height: 150px;
     position: absolute;
     width: @width-logo;
+}
+#portal-logo{
+    margin:0;
 }
 #top-slogan {
     margin-left: 1em;
@@ -46,20 +62,31 @@
     background-color: transparent;
     flex: 1 1 0;
 }
-#nav-wrapper {
+.main-homepage #nav-wrapper {
     background-color: rgba(0, 0, 0, 0.5);
     margin-left: auto;
-    margin-right: auto;
     margin-top: calc(166.667px);
     width: @width-content;
+}
+#nav-wrapper{
+    background: #fff;
+    margin-right: auto;
+    margin-top:0;
+    width: 100%;
 }
 #navWrapper {
     background-color: transparent !important;
 }
-#portal-breadcrumbs {
+.main-homepage #portal-breadcrumbs{
     margin-left: auto;
+}
+#portal-breadcrumbs {
+    margin-left: calc(183px);
     margin-right: auto;
     width: @width-content;
+}
+.main-homepage #portal-globalnav{
+    margin-left: 0;
 }
 #portal-globalnav {
     align-items: center;
@@ -67,14 +94,28 @@
     display: flex;
     flex-flow: row wrap;
     justify-content: space-around;
+    margin-left: calc(183px);
     padding: 1em;
+    max-width: 100%;
+}
+#portal-globalnav li:hover{
+    background: @magenta;
+}
+#portal-globalnav li:last-child{
+    border-right: none;
 }
 #portal-globalnav li {
     display: block;
+    width: calc((100% / 3) - 1px);
+    border-right: 1px solid #e1e1e1;
 }
-#portal-globalnav li a,
+.main-homepage #portal-globalnav li a,
 #portal-globalnav li a:hover {
+    color:@front;
+}
+#portal-globalnav li a {
     background-color: transparent;
+    color:@black;
     text-transform: uppercase;
 }
 #portal-globalnav #portaltab-index_html {
@@ -82,19 +123,80 @@
     position: relative;
 }
 #portal-globalnav #portaltab-index_html a {
-    background: transparent;
+    background: @nav-transparent;
     color: transparent;
     width: 100%;
+}
+.main-homepage #portal-globalnav .selected a,
+#portal-globalnav .selected a:hover,
+#portal-globalnav a:hover,
+#portal-globalnav li:hover .selected a,
+#portal-globalnav li:hover a.activated,
+.main-homepage #portal-globalnav li a.activated {
+    background:@nav-transparent !important;
+    color: @front;
+}
+#portal-globalnav .selected a,
+#portal-globalnav li a.activated{
+    background:@nav-transparent !important;
+    color:@black;
+}
+#portal-globalnav li a.activated:hover{
+    color: @front !important;
+}
+/*   sub menu   */
+ul.navTreeLevel0 {
+    background: @nav-transparent;
+    max-width: 100%;
+}
+ul.navTreeLevel0 li a{
+    color: @front;
+}
+ul.navTreeLevel0 li.sfHover a{
+    color: #333;
+}
+/*   top-actions   */
+#top-actions-actions > div,
+.top-menu-action{
+    display: inline-block;
+    vertical-align: top;
+}
+#social-viewlet,
+#portal-personaltools-wrapper,
+#portal-siteactions,
+#portal-personaltools{
+    float: none;
 }
 #portal-searchbox {
     display: none;
 }
-
+.btn-search::before {
+    content: "\e828";
+    font-family: "fontello";
+    font-size: 125%;
+}
+#portal-personaltools{
+    font-size: 100%;
+}
+dl.actionMenu.activated dt a{
+    margin:0 0.25em;
+}
+.top-menu-action dd a {
+    line-height: 2em;
+    padding: 0 0.75em;
+    &:hover{background: lighten(@background,20%)}
+}
+.top-menu-action dd{
+    background: @background;
+    margin-right: 2em;
+    margin-top: 3px;
+    padding: 0.5em;
+}
 #portal-columns {
     margin-left: auto;
     margin-right: auto;
-    width: @width-content;
-    z-index: 2;
+    max-width: @width-content;
+    z-index: 1;
 }
 #portal-footer-wrapper .row {
     background-color: @background;
