@@ -201,3 +201,51 @@ dl.actionMenu.activated dt a{
     background-color: @background;
     color: @front;
 }
+.bloc-document .zoom {
+    float: left;
+    position: relative;
+    width: 50%;
+}
+.bloc-document .bloc {
+    overflow: hidden;
+    position: relative;
+}
+.bloc-document .zoom .img img {
+    height: 100%;
+    max-width: 100%;
+    width: 100%;
+}
+.bloc-document .zoom:first-child .bloc:first-child .img img {
+    margin-top: 25%;
+}
+.bloc-document .zoom:first-child .bloc:nth-child(2) .img img {
+    height: 50%;
+    margin-left: 50%;
+    max-width: 50%;
+    width: 50%;
+}
+.bloc-document .zoom:nth-child(2) .bloc:first-child .img img {
+    height: 50%;
+    max-width: 50%;
+    width: 50%;
+}
+.bloc-document .zoom .texte {
+    color: #fff;
+    padding: 1em;
+    position: absolute;
+}
+.bloc-document .zoom:first-child .bloc:first-child .texte {
+    margin-top: -100%;
+}
+.bloc-document .zoom:first-child .bloc:nth-child(2) .texte {
+    bottom: 0;
+    left: 50%;
+}
+.bloc-document .zoom:nth-child(2) .bloc:first-child .texte {
+    bottom: 0;
+}
+.bloc-document .zoom:nth-child(2) .bloc:nth-child(2) .texte {
+    right: 0;
+    text-align: right;
+    bottom: 0;
+}
