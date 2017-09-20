@@ -20,6 +20,7 @@
     color: @front;
     position: absolute;
     top:0;
+    width: 100%;
     z-index: 2;
 }
 #top-logo-slogan-actions-inner {
@@ -63,7 +64,7 @@
     flex: 1 1 0;
 }
 .main-homepage #nav-wrapper {
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: @nav-opaticy;
     margin-left: auto;
     margin-top: calc(166.667px);
     width: @width-content;
@@ -90,8 +91,7 @@
 #portal-globalnav {
     align-items: center;
     background-color: transparent;
-    display: flex;
-    flex-flow: row wrap;
+    display: inline-block;
     justify-content: space-around;
     margin-left: calc(183px);
     padding: 1em;
@@ -100,13 +100,10 @@
 #portal-globalnav li:hover{
     background: @magenta;
 }
-#portal-globalnav li:last-child{
-    border-right: none;
-}
 #portal-globalnav li {
-    display: block;
+    display: inline-block;
+    vertical-align: top;
     width: calc((100% / 3) - 1px);
-    border-right: 1px solid #e1e1e1;
 }
 .main-homepage #portal-globalnav li a,
 #portal-globalnav li a:hover {
@@ -115,7 +112,9 @@
 #portal-globalnav li a {
     background-color: transparent;
     color:@black;
+    display: inline-block;
     text-transform: uppercase;
+    max-width: 75%;
 }
 #portal-globalnav #portaltab-index_html {
     display: none;
@@ -143,6 +142,30 @@
 #portal-globalnav li a.activated:hover{
     color: @front !important;
 }
+.theme1::before {
+    content: url("/images-spirit/communal.png");
+    display: block;
+    float: left;
+}
+.theme2::before {
+    content: url("/images-spirit/vivre.png");
+    display: block;
+    float: left;
+}
+.theme3::before {
+    content: url("/images-spirit/decouvrir.png");
+    display: block;
+    float: left;
+}
+.theme1,
+.theme2,
+.theme3{
+    font-size: 130%;
+}
+#portal-globalnav .portal-tab-description {
+    font-size: 80%;
+    text-transform: lowercase;
+}
 /*   sub menu   */
 ul.navTreeLevel0 {
     background: @nav-transparent;
@@ -166,13 +189,58 @@ ul.navTreeLevel0 li.sfHover a{
 #portal-personaltools{
     float: none;
 }
-#portal-searchbox {
-    display: none;
+
+#search-wrapper {
+    position: absolute;
+    right: 0;
+    top: 150px;
+}
+#hidden-search{
+    float: left;
+    margin-top: -1.3em;
+}
+.LSBox #searchGadget{
+    height: 3.5em;
+}
+#btn-search{
+    float: right;
 }
 .btn-search::before {
     content: "\e828";
     font-family: "fontello";
     font-size: 125%;
+}
+a.btn-search {
+    background: @nav-opaticy;
+    color: #fff;
+    padding: 1.5em;
+}
+#portal-searchbox{
+    margin: 0;
+    position: relative;
+    float: none;
+    right: 0;
+    top:0;
+}
+.portal-search-hidden,
+.portal-search-hidden .LSBox #searchGadget{
+    width: 0;
+    overflow: hidden;
+}
+.portal-search-visible{
+    overflow: visible;
+    width: 80%;
+    transition: 1s ease;
+}
+.portal-search-visible .LSBox #searchGadget{
+    overflow: visible;
+    transition: 1s ease;
+}
+.LSBox::after {
+    content: "\e83c";
+}
+.LSBox input[type="text"]{
+    background: #fff;
 }
 #portal-personaltools{
     font-size: 100%;

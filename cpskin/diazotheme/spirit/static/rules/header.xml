@@ -33,19 +33,20 @@
                                     <div id="top-languages">
                                         <xsl:apply-templates select="./*[@id='portal-languageselector']" />
                                     </div>
-                                    <div id="btn-search">
-                                        <a href="#"  class="btn-search">
-                                        </a>
-                                    </div>
-                                </div>
-                                <div id="hidden-search" style="display:none;">
-                                    <xsl:copy-of select="./*[@id='portal-searchbox']"/>
                                 </div>
                             </div>
                         </div>
                     </div>
+                    <div id="search-wrapper">
+                      <div id="hidden-search" class="portal-search-hidden">
+                        <xsl:copy-of select="./*[@id='portal-searchbox']"/>
+                      </div>
+                      <div id="btn-search">
+                        <a href="#"  class="btn-search">
+                        </a>
+                      </div>
+                    </div> 
                 </div>
-
                 <div id="nav-wrapper">
                     <xsl:copy-of  select="./*[@id='portal-globalnav']"/>
                     <xsl:apply-templates select="./*[not(@id) or (@id!='portal-personaltools-wrapper'
