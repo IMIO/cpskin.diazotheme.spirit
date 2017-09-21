@@ -605,3 +605,69 @@ dl.actionMenu.activated dt a{
 .section-evenements.subsection-agenda .widget-fieldset.faceted-criteria .faceted-criteria-reset a {
     visibility: visible;
 }
+// section-evenements subsection-agenda
+// items
+.section-evenements.subsection-agenda #faceted-results {
+    padding-left: 0 !important;
+}
+.section-evenements.subsection-agenda .faceted-agenda-ungrouped-view {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+}
+.section-evenements.subsection-agenda .event-entry {
+    margin-bottom: 1em;
+    margin-right: 0;
+    width: 49%;
+    border: 1px solid #cccccc;
+    position: relative;
+}
+.section-evenements.subsection-agenda .event-entry .pageleadImage {
+    padding-bottom: 50% !important;
+    width: 50% !important;
+    margin-right: 0 !important;
+}
+.section-evenements.subsection-agenda .event-entry .pagecaption {
+    width: 50% !important;
+}
+.section-evenements.subsection-agenda .event-entry .pagecaption h3 {
+    margin-top: calc(@size-day-month + 20px);
+    padding: 0.5em;
+    font-size: 1.2em;
+}
+.section-evenements.subsection-agenda .event-entry .documentByLine {
+    color: @theme;
+    height: calc(@size-day-month);
+    width: calc(@size-day-month);
+    position: absolute;
+    text-align: center;
+    border: 5px dotted @theme;
+    border-radius: 50%;
+    justify-content: center;
+    display: flex;
+    flex-flow: column nowrap;
+    margin: 20px;
+    right: 0;
+}
+
+
+
+
+// cette partie est à supprimer une fois que le format de date sera adapté
+.section-evenements.subsection-agenda .event-entry .documentByLine span {
+    display: none;
+}
+.section-evenements.subsection-agenda .event-entry .documentByLine span:nth-child(2) {
+    display: block;
+}
+// la partie display: none est à adapter, je l'ai ajoutée car en local,
+// je ne parvenais pas à limiter l'affichage à 3 éléments
+.agenda .results ul .bloc-item {
+    display: none !important;
+}
+.agenda .results ul .bloc-item:nth-child(1),
+.agenda .results ul .bloc-item:nth-child(2),
+.agenda .results ul .bloc-item:nth-child(3) {
+    display: block !important;
+}
+// fin du bloc à supprimer
