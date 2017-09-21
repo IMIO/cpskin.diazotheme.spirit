@@ -98,7 +98,7 @@
     max-width: 100%;
 }
 #portal-globalnav li:hover{
-    background: @magenta;
+    background: @theme;
 }
 #portal-globalnav li {
     display: inline-block;
@@ -269,54 +269,86 @@ dl.actionMenu.activated dt a{
     background-color: @background;
     color: @front;
 }
-.bloc-document .zoom {
+// Bloc zoom par défaut
+#accueil .bloc-document .zoom {
     float: left;
     position: relative;
     width: 50%;
 }
-.bloc-document .bloc {
+#accueil .bloc-document .bloc {
     overflow: hidden;
     position: relative;
 }
-.bloc-document .zoom .img img {
+#accueil .bloc-document .zoom .img img {
     height: 100%;
     max-width: 100%;
     width: 100%;
 }
-.bloc-document .zoom:first-child .bloc:first-child .img img {
+#accueil .bloc-document .zoom:first-child .bloc:first-child .img img {
     margin-top: 25%;
 }
-.bloc-document .zoom:first-child .bloc:nth-child(2) .img img {
+#accueil .bloc-document .zoom:first-child .bloc:nth-child(2) .img img {
     height: 50%;
     margin-left: 50%;
     max-width: 50%;
     width: 50%;
 }
-.bloc-document .zoom:nth-child(2) .bloc:first-child .img img {
+#accueil .bloc-document .zoom:nth-child(2) .bloc:first-child .img img {
     height: 50%;
     max-width: 50%;
     width: 50%;
 }
-.bloc-document .zoom .texte {
+#accueil .bloc-document .zoom .texte {
     color: #fff;
-    padding: 1em;
+    padding: 3em;
     position: absolute;
 }
-.bloc-document .zoom:first-child .bloc:first-child .texte {
+#accueil .bloc-document .zoom:first-child .bloc:first-child .texte {
     margin-top: -100%;
 }
-.bloc-document .zoom:first-child .bloc:nth-child(2) .texte {
+#accueil .bloc-document .zoom:first-child .bloc:nth-child(2) .texte {
     bottom: 0;
     left: 50%;
 }
-.bloc-document .zoom:nth-child(2) .bloc:first-child .texte {
+#accueil .bloc-document .zoom:nth-child(2) .bloc:first-child .texte {
     bottom: 0;
 }
-.bloc-document .zoom:nth-child(2) .bloc:nth-child(2) .texte {
+#accueil .bloc-document .zoom:nth-child(2) .bloc:nth-child(2) .texte {
     right: 0;
     text-align: right;
     bottom: 0;
 }
+// bloc zoom-2
+#accueil .bloc-document.zoom-2 .zoom:nth-child(2) .bloc:first-child .img img {
+    height: 100%;
+    max-width: 100%;
+    width: 100%;
+}
+#accueil .bloc-document.zoom-2 .zoom:nth-child(2) .bloc:nth-child(2) .img img {
+    height: 50%;
+    max-width: 50%;
+    width: 50%;
+}
+#accueil .bloc-document.zoom-2 .zoom:nth-child(2) .bloc:first-child .texte {
+    right: 0;
+    text-align: right;
+    top: 0;
+}
+#accueil .bloc-document.zoom-2 .zoom:first-child .bloc:first-child .texte {
+    bottom: 0;
+}
+#accueil .bloc-document.zoom-2 .zoom:first-child .bloc:nth-child(2) .texte {
+    text-align: right;
+    right: 0;
+}
+#accueil .bloc-document.zoom-2 .zoom:nth-child(2) .bloc:nth-child(2) .texte {
+    text-align: right;
+    right: 50%;
+}
+#accueil .bloc-document.zoom-2 .zoom .description {
+    display: none !important;
+}
+// slider multiple
 .slider-multiple #slider-actualites {
     display: none;
 }
@@ -399,7 +431,7 @@ dl.actionMenu.activated dt a{
     margin-left: -10px;
 }
 .voir-tout {
-    background: @magenta !important;
+    background: @theme !important;
     width: 60px;
     height: 60px;
     margin-bottom: 0;
@@ -419,4 +451,60 @@ dl.actionMenu.activated dt a{
 }
 .voir-tout a {
     color: transparent;
+}
+.agenda {
+    margin-top: 100px;
+}
+.agenda .results {
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+    background-color: #ffffff;
+    float: none;
+    margin-bottom: 50px;
+    padding-left: 0;
+    width: 100%;
+}
+.agenda .results ul {
+    display: flex;
+    justify-content: space-between;
+}
+
+//Agenda
+.agenda .results ul .bloc-item {
+    float: none;
+    min-height: 0;
+    padding: 1.5em;
+    width: auto;
+    float: none;
+    margin-bottom: 0;
+}
+.agenda .results ul .bloc-item:nth-child(1),
+.agenda .results ul .bloc-item:nth-child(2) {
+    border-right: 1px solid #ccc;
+}
+.agenda .results ul .bloc-item .day-month {
+    color: @theme;
+    height: calc(@size-day-month + 10px);
+    width: calc(@size-day-month + 10px);
+    position: absolute;
+    text-align: center;
+    border: 5px dotted @theme;
+    border-radius: 50%;
+    justify-content: center;
+    display: flex;
+    flex-flow: column nowrap;
+}
+.agenda .results ul .bloc-item .month {
+    font-size: 0.8em;
+}
+.agenda .results ul .bloc-item .day {
+    font-size: 1.8em;
+    margin-top: 0.2em;
+}
+.agenda .results ul .bloc-item h3,
+.agenda .results ul .bloc-item .description {
+    margin-left: calc(@size-day-month + 40px);
+}
+.agenda .results ul .bloc-item .documentByLine {
+    display: none;
 }
