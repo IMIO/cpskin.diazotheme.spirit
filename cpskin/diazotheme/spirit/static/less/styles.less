@@ -8,8 +8,8 @@
     position: absolute;
 }
 #top-banner img.banner {
-    max-height: @height-banner;
     max-width: 100%;
+    width: 100%;
     position: relative;
     z-index: 1;
 }
@@ -40,6 +40,7 @@
     margin-left: 1em;
     position: relative;
     width: @width-logo;
+    z-index: 1;
 }
 #top-logo-inner {
     background-color: @front;
@@ -94,7 +95,7 @@
     display: inline-block;
     justify-content: space-around;
     margin-left: calc(183px);
-    padding: 1em;
+    padding: 4em 2.5em;
     max-width: 100%;
 }
 #portal-globalnav li:hover{
@@ -102,19 +103,36 @@
 }
 #portal-globalnav li {
     display: inline-block;
+    margin-right: 2%;
+    position: relative;
     vertical-align: top;
-    width: calc((100% / 3) - 1px);
+    width: calc(33.3333% - 2% - 1px);
 }
 .main-homepage #portal-globalnav li a,
 #portal-globalnav li a:hover {
     color:@front;
 }
+#portal-globalnav a::after,
+.sf-with-ul::after{
+    content: "\00a0 \00a0 \e848";
+    font-family: "fontello";
+}
 #portal-globalnav li a {
     background-color: transparent;
+    box-sizing: border-box;
     color:@black;
     display: inline-block;
     text-transform: uppercase;
-    max-width: 75%;
+    padding:0.8% 0 0.8% 25%;
+    position: relative;
+    width: 100%;
+}
+#portal-globalnav .portal-tab-description::after{
+    display: none;
+}
+#portal-globalnav .portal-tab-description {
+    font-size: 80%;
+    text-transform: lowercase;
 }
 #portal-globalnav #portaltab-index_html {
     display: none;
@@ -125,57 +143,104 @@
     color: transparent;
     width: 100%;
 }
-.main-homepage #portal-globalnav .selected a,
+
 #portal-globalnav .selected a:hover,
 #portal-globalnav a:hover,
 #portal-globalnav li:hover .selected a,
 #portal-globalnav li:hover a.activated,
-.main-homepage #portal-globalnav li a.activated {
-    background:@nav-transparent !important;
-    color: @front;
-}
 #portal-globalnav .selected a,
-#portal-globalnav li a.activated{
-    background:@nav-transparent !important;
-    color:@black;
+#portal-globalnav li a.activated,
+#portal-globalnav li a.activated + .portal-tab-description{
+    background: @magenta !important;
+    color: @front;
 }
 #portal-globalnav li a.activated:hover{
     color: @front !important;
 }
-.theme1::before {
-    content: url("/images-spirit/communal.png");
-    display: block;
-    float: left;
+#portal-globalnav li a.portal-tab-description.activated,
+#portal-globalnav li a.activated + .portal-tab-description{
+    padding-bottom: 2em;
 }
-.theme2::before {
-    content: url("/images-spirit/vivre.png");
+.theme1 a::before {
+    content: url("http://localhost:8080/liege/fr/images-spirit/communal.png");
     display: block;
-    float: left;
+    position: absolute;
+    left: 0;
+    z-index: 1;
 }
-.theme3::before {
-    content: url("/images-spirit/decouvrir.png");
+.theme2 a::before {
+    content: url("http://localhost:8080/liege/fr/images-spirit/vivre.png");
     display: block;
-    float: left;
+    position: absolute;
+    left: 0;
+    z-index: 1;
+}
+.theme3 a::before {
+    content: url("http://localhost:8080/liege/fr/images-spirit/decouvrir.png");
+    display: block;
+    position: absolute;
+    left:0;
+    z-index: 1;
+}
+.theme1::after,
+.theme2::after{
+    border-right: 1px solid #fff;
+    content: "\00a0";
+    float: right;
+    height: 4.2em;
+    position: absolute;
+    right: -3%;
+    width: 1px;
 }
 .theme1,
 .theme2,
 .theme3{
     font-size: 130%;
 }
-#portal-globalnav .portal-tab-description {
-    font-size: 80%;
-    text-transform: lowercase;
+.theme1 a.portal-tab-description::before,
+.theme2 a.portal-tab-description::before,
+.theme3 a.portal-tab-description::before{
+    display: none;
 }
 /*   sub menu   */
-ul.navTreeLevel0 {
-    background: @nav-transparent;
-    max-width: 100%;
+.portal-globalnav-cpskinmenu a:hover,
+.portal-globalnav-cpskinmenu-tabs a:hover,
+.portal-globalnav-cpskinmenu .sfHover > span > a{
+    background: @magenta;
+    color:@front !important;
+    border-radius: 0;
 }
-ul.navTreeLevel0 li a{
-    color: @front;
+ul.navTreeLevel0 {
+    background: @nav-background;
+    border-top: 0.5em solid @magenta;
+    margin-top: -3.2em;
+    max-width: 100%;
+    text-transform: uppercase;
+}
+ul.navTreeLevel1 li a{
+    color: @black;
+}
+ul.navTreeLevel1{
+    text-transform: lowercase;
 }
 ul.navTreeLevel0 li.sfHover a{
     color: #333;
+}
+.sf-menu ul.navTreeLevel1,
+.sf-menu ul.navTreeLevel2,
+.sf-menu ul.navTreeLevel3{
+    background: @nav-background;
+    border-top: 0.1em solid #ebebeb !important;
+}
+.sf-menu ul.direct_access{
+    background: @nav-background !important;
+}
+.sf-menu .direct_access li a::before{
+    content: "\e84a";
+    color:@magenta;
+}
+.sf-menu .direct_access li a:hover::before{
+    color:@front;
 }
 /*   top-actions   */
 #top-actions-actions > div,
