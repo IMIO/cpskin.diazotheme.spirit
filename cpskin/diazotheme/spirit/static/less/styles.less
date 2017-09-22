@@ -47,9 +47,13 @@ body, h1, h2, h3, h4, h5, h6, #portal-globalnav li a {
 }
 #top-logo-inner {
     background-color: @front;
+    box-shadow: 1px 4px 7px #bcbcbc;
     height: 150px;
     position: absolute;
     width: @width-logo;
+}
+.main-homepage #top-logo-inner{
+    box-shadow: 0px 0px 0px;
 }
 #portal-logo{
     margin:0;
@@ -70,7 +74,7 @@ body, h1, h2, h3, h4, h5, h6, #portal-globalnav li a {
 .main-homepage #nav-wrapper {
     background-color: @nav-opaticy;
     margin-left: auto;
-    margin-top: calc(166.667px);
+    margin-top: calc(295.667px);
     width: @width-content;
 }
 #nav-wrapper{
@@ -103,11 +107,11 @@ body, h1, h2, h3, h4, h5, h6, #portal-globalnav li a {
 }
 #portal-globalnav li:hover{
     background: @theme;
-    min-height: calc(74px);
 }
 #portal-globalnav li {
     display: inline-block;
     margin-right: 2%;
+    min-height: calc(74px);
     position: relative;
     vertical-align: top;
     width: calc(33.3333% - 2% - 1px);
@@ -218,7 +222,8 @@ ul.navTreeLevel0 {
     background: @nav-background;
     border-top: 0.5em solid @theme;
     margin-top: -3.2em;
-    max-width: 100%;
+    max-width: 1200px;
+    position: absolute;
     text-transform: uppercase;
 }
 ul.navTreeLevel1 li a{
@@ -263,6 +268,7 @@ ul.navTreeLevel0 li.sfHover a{
     position: absolute;
     right: 0;
     top: 150px;
+    z-index: 1;
 }
 #hidden-search{
     float: left;
@@ -334,11 +340,13 @@ dl.actionMenu.activated dt a{
     max-width: @width-content;
     z-index: 1;
 }
-#portal-footer-wrapper .row {
-    background-color: @background;
-    color: @front;
+.main-homepage #portal-columns{
+    padding-top:4em;
 }
-// Bloc zoom par défaut
+.main-homepage  #content {
+    margin: 0 auto;
+}
+/* Bloc zoom par défaut*/
 #accueil .bloc-document .zoom {
     float: left;
     position: relative;
@@ -387,7 +395,7 @@ dl.actionMenu.activated dt a{
     text-align: right;
     bottom: 0;
 }
-// bloc zoom-2
+/* bloc zoom-2 */
 #accueil .bloc-document.zoom-2 .zoom:nth-child(2) .bloc:first-child .img img {
     height: 100%;
     max-width: 100%;
@@ -417,12 +425,12 @@ dl.actionMenu.activated dt a{
 #accueil .bloc-document.zoom-2 .zoom .description {
     display: none !important;
 }
-// slider multiple
+/* slider multiple */
 .slider-multiple #slider-actualites {
     display: none;
 }
 .slider-multiple .carousel.flexslider {
-    background-color: #eaeaea;
+    background: @slider-background;
     padding-bottom: 50px;
 }
 .slider-multiple .carousel.flexslider ul > li {
@@ -537,6 +545,20 @@ dl.actionMenu.activated dt a{
 .voir-tout a {
     color: transparent;
 }
+.bloc-2.slider-multiple::before {
+    background: @slider-background;
+    content: "";
+    display: block;
+    height: 884px;
+    margin-left: -50%;
+    position: absolute;
+    top: -100%;
+    width: 200%;
+    z-index: -1;
+}
+.bloc-2.slider-multiple {
+    position: relative;
+}
 .agenda {
     margin-top: 100px;
 }
@@ -554,11 +576,19 @@ dl.actionMenu.activated dt a{
 }
 
 //Agenda
+.agenda .titre-rss,
+.agenda .titre-rss a {
+    float: none;
+    background-color: transparent;
+}
+.agenda .bloc-rss {
+    display: none;
+}
 .agenda .results ul .bloc-item {
     float: none;
     min-height: calc(155px);
     padding: 1.5em;
-    width: auto;
+    width: 33%;
     float: none;
     margin-bottom: 0;
 }
@@ -615,9 +645,165 @@ dl.actionMenu.activated dt a{
 #carousel-a-la-une{
     display: none;
 }
-//ne pas commiter
+
+// section-evenements subsection-agenda
+// Recherche
+.section-evenements.subsection-agenda #top-area {
+    background: #f2f2f2;
+}
+.section-evenements.subsection-agenda #c3_widget {
+    display: block !important;
+}
+.section-evenements.subsection-agenda input[type="text"] {
+    background: #ffffff;
+    border: none !important;
+    border-radius: @border-radius-input;
+    height: @input-height !important;
+    padding-right: 0;
+    width: 15em !important;
+}
+.section-evenements.subsection-agenda input.hasDatepicker {
+    width: 7em !important;
+}
+.section-evenements.subsection-agenda .faceted-top-widgets {
+    padding-right: 0 !important;
+    padding: 2em;
+}
+.section-evenements.subsection-agenda .faceted-top-widgets .faceted-widget:last-child {
+    margin-bottom: 2em;
+}
+.section-evenements.subsection-agenda #faceted-form fieldset {
+    padding: 0 !important;
+}
+.section-evenements.subsection-agenda .widget-fieldset legend {
+    float: left;
+    font-weight: normal;
+    font-size: 100% !important;
+}
+.section-evenements.subsection-agenda .section-public-cible,
+.section-evenements.subsection-agenda .section-tarification {
+    display: none !important;
+}
+.section-evenements.subsection-agenda .widget-fieldset form {
+    display: flex;
+}
+.section-evenements.subsection-agenda .section-affichage {
+    width: 100%;
+    white-space: nowrap;
+}
+.section-evenements.subsection-agenda .faceted_select {
+    max-width: 20em !important;
+    min-width: 15em !important;
+}
+.section-evenements.subsection-agenda #faceted-form .select2-container .select2-choice {
+    border-top-left-radius: @border-radius-input;
+    border-bottom-left-radius: @border-radius-input;
+    background: @front !important;
+    height: @input-height;
+    border: none !important;
+    line-height: @input-height;
+    color: gray;
+    padding: 0.2em 1em;
+    font-size: 0.9em;
+}
+.section-evenements.subsection-agenda .select2-container .select2-choice .select2-arrow {
+    background: @background;
+    color: @front;
+    border-left: none !important;
+    text-align: center;
+    width: @input-height;
+}
+.section-evenements.subsection-agenda .select2-container .select2-choice .select2-arrow b {
+    background: @background;
+}
+.section-evenements.subsection-agenda .select2-container .select2-choice .select2-arrow b::before {
+    content: "+";
+    line-height: 40px;
+}
+.section-evenements.subsection-agenda .widget-fieldset li {
+    display: flex !important;
+    margin-left: 0em !important;
+}
+.section-evenements.subsection-agenda .widget-fieldset li label {
+    padding: 0.4em 1em 0 0.5em;
+}
+.section-evenements.subsection-agenda .widget-fieldset.faceted-criteria legend {
+    float: none;
+}
+.section-evenements.subsection-agenda .widget-fieldset.faceted-criteria a {
+    visibility: hidden;
+}
+.section-evenements.subsection-agenda .widget-fieldset.faceted-criteria a::after {
+    color: @theme;
+    content: "❌";
+    height: 10px;
+    visibility: visible;
+    width: 10px;
+}
+.section-evenements.subsection-agenda .widget-fieldset.faceted-criteria .faceted-criteria-reset a {
+    visibility: visible;
+}
+// section-evenements subsection-agenda
+// items
+.section-evenements.subsection-agenda #faceted-results {
+    padding-left: 0 !important;
+}
+.section-evenements.subsection-agenda .faceted-agenda-ungrouped-view {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+}
+.section-evenements.subsection-agenda .event-entry {
+    margin-bottom: 1em;
+    margin-right: 0;
+    width: 49%;
+    border: 1px solid #cccccc;
+    position: relative;
+}
+.section-evenements.subsection-agenda .event-entry .pageleadImage {
+    padding-bottom: 50% !important;
+    width: 50% !important;
+    margin-right: 0 !important;
+}
+.section-evenements.subsection-agenda .event-entry .pagecaption {
+    width: 50% !important;
+}
+.section-evenements.subsection-agenda .event-entry .pagecaption h3 {
+    margin-top: calc(@size-day-month + 20px);
+    padding: 0.5em;
+    font-size: 1.2em;
+}
+.section-evenements.subsection-agenda .event-entry .documentByLine {
+    color: @theme;
+    height: calc(@size-day-month);
+    width: calc(@size-day-month);
+    position: absolute;
+    text-align: center;
+    border: 5px dotted @theme;
+    border-radius: 50%;
+    justify-content: center;
+    display: flex;
+    flex-flow: column nowrap;
+    margin: 20px;
+    right: 0;
+}
+#portal-footer-wrapper .row {
+    background-color: @background;
+    color: @front;
+}
+
+
+// cette partie est à supprimer une fois que le format de date sera adapté
+.section-evenements.subsection-agenda .event-entry .documentByLine span {
+    display: none;
+}
+.section-evenements.subsection-agenda .event-entry .documentByLine span:nth-child(2) {
+    display: block;
+}
+// la partie display: none est à adapter, je l'ai ajoutée car en local,
+// je ne parvenais pas à limiter l'affichage à 3 éléments
 .agenda .results ul .bloc-item {
-   display: none !important;
+    display: none !important;
 }
 .agenda .results ul .bloc-item:nth-child(1),
 .agenda .results ul .bloc-item:nth-child(2),
@@ -635,3 +821,5 @@ dl.actionMenu.activated dt a{
     padding-bottom: 1em;
     text-transform: uppercase;
 }
+
+// fin du bloc à supprimer

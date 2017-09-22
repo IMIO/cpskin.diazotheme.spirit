@@ -1,6 +1,8 @@
-// bloc zoom
-#accueil .bloc-document .zoom {
+// general
+#portal-columns {
+   padding-right: 0;
 }
+// bloc zoom
 #accueil .bloc-document .zoom .img img {
     height: 100% !important;
     max-width: 100% !important;
@@ -26,4 +28,54 @@
 }
 .agenda .results ul .bloc-item h3{
     margin-top: calc(@size-day-month + 40px);
+}
+.agenda .results ul {
+    flex-flow: column nowrap;
+}
+.agenda .results ul .bloc-item:nth-child(1),
+.agenda .results ul .bloc-item:nth-child(2) {
+    border-right: none;
+    border-bottom: 1px solid #cccccc;
+}
+.agenda .results ul .bloc-item a {
+    text-align: center;
+}
+// Agenda vue
+.section-evenements.subsection-agenda .faceted-top-widgets {
+    display: flex;
+    flex-flow: column nowrap;
+    padding: 1em;
+}
+.section-evenements.subsection-agenda .faceted-top-widgets .faceted-widget {
+    float: none;
+}
+.section-evenements.subsection-agenda .widget-fieldset legend {
+    float: none;
+}
+.section-evenements.subsection-agenda .widget-fieldset form {
+    flex-flow: column wrap;
+}
+.section-evenements.subsection-agenda .faceted-daterange-widget-form div {
+    margin-bottom: 0.5em;
+}
+.section-evenements.subsection-agenda .event-entry {
+    display: flex;
+    flex-flow: column nowrap;
+    width: 100%;
+    float: none !important;
+}
+.section-evenements.subsection-agenda .event-entry .pagecaption {
+    width: 100% !important;
+}
+.section-evenements.subsection-agenda .event-entry .pageleadImage {
+    padding-bottom: 100% !important;
+    width: 100% !important;
+    float: none !important;
+}
+.section-evenements.subsection-agenda .event-entry .pagecaption h3 {
+    margin-top: 0;
+}
+.section-evenements.subsection-agenda .event-entry .documentByLine {
+    position: relative;
+    float: right;
 }
