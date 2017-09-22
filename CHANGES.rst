@@ -2,10 +2,11 @@ Changelog
 =========
 
 
-0.1.1 (unreleased)
+0.1.1 (2017-09-22)
 ------------------
 
-- Nothing changed yet.
+- Add css for homepage and navigation
+  [mgennart]
 
 
 0.1 (2017-09-20)
