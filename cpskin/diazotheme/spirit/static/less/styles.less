@@ -7,21 +7,12 @@ body, h1, h2, h3, h4, h5, h6, #portal-globalnav li a {
     position: relative;
     z-index: inherit;
 }
-.main-homepage #top-banner img.banner{
-    position: absolute;
-}
 #top-banner img.banner {
     max-width: 100%;
     width: 100%;
-    position: relative;
-    z-index: 1;
-}
-.main-homepage #top-logo-slogan-actions {
-    position: relative;
 }
 #top-logo-slogan-actions {
     color: @front;
-    position: absolute;
     top:0;
     width: 100%;
     z-index: 2;
@@ -71,10 +62,22 @@ body, h1, h2, h3, h4, h5, h6, #portal-globalnav li a {
     background-color: transparent;
     flex: 1 1 0;
 }
+#portal-languageselector{
+    background: transparent;
+    max-width: 100%;
+}
+#top-actions-inner .currentLanguage a{
+    color: #d7004e;
+}
+#top-actions-inner #portal-languageselector a {
+    text-transform: uppercase;
+}
 .main-homepage #nav-wrapper {
     background-color: @nav-opaticy;
-    margin-left: auto;
-    margin-top: calc(295.667px);
+    left: 50%;
+    margin: 0 auto 0 calc(-600px);
+    position: absolute;
+    top: 40%;
     width: @width-content;
 }
 #nav-wrapper{
@@ -91,6 +94,7 @@ body, h1, h2, h3, h4, h5, h6, #portal-globalnav li a {
 #portal-breadcrumbs {
     margin-left: calc(183px);
     margin-right: auto;
+    margin-top:1em;
     width: @width-content;
 }
 .main-homepage #portal-globalnav{
@@ -210,6 +214,14 @@ body, h1, h2, h3, h4, h5, h6, #portal-globalnav li a {
 .theme3 a.portal-tab-description::before{
     display: none;
 }
+.theme1.selected,
+.theme2.selected,
+.theme3.selected{
+    background: @theme;
+}
+#portal-globalnav .selected a{
+    text-decoration: none;
+}
 /*   sub menu   */
 .portal-globalnav-cpskinmenu a:hover,
 .portal-globalnav-cpskinmenu-tabs a:hover,
@@ -218,18 +230,26 @@ body, h1, h2, h3, h4, h5, h6, #portal-globalnav li a {
     color:@front !important;
     border-radius: 0;
 }
-ul.navTreeLevel0 {
+#nav-wrapper ul.navTreeLevel0 {
     background: @nav-background;
     border-top: 0.5em solid @theme;
+    left: 215px;
     margin-top: -3.2em;
-    max-width: 1200px;
+    max-width: calc(100% - 17.8%);
     position: absolute;
     text-transform: uppercase;
+    width: 100%;
+    z-index: 2;
+}
+.main-homepage #nav-wrapper ul.navTreeLevel0{
+    left: 0;
+    max-width: 100%;
 }
 ul.navTreeLevel1 li a{
     color: @black;
 }
 ul.navTreeLevel1{
+    max-width: 100%;
     text-transform: lowercase;
 }
 ul.navTreeLevel0 li.sfHover a{
@@ -341,7 +361,7 @@ dl.actionMenu.activated dt a{
     z-index: 1;
 }
 .main-homepage #portal-columns{
-    padding-top:4em;
+    top: -13em;
 }
 .main-homepage  #content {
     margin: 0 auto;
@@ -787,12 +807,33 @@ dl.actionMenu.activated dt a{
     margin: 20px;
     right: 0;
 }
+#portal-footer{
+    margin: 1em 0 0 ;
+}
+#portal-footer a,
+#portal-footer p{
+    color: #969696;
+}
 #portal-footer-wrapper .row {
     background-color: @background;
     color: @front;
 }
-
-
+#footer-social {
+    margin: 0 auto;
+    max-width: 1200px;
+}
+#footer-social > div {
+    margin: 0 auto;
+    max-width: 33%;
+}
+#footer-social .social {
+    display: inline-block;
+    width: 20%;
+}
+#footer-social a {
+    color: #fff;
+    font-size: 150%;
+}
 // cette partie est à supprimer une fois que le format de date sera adapté
 .section-evenements.subsection-agenda .event-entry .documentByLine span {
     display: none;

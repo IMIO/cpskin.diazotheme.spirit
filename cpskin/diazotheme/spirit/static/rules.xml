@@ -19,7 +19,6 @@
 
   <!-- Our own rules -->
   <xi:include href="/++theme++cpskin.theme.base/rules/head.xml"/>
-  <xi:include href="/++theme++cpskin.theme.base/rules/footer.xml"/>
   <xi:include href="/++theme++cpskin.theme.base/rules/content.xml"/>
   <xi:include href="/++theme++cpskin.theme.base/rules/right_actions.xml"/>
   <xi:include href="/++theme++cpskin.theme.base/rules/login.xml"/>
@@ -27,6 +26,7 @@
 
   <!-- Our own rules -->
   <xi:include href="/++theme++cpskin.diazotheme.spirit/rules/header.xml"/>
+  <xi:include href="/++theme++cpskin.diazotheme.spirit/rules/footer.xml"/>
 
   <replace css:theme="body" css:content="body" />
 
