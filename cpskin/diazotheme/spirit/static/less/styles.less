@@ -1,4 +1,4 @@
-body, h1, h2, h3, h4, h5, h6, #portal-globalnav li a {
+h1, h2, h3, h4, h5, h6, #portal-globalnav li a {
     font-family: abel;
 }
 #portal-header {
@@ -6,6 +6,18 @@ body, h1, h2, h3, h4, h5, h6, #portal-globalnav li a {
     max-width: 1920px;
     position: relative;
     z-index: inherit;
+}
+.main-homepage #portal-top{
+    position: relative;
+}
+.main-homepage #portal-top::after {
+    background: @slider-background;
+    content: "";
+    display: block;
+    height: calc(139%);
+    position: absolute;
+    top: 100%;
+    width: calc(100%);
 }
 #top-banner img.banner {
     max-width: 100%;
@@ -28,10 +40,10 @@ body, h1, h2, h3, h4, h5, h6, #portal-globalnav li a {
 #top-logo-slogan {
     display: flex;
     flex-flow: row nowrap;
-    margin-top:-1em;
 }
 #top-logo {
     margin-left: 1em;
+     margin-top:-1em;
     position: relative;
     width: @width-logo;
     z-index: 1;
@@ -51,6 +63,9 @@ body, h1, h2, h3, h4, h5, h6, #portal-globalnav li a {
 }
 #top-slogan {
     margin-left: 1em;
+}
+#cpskin-slogan-titre {
+    display: none;
 }
 #top-slogan-inner h1 {
     color: @front;
@@ -109,13 +124,16 @@ body, h1, h2, h3, h4, h5, h6, #portal-globalnav li a {
     padding: 4em 2.5em;
     max-width: 100%;
 }
-#portal-globalnav li:hover{
+#portal-globalnav li:hover,
+#portal-globalnav li.menu-activated,
+#portal-globalnav li:hover.selected,
+#portal-globalnav li.selected.menu-activated{
     background: @theme;
 }
 #portal-globalnav li {
     display: inline-block;
     margin-right: 2%;
-    min-height: calc(74px);
+    min-height: calc(85px);
     position: relative;
     vertical-align: top;
     width: calc(33.3333% - 2% - 1px);
@@ -135,15 +153,39 @@ body, h1, h2, h3, h4, h5, h6, #portal-globalnav li a {
     color:@black;
     display: inline-block;
     text-transform: uppercase;
-    padding:0.8% 0 0.8% 25%;
+    padding:1.8% 0 0.8% 25%;
     position: relative;
     width: 100%;
+}
+#portal-globalnav li:hover a,
+#portal-globalnav li.menu-activated a,
+#portal-globalnav li:hover.selected a,
+#portal-globalnav .selected a:hover{
+    color: @front;
+}
+#portal-globalnav li.selected,
+#portal-globalnav .selected a:hover{
+    background: transparent;
+}
+#portal-globalnav a:hover,
+#portal-globalnav .activated,
+#portal-globalnav li a.activated,
+#portal-globalnav li.selected.menu-activated a,
+#portal-globalnav li.selected a{
+    background-color: transparent;
+    color: @front;
+}
+#portal-globalnav li.selected a{
+    background: transparent;
+    color: #000;
 }
 #portal-globalnav .portal-tab-description::after{
     display: none;
 }
 #portal-globalnav .portal-tab-description {
     font-size: 80%;
+    padding-top:0;
+    padding-right: 1em;
     text-transform: lowercase;
 }
 #portal-globalnav #portaltab-index_html {
@@ -154,24 +196,6 @@ body, h1, h2, h3, h4, h5, h6, #portal-globalnav li a {
     background: @nav-transparent;
     color: transparent;
     width: 100%;
-}
-
-#portal-globalnav .selected a:hover,
-#portal-globalnav a:hover,
-#portal-globalnav li:hover .selected a,
-#portal-globalnav li:hover a.activated,
-#portal-globalnav .selected a,
-#portal-globalnav li a.activated,
-#portal-globalnav li a.activated + .portal-tab-description{
-    background: @theme !important;
-    color: @front;
-}
-#portal-globalnav li a.activated:hover{
-    color: @front !important;
-}
-#portal-globalnav li a.portal-tab-description.activated,
-#portal-globalnav li a.activated + .portal-tab-description{
-    padding-bottom: 2em;
 }
 .theme1 a::before {
     content: url("http://localhost:8080/liege/fr/images-spirit/communal.png");
@@ -221,6 +245,9 @@ body, h1, h2, h3, h4, h5, h6, #portal-globalnav li a {
 }
 #portal-globalnav .selected a{
     text-decoration: none;
+}
+#cpskin-slogan-description{
+    font-size: 130%;
 }
 /*   sub menu   */
 .portal-globalnav-cpskinmenu a:hover,
@@ -366,7 +393,7 @@ dl.actionMenu.activated dt a{
 .main-homepage  #content {
     margin: 0 auto;
 }
-/* Bloc zoom par défaut*/
+//Bloc zoom par défaut
 #accueil .bloc-document .zoom {
     float: left;
     position: relative;
@@ -444,6 +471,25 @@ dl.actionMenu.activated dt a{
 }
 #accueil .bloc-document.zoom-2 .zoom .description {
     display: none !important;
+}
+
+.zoom-1::after {
+    background: @slider-background;
+    content: "";
+    display: block;
+    height: calc(50%);
+    left: -50%;
+    position: absolute;
+    top: 36%;
+    width: calc(200%);
+    z-index: -1;
+}
+.zoom-1,
+.zoom-2{
+    display: inline-block;
+    margin: 5em 0 0;
+    position: relative;
+    width: 100%;
 }
 /* slider multiple */
 .slider-multiple #slider-actualites {
@@ -564,20 +610,6 @@ dl.actionMenu.activated dt a{
 }
 .voir-tout a {
     color: transparent;
-}
-.bloc-2.slider-multiple::before {
-    background: @slider-background;
-    content: "";
-    display: block;
-    height: 884px;
-    margin-left: -50%;
-    position: absolute;
-    top: -100%;
-    width: 200%;
-    z-index: -1;
-}
-.bloc-2.slider-multiple {
-    position: relative;
 }
 .agenda {
     margin-top: 100px;
@@ -806,6 +838,88 @@ dl.actionMenu.activated dt a{
     flex-flow: column nowrap;
     margin: 20px;
     right: 0;
+}
+//icone
+.icone-container {
+    margin: 5em 0;
+}
+.icone-inner {
+    display: inline-block;
+    text-align: center;
+    width: 20%;
+}
+.icone-inner:first-child,
+.icone-inner:nth-child(2){
+    padding-right: 6%;
+}
+.icone-inner:last-child {
+    padding-left: 6%;
+}
+.icone-inner h3{
+    color:@theme;
+}
+
+//zone multimedia
+#multimediaviewlet::after {
+    background: @slider-background;
+    content: "";
+    display: block;
+    height: 50%;
+    left: -50%;
+    position: absolute;
+    top: 36.4%;
+    width: 200%;
+    z-index: -1;
+}
+#multimediaviewlet{
+    background: transparent;
+    margin: 4em 0 0;
+    position: relative;
+}
+.section-notheme #multimediaviewlet h2,
+#multimediaviewlet h2{
+    color:@black;
+}
+.albums-container {
+    padding-left: 0;
+    width: 50%;
+}
+.albums-container img {
+    max-width: 100%;
+}
+.videos-container {
+    margin-left: -17%;
+    margin-top: 10%;
+    padding-left: 0;
+}
+.videos-container > h2 {
+    text-align: right;
+}
+.videos > li {
+    width: 800px;
+}
+#multimediaviewlet .link-all::before {
+    color: #ffffff;
+    content: "+";
+    display: inline-block;
+    font-size: 20px;
+    height: 60px;
+    margin-left: 24px;
+    margin-top: 18px;
+}
+#multimediaviewlet .link-all {
+    background: @theme !important;
+    width: 60px;
+    height: 60px;
+    margin-bottom: 0;
+    margin-top: 30px;
+    margin-right: 0;
+    overflow: hidden;
+    right: 0;
+}
+#multimediaviewlet .albums-container .link-all {
+    background: @voir-tout-black !important;
+    right: 90%;
 }
 #portal-footer{
     margin: 1em 0 0 ;
