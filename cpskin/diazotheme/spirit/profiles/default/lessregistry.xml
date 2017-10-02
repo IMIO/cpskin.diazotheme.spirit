@@ -21,6 +21,17 @@
     applyPrefix="True"
     insert-before="portal_resources/cpskin/styles.less" />
  
+  <stylesheet title="cpskin.diazotheme.spirit LESS Liege"
+    id="++theme++cpskin.diazotheme.spirit/less/liege.less"
+    media="all"
+    enabled="1"
+    rendering="link"
+    compression="none"
+    expression="python:here.restrictedTraverse('@@currentTheme')() == 'cpskin.diazotheme.spirit'"
+    applyPrefix="True"
+    insert-before="++theme++cpskin.diazotheme.spirit/less/mobile.less" />
+ 
+ 
  <stylesheet title="cpskin.diazotheme.spirit LESS Mobile Styles"
     id="++theme++cpskin.diazotheme.spirit/less/mobile.less"
     media="handheld, screen and (max-device-width: 600px), screen and (max-width: 600px)"
@@ -30,5 +41,7 @@
     expression="python:here.restrictedTraverse('@@currentTheme')() == 'cpskin.diazotheme.spirit'"
     compression="none"
     insert-after="++theme++cpskin.diazotheme.spirit/less/styles.less" />
+ 
+
 
 </object>

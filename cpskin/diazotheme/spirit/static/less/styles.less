@@ -668,13 +668,11 @@ dl.actionMenu.activated dt a{
 
 // section-evenements subsection-agenda
 // Recherche
-.section-evenements.subsection-agenda #top-area {
+#faceted-form #top-area {
     background: #f2f2f2;
 }
-.section-evenements.subsection-agenda #c3_widget {
-    display: block !important;
-}
-.section-evenements.subsection-agenda input[type="text"] {
+
+#faceted-form input[type="text"] {
     background: #ffffff;
     border: none !important;
     border-radius: @border-radius-input;
@@ -682,40 +680,35 @@ dl.actionMenu.activated dt a{
     padding-right: 0;
     width: 15em !important;
 }
-.section-evenements.subsection-agenda input.hasDatepicker {
+#faceted-form input.hasDatepicker {
     width: 7em !important;
 }
-.section-evenements.subsection-agenda .faceted-top-widgets {
+#faceted-form .faceted-top-widgets {
     padding-right: 0 !important;
     padding: 2em;
 }
-.section-evenements.subsection-agenda .faceted-top-widgets .faceted-widget:last-child {
-    margin-bottom: 2em;
-}
-.section-evenements.subsection-agenda #faceted-form fieldset {
+
+#faceted-form #faceted-form fieldset {
     padding: 0 !important;
 }
-.section-evenements.subsection-agenda .widget-fieldset legend {
+#faceted-form .widget-fieldset legend {
     float: left;
     font-weight: normal;
     font-size: 100% !important;
 }
-.section-evenements.subsection-agenda .section-public-cible,
-.section-evenements.subsection-agenda .section-tarification {
+#faceted-form .section-public-cible,
+#faceted-form .section-tarification {
     display: none !important;
 }
-.section-evenements.subsection-agenda .widget-fieldset form {
+#faceted-form .widget-fieldset form {
     display: flex;
 }
-.section-evenements.subsection-agenda .section-affichage {
-    width: 100%;
-    white-space: nowrap;
-}
-.section-evenements.subsection-agenda .faceted_select {
+
+#faceted-form .faceted_select {
     max-width: 20em !important;
     min-width: 15em !important;
 }
-.section-evenements.subsection-agenda #faceted-form .select2-container .select2-choice {
+#faceted-form .select2-container .select2-choice {
     border-top-left-radius: @border-radius-input;
     border-bottom-left-radius: @border-radius-input;
     background: @front !important;
@@ -726,41 +719,40 @@ dl.actionMenu.activated dt a{
     padding: 0.2em 1em;
     font-size: 0.9em;
 }
-.section-evenements.subsection-agenda .select2-container .select2-choice .select2-arrow {
+#faceted-form .select2-container .select2-choice .select2-arrow {
     background: @background;
     color: @front;
     border-left: none !important;
     text-align: center;
     width: @input-height;
 }
-.section-evenements.subsection-agenda .select2-container .select2-choice .select2-arrow b {
+#faceted-form .select2-container .select2-choice .select2-arrow b {
     background: @background;
 }
-.section-evenements.subsection-agenda .select2-container .select2-choice .select2-arrow b::before {
+#faceted-form .select2-container .select2-choice .select2-arrow b::before {
     content: "+";
     line-height: 40px;
 }
-.section-evenements.subsection-agenda .widget-fieldset li {
+#faceted-form .widget-fieldset li {
     display: flex !important;
     margin-left: 0em !important;
 }
-.section-evenements.subsection-agenda .widget-fieldset li label {
+#faceted-form .widget-fieldset li label {
     padding: 0.4em 1em 0 0.5em;
 }
-.section-evenements.subsection-agenda .widget-fieldset.faceted-criteria legend {
-    float: none;
-}
-.section-evenements.subsection-agenda .widget-fieldset.faceted-criteria a {
-    visibility: hidden;
-}
-.section-evenements.subsection-agenda .widget-fieldset.faceted-criteria a::after {
-    color: @theme;
+
+#faceted-form .widget-fieldset.faceted-criteria a::before {
+    background: @bg-nav-fac;
+    color: #d7004e;
     content: "❌";
     height: 10px;
+    padding: 0 0.5em 0 0.25em;
+    position: relative;
+    right: -1.4em;
     visibility: visible;
     width: 10px;
 }
-.section-evenements.subsection-agenda .widget-fieldset.faceted-criteria .faceted-criteria-reset a {
+#faceted-form .widget-fieldset.faceted-criteria .faceted-criteria-reset a {
     visibility: visible;
 }
 // section-evenements subsection-agenda
