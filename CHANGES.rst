@@ -2,10 +2,11 @@ Changelog
 =========
 
 
-0.1.3 (unreleased)
+0.1.3 (2017-10-04)
 ------------------
 
-- Nothing changed yet.
+- change css for agenda.
+  [mgennart]
 
 
 0.1.2 (2017-10-02)
