@@ -64,9 +64,6 @@ h1, h2, h3, h4, h5, h6, #portal-globalnav li a {
 #top-slogan {
     margin-left: 1em;
 }
-#cpskin-slogan-titre {
-    display: none;
-}
 #top-slogan-inner h1 {
     color: @front;
     font-size: 1em;
@@ -109,8 +106,26 @@ h1, h2, h3, h4, h5, h6, #portal-globalnav li a {
 #portal-breadcrumbs {
     margin-left: calc(183px);
     margin-right: auto;
-    margin-top:1em;
+    margin-top:2em;
     width: @width-content;
+}
+#portal-breadcrumbs,
+#portal-breadcrumbs a{
+    color:@black;
+}
+#portal-breadcrumbs a{
+    text-decoration: underline;
+}
+.breadcrumbSeparator::after {
+    content: "\E83F";
+    font-family: fontello;
+    visibility: visible;
+    color: @theme;
+    padding-right: 0.5em;
+}
+.breadcrumbSeparator {
+    text-decoration: none;
+    visibility: hidden;
 }
 .main-homepage #portal-globalnav{
     margin-left: 0;
@@ -120,7 +135,7 @@ h1, h2, h3, h4, h5, h6, #portal-globalnav li a {
     background-color: transparent;
     display: inline-block;
     justify-content: space-around;
-    margin-left: calc(183px);
+    margin-left: calc(235px);
     padding: 4em 2.5em;
     max-width: 100%;
 }
@@ -132,10 +147,14 @@ h1, h2, h3, h4, h5, h6, #portal-globalnav li a {
 }
 #portal-globalnav li {
     display: inline-block;
-    margin-right: 2%;
+    margin-right: 10%;
     min-height: calc(85px);
     position: relative;
     vertical-align: top;
+    width: calc(33.3333% - 10% - 1px);
+}
+.main-homepage #portal-globalnav li {
+    margin-right: 2%;
     width: calc(33.3333% - 2% - 1px);
 }
 .main-homepage #portal-globalnav li a,
@@ -198,21 +217,21 @@ h1, h2, h3, h4, h5, h6, #portal-globalnav li a {
     width: 100%;
 }
 .theme1 a::before {
-    content: url("/images-spirit/communal.png");
+    content: url("http://127.0.0.2:8080/liege/fr//images-spirit/communal.png");
     display: block;
     position: absolute;
     left: 0;
     z-index: 1;
 }
 .theme2 a::before {
-    content: url("/images-spirit/vivre.png");
+    content: url("http://127.0.0.2:8080/liege/fr//images-spirit/vivre.png");
     display: block;
     position: absolute;
     left: 0;
     z-index: 1;
 }
 .theme3 a::before {
-    content: url("/images-spirit/decouvrir.png");
+    content: url("http://127.0.0.2:8080/liege/fr//images-spirit/decouvrir.png");
     display: block;
     position: absolute;
     left:0;
@@ -246,6 +265,7 @@ h1, h2, h3, h4, h5, h6, #portal-globalnav li a {
 #portal-globalnav .selected a{
     text-decoration: none;
 }
+#cpskin-slogan-titre,
 #cpskin-slogan-description{
     font-size: 130%;
 }
@@ -497,7 +517,7 @@ dl.actionMenu.activated dt a{
 }
 .slider-multiple .carousel.flexslider {
     background: @slider-background;
-    padding-bottom: 50px;
+    padding-bottom: calc(45px);
 }
 .slider-multiple .carousel.flexslider ul > li {
     background: #fff;
@@ -673,6 +693,12 @@ dl.actionMenu.activated dt a{
 }
 .agenda .results ul .bloc-item .documentByLine {
     display: none;
+}
+.agenda a:hover h2{
+    background: transparent;
+    bottom: 0;
+    height: auto;
+    position: relative;
 }
 //Slider carousel
 .flexslider{
@@ -939,6 +965,26 @@ dl.actionMenu.activated dt a{
 #footer-social a {
     color: #fff;
     font-size: 150%;
+}
+//mini site
+.in-minisite-out-portal #top-logo-slogan-actions-inner{
+    background: transparent;
+    padding: 0;
+}
+#minisite-logo {
+    float: left;
+    height: auto;
+    width: 14%;
+    padding-left: 0;
+    position: inherit;
+    top: 0;
+}
+#minisite-globalnav-inner {
+    float: left;
+    width: 86%;
+}
+#minisite-globalnav a.minisite-home {
+    display: none;
 }
 // cette partie est à supprimer une fois que le format de date sera adapté
 .section-evenements.subsection-agenda .event-entry .documentByLine span {

@@ -2,7 +2,7 @@
 <rules xmlns="http://namespaces.plone.org/diazo"
     xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
     xmlns:css="http://namespaces.plone.org/diazo/css">
-    <rules>
+    <rules if-not="$isinminisitemode">
         <replace css:content-children="#portal-header">
             <xsl:copy-of select="./*[@id='messagesviewlet']"/>
             <div id="top-logo-slogan-actions">
@@ -54,6 +54,17 @@
                                                               and @id!='top-menu-actions'
                                                               and @id!='portal-globalnav')]"/>
                 </div>
+                <xsl:if test="$ms_horizontal_navigation_any_mode">
+                  <div class="container-minisite-globalnav-logo">
+                    <xsl:copy-of select="//*[@id='minisite-actions']"/>
+                    <div id="minisite-navigation-inner">
+                      <div id="minisite-logo-nav">
+                          <xsl:copy-of select="//*[@id='minisite-logo']" />
+                          <xsl:copy-of select="//*[@id='minisite-globalnav']" />
+                      </div> 
+                  </div>
+                  </div>
+                </xsl:if>
                 <div id="top-banner">
                   <xsl:copy-of select="//*[@id='cpskin-banner']/img" />
                 </div>
@@ -70,23 +81,46 @@
         <drop css:content="#minisite-logo" />
         <drop css:content="#minisite-actions" />
     </rules>
+    
+    <!-- Is mini site -->
+    <rules if="$isinminisitemode">
+        <replace css:content-children="#portal-header">
+            <xsl:copy-of select="./*[@id='messagesviewlet']"/>
+            <div id="top-logo-slogan-actions">
+                <div id="top-logo-slogan-actions-inner">
+                    <div id="search-wrapper">
+                      <div id="hidden-search" class="portal-search-hidden">
+                        <xsl:copy-of select="./*[@id='portal-searchbox']"/>
+                      </div>
+                      <div id="btn-search">
+                        <a href="#"  class="btn-search">
+                        </a>
+                      </div>
+                  </div> 
+              </div>
+                <xsl:if test="$ms_horizontal_navigation_any_mode">
+                  <div class="container-minisite-globalnav-logo">
+                    <xsl:copy-of select="//*[@id='minisite-actions']"/>
+                    <div id="minisite-navigation-inner">
+                      <div id="minisite-logo-nav">
+                          <xsl:copy-of select="//*[@id='minisite-logo']" />
+                          <xsl:copy-of select="//*[@id='minisite-globalnav']" />
+                      </div> 
+                  </div>
+                  </div>
+                </xsl:if>
+                <div id="top-banner">
+                  <xsl:copy-of select="//*[@id='cpskin-banner']/img" />
+                </div>
+                <xsl:copy-of select="//*[@id='portal-breadcrumbs']" />
+            </div>
+        </replace>
 
-    <!-- Logo to minisite horizontal navigation and minisite action-->
-<rules if="$ms_horizontal_navigation">
-    <before css:content-children="#container-minisite-globalnav">
-      <div id="minisite-actions-inner">
-        <xsl:copy-of select="//*[@id='minisite-actions']" />
-      </div>
-          <div id="minisite-navigation-inner">
-              <div id="minisite-logo-nav">
-                  <xsl:copy-of select="//*[@id='minisite-logo']" />
-                  <xsl:copy-of select="//*[@id='minisite-globalnav']" />
-              </div> 
-          </div>   
-    </before>
-    <drop css:content="#minisite-logo" />
-    <drop css:content="#minisite-actions" />
-     <drop css:content="#minisite-globalnav" />
-</rules>
-
+        <drop css:content="#messagesviewlet" />
+        <drop css:content="#cpskin-banner" />
+        <drop css:content="#minisite-search" />
+        <drop css:content="#portal-breadcrumbs"/>
+        <drop css:content="#cpskin-slogan" />
+        <drop css:content="#container-minisite-globalnav" />
+    </rules>
 </rules>
