@@ -8,9 +8,6 @@ Changelog
 - Change style for homepage in mobile
   [amariscal]
 
-- Move social viewlet to bottom
-  [laulaz]
-
 - Focus on search input when search button is clicked : #19168
   [laulaz]
 
