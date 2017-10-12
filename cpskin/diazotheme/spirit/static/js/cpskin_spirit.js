@@ -9,7 +9,14 @@ $(document).ready(function() {
 
 // search
     $( ".btn-search" ).click(function(event) {
+
       $("#hidden-search").toggleClass("portal-search-visible portal-search-hidden");
+
+      $( "#hidden-search" ).slideToggle(
+        "fast",
+        function () {
+           $("#searchGadget").focus();
+        });
       event.preventDefault();
     });
        

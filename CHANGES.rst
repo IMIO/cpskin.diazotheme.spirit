@@ -5,6 +5,9 @@ Changelog
 0.1.4 (unreleased)
 ------------------
 
+- Focus on search input when search button is clicked : #19168
+  [laulaz]
+
 - Override cpskin.banner to change slogan feature
   [laulaz]
 
