@@ -5,7 +5,8 @@ Changelog
 0.1.4 (unreleased)
 ------------------
 
-- Nothing changed yet.
+- Override cpskin.banner to change slogan feature
+  [laulaz]
 
 
 0.1.3 (2017-10-04)

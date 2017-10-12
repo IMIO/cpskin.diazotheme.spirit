@@ -23,4 +23,14 @@
         provides="Products.GenericSetup.interfaces.EXTENSION"
         />
 
+    <!-- Upgrade steps -->
+    <genericsetup:upgradeStep
+        title="CPSKIN Diazotheme Spirit: upgrade to v2: Add browserlayer"
+        description="Add new browserlayer"
+        handler=".upgradehandlers.add_browserlayer"
+        source="1"
+        destination="2"
+        profile="cpskin.diazotheme.spirit:default"
+        />
+
 </configure>
