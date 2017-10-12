@@ -5,6 +5,9 @@ Changelog
 0.1.4 (unreleased)
 ------------------
 
+- Change style for homepage in mobile
+  [amariscal]
+
 - Move social viewlet to bottom
   [laulaz]
 
