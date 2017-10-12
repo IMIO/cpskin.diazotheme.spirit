@@ -27,6 +27,7 @@
   <!-- Our own rules -->
   <xi:include href="/++theme++cpskin.diazotheme.spirit/rules/header.xml"/>
   <xi:include href="/++theme++cpskin.diazotheme.spirit/rules/footer.xml"/>
+  <xi:include href="/++theme++cpskin.diazotheme.spirit/rules/social.xml"/>
 
   <replace css:theme="body" css:content="body" />
 

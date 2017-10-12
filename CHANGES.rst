@@ -5,6 +5,9 @@ Changelog
 0.1.4 (unreleased)
 ------------------
 
+- Move social viewlet to bottom
+  [laulaz]
+
 - Focus on search input when search button is clicked : #19168
   [laulaz]
 
