@@ -2,7 +2,7 @@ Changelog
 =========
 
 
-0.1.4 (unreleased)
+0.1.4 (2017-10-13)
 ------------------
 
 - Change style for homepage in mobile
