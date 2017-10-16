@@ -215,21 +215,21 @@ h1, h2, h3, h4, h5, h6, #portal-globalnav li a {
     width: 100%;
 }
 .theme1 a::before {
-    content: url("/images-spirit/communal.png");
+    content: url("http://localhost:8080/liege/fr/images-spirit/communal.png");
     display: block;
     position: absolute;
     left: 0;
     z-index: 1;
 }
 .theme2 a::before {
-    content: url("/images-spirit/vivre.png");
+    content: url("http://localhost:8080/liege/fr/images-spirit/vivre.png");
     display: block;
     position: absolute;
     left: 0;
     z-index: 1;
 }
 .theme3 a::before {
-    content: url("/images-spirit/decouvrir.png");
+    content: url("http://localhost:8080/liege/fr/images-spirit/decouvrir.png");
     display: block;
     position: absolute;
     left:0;
@@ -519,7 +519,7 @@ dl.actionMenu.activated dt a{
 }
 .slider-multiple .carousel.flexslider {
     background: @slider-background;
-    padding-bottom: calc(45px);
+    padding-bottom: calc(37px);
 }
 .slider-multiple .carousel.flexslider ul > li {
     background: #fff;
@@ -884,7 +884,7 @@ dl.actionMenu.activated dt a{
     background: @slider-background;
     content: "";
     display: block;
-    height: 50%;
+    height: calc(60%);
     left: -50%;
     position: absolute;
     top: 36.4%;
@@ -907,6 +907,9 @@ dl.actionMenu.activated dt a{
 .albums-container img {
     max-width: 100%;
 }
+.albums-container .link-all{
+    right: 90%;
+}
 .videos-container {
     margin-left: -17%;
     margin-top: 10%;
@@ -918,6 +921,21 @@ dl.actionMenu.activated dt a{
 .videos > li {
     width: 800px;
 }
+#multimediaviewlet .albums-container .link-all::after{
+    top: -236%;
+}
+#multimediaviewlet .link-all::after {
+    content: "";
+    font-size: 1.5em;
+    position: relative;
+    top: -276%;
+    visibility: visible;
+    height: 60px;
+    width: 60px;
+    display: block;
+    background: @theme !important;
+    z-index: 0;
+}
 #multimediaviewlet .link-all::before {
     color: #ffffff;
     content: "+";
@@ -926,11 +944,24 @@ dl.actionMenu.activated dt a{
     height: 60px;
     margin-left: 24px;
     margin-top: 18px;
+    visibility: visible;
+    position: relative;
+    z-index: 1;
 }
 #multimediaviewlet .link-all {
-    background: @theme !important;
-    width: 60px;
+    visibility: hidden;
     height: 60px;
+    width: 60px;
+    margin-top: 2%;
+}
+//CONTENT
+#viewlet-social-like{
+   width:100%;
+}
+#content-core::before {
+    content: "";
+    display: block;
+    clear: left;
 }
 #portal-footer{
     margin: 1em 0 0 ;

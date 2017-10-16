@@ -26,7 +26,6 @@
                                     <xsl:copy-of select="//*[@id='top-menu-actions']" />
                                     <xsl:copy-of select="./*[@id='portal-personaltools-wrapper']" />
                                     <xsl:copy-of select="//*[@id='portal-siteactions']" />
-                                    <xsl:apply-templates select="./*[@id='social-viewlet']" />
                                     <div id="top-languages">
                                         <xsl:apply-templates select="./*[@id='portal-languageselector']" />
                                     </div>
@@ -49,7 +48,6 @@
                     <xsl:apply-templates select="./*[not(@id) or (@id!='portal-personaltools-wrapper'
                                                               and @id!='portal-logo'
                                                               and @id!='portal-searchbox'
-                                                              and @id!='social-viewlet'
                                                               and @id!='portal-languageselector'
                                                               and @id!='top-menu-actions'
                                                               and @id!='portal-globalnav')]"/>
