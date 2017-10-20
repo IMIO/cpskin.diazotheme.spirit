@@ -2,10 +2,12 @@ Changelog
 =========
 
 
-0.1.5 (unreleased)
+0.1.5 (2017-10-20)
 ------------------
 
-- Nothing changed yet.
+- Change css navigation , directory in mobile and add css for tablet
+  [mgennart]
+
 
 
 0.1.4 (2017-10-13)

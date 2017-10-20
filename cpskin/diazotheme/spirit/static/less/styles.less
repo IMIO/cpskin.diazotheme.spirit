@@ -14,7 +14,7 @@ h1, h2, h3, h4, h5, h6, #portal-globalnav li a {
     background: @slider-background;
     content: "";
     display: block;
-    height: calc(139%);
+    height: calc(153%);
     position: absolute;
     top: 100%;
     width: calc(100%);
@@ -420,6 +420,7 @@ dl.actionMenu.activated dt a{
     float: left;
     position: relative;
     width: 50%;
+    margin: 4em 0;
 }
 #accueil .bloc-document .bloc {
     overflow: hidden;
@@ -448,6 +449,9 @@ dl.actionMenu.activated dt a{
     color: #fff;
     padding: 3em;
     position: absolute;
+}
+#content .zoom a {
+    color: #fff;
 }
 #accueil .bloc-document .zoom:first-child .bloc:first-child .texte {
     margin-top: -100%;
@@ -518,7 +522,6 @@ dl.actionMenu.activated dt a{
     display: none;
 }
 .slider-multiple .carousel.flexslider {
-    background: @slider-background;
     padding-bottom: calc(37px);
 }
 .slider-multiple .carousel.flexslider ul > li {
@@ -535,7 +538,7 @@ dl.actionMenu.activated dt a{
     color: #000 !important;
 }
 .slider-multiple .carousel.flexslider .flex-caption {
-    margin-bottom: 2em;
+    margin-bottom: 3em;
 }
 .slider-multiple .carousel.flexslider ul > li .publication-date {
     padding: 0.5em;
@@ -867,6 +870,7 @@ dl.actionMenu.activated dt a{
     display: inline-block;
     text-align: center;
     width: 20%;
+    vertical-align: top;
 }
 .icone-inner:first-child,
 .icone-inner:nth-child(2){
@@ -963,6 +967,7 @@ dl.actionMenu.activated dt a{
     display: block;
     clear: left;
 }
+//footer
 #portal-footer{
     margin: 1em 0 0 ;
 }
@@ -980,15 +985,18 @@ dl.actionMenu.activated dt a{
 }
 #footer-social > div {
     margin: 0 auto;
-    max-width: 33%;
+    max-width: 66%;
 }
 #footer-social .social {
     display: inline-block;
-    width: 20%;
+    width: 19%;
 }
 #footer-social a {
     color: #fff;
     font-size: 150%;
+}
+.icon-vimeo::before {
+    font-size: 83%;
 }
 //mini site
 .in-minisite-out-portal #top-logo-slogan-actions-inner{
@@ -1010,33 +1018,64 @@ dl.actionMenu.activated dt a{
 #minisite-globalnav a.minisite-home {
     display: none;
 }
-// cette partie est à supprimer une fois que le format de date sera adapté
-.section-evenements.subsection-agenda .event-entry .documentByLine span {
-    display: none;
-}
-.section-evenements.subsection-agenda .event-entry .documentByLine span:nth-child(2) {
-    display: block;
-}
-// la partie display: none est à adapter, je l'ai ajoutée car en local,
-// je ne parvenais pas à limiter l'affichage à 3 éléments
-.agenda .results ul .bloc-item {
-    display: none !important;
-}
-.agenda .results ul .bloc-item:nth-child(1),
-.agenda .results ul .bloc-item:nth-child(2),
-.agenda .results ul .bloc-item:nth-child(3) {
-   display: block !important;
-}
-.agenda .titre-rss{
-    background: @nav-transparent;
-}
-.agenda .bloc-rss{
-    display: none;
-}
-.agenda .titre h2{
-    color: @black;
-    padding-bottom: 1em;
-    text-transform: uppercase;
+//navigation view
+.navigation-view-menu {
+    float: left;
+    margin-bottom: 1.5%;
+    margin-right: 1.5%;
+    position: relative;
+    width: 31.75%;
 }
 
-// fin du bloc à supprimer
+.navigation-view-menu .leadimage-navigation {
+    width: 100%;
+    max-width:100%;
+}
+
+.navigation-view-menu-description:hover, 
+h2.navigation-view-menu-title:hover + .navigation-view-menu-description {
+    background: rgba(0, 0, 0, 0.8) none repeat scroll 0 0;
+    color: white !important;
+    height: 70%;
+    padding: 0 1em 1em !important;
+    position: absolute;
+    visibility: visible;
+}
+
+.navigation-view-menu-description, 
+h2.navigation-view-menu-title + .navigation-view-menu-description {
+    bottom: 0;
+    box-sizing: border-box;
+    color: transparent;
+    height: 70%;
+    overflow: hidden;
+    padding: 2em 1em 0;
+    position: absolute;
+    transition: background 0.5s, padding 1s ease 0s;
+}
+
+a:hover h2 {
+    background: black none repeat scroll 0 0;
+    bottom: 70%;
+    height: 30%;
+    position: absolute;
+}
+
+h2.navigation-view-menu-title {
+    background: rgba(0, 0, 0, 0.8) none repeat scroll 0 0;
+    bottom: 0;
+    box-sizing: border-box;
+    color: white;
+    display: block;
+    font-size: 1.5em;
+    height: 30%;
+    line-height: 1em;
+    padding: 0.15em 0.5em !important;
+    position: absolute;
+    width: 100%;
+}
+//control panel
+.template-overview-controlpanel.main-homepage #portal-columns {
+    top: 0;
+}
+
