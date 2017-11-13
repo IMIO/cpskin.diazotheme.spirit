@@ -42,6 +42,16 @@
     compression="none"
     insert-after="++theme++cpskin.diazotheme.spirit/less/styles.less" />
  
+  <stylesheet title="cpskin.diazotheme.sprit LESS Large Mobile Styles"
+    id="++theme++cpskin.diazotheme.spirit/less/mobilelarge.less"
+    media="handheld, screen and (min-device-width: 768px) and (max-device-width: 1024px), screen and (min-device-width: 768px) and (max-width: 1024px)"
+    enabled="1"
+    rendering="link"
+    applyPrefix="True"
+    expression="python:here.restrictedTraverse('@@currentTheme')() == 'cpskin.diazotheme.spirit'"
+    compression="none"
+    insert-after="++theme++cpskin.diazotheme.spirit/less/mobile.less" />
+ 
 
 
 </object>
