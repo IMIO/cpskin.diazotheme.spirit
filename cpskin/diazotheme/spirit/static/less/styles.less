@@ -416,6 +416,12 @@ dl.actionMenu.activated dt a{
     margin: 0 auto;
 }
 //Bloc zoom par défaut
+
+#content .zoom a {
+    color: white;
+    text-shadow: 0 0 30px #000;
+}
+
 #accueil .bloc-document .zoom {
     float: left;
     position: relative;
@@ -717,6 +723,17 @@ dl.actionMenu.activated dt a{
     padding: 2em;
     width: 25%;
 }
+
+#slider-a-la-une.flexslider .flex-caption::after {
+    content: "";
+    background: linear-gradient(to bottom,transparent ,#000, #000);
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    height: 6.5em;
+    left: 0;
+}
+
 #content #flex .flexslider a,
 #content #flex .flexslider #content #flex a:hover,
 #content #flex .flexslider a:link{
@@ -877,6 +894,17 @@ dl.actionMenu.activated dt a{
 }
 .icone-inner h3{
     color:@theme;
+}
+
+#content .zone-icones h3 a,
+#content .zone-icones h3 a:hover{
+    color: #d7004e;
+    font-size: 125%;
+    font-weight: bold;
+}
+
+#content .zone-icones p a{
+    color: #000;
 }
 
 //zone multimedia
