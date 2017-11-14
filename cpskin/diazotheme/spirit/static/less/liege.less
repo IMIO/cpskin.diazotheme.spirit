@@ -142,6 +142,7 @@ dl.portletNavigationTree dt.portletHeader a{
 
 
 #right-actions-viewlet #other-actions li a:before{
+    margin:0;
     padding: 1em;
     color: white;
 }
@@ -335,6 +336,8 @@ h2.tileHeadline [href*=".pdf"]{
 #content #belowContentContact .related-contact {
     box-sizing: border-box;
     display: inline-block;
+    float: none;
+    vertical-align: top;
     width: 49%;
 }
 
@@ -539,7 +542,7 @@ fieldset#form-groups-related_contacts,
 .bloc-info {
     border: 1px solid #464646;
     padding: 2em;
-    margin-bottom: 2em;
+    margin-bottom: 22%;
 }
 #footer-sitemap a,
 #footer-sitemap h3 {
@@ -608,11 +611,15 @@ font-size:95%;
     width: 36%;
     margin-left: 5%;
 }
+
+.bloc-suivre {
+    padding-bottom: 1em;
+}
 #footer-social {
     margin: 0 auto;
     max-width: calc(32.8333333333%);
-    position: relative;
-    top: -9em;
+    position: static;
+    top: 0;
 }
 //mobile
 .advb-submenu .advb-title {

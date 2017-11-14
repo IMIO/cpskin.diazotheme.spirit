@@ -37,7 +37,7 @@
 }
 // bloc zoom
 #accueil .bloc-document .zoom .img img {
-    height: 100% !important;
+    height: auto !important;
     max-width: 100% !important;
     width: 100% !important;
     margin-left: 0  !important;
@@ -240,9 +240,12 @@ body {
     display: flex;
     flex-flow: row nowrap;
     position: absolute !important;
-    top: 20%;
+    top: 80%;
     width: 100%;
     justify-content: space-between;
+}
+.main-homepage .slider-multiple .voir-tout {
+    margin-top: 35px;
 }
 .main-homepage .titre-rss{
     padding-left: 0;
@@ -327,6 +330,9 @@ body {
 #right-actions-viewlet{
    top:21em;
 }
+.tileImage{
+   display: inline-block;
+}
 //vue faceted
 #faceted-form .faceted-top-widgets{
    padding: 0;
@@ -368,6 +374,9 @@ body {
 #content .contact-entry{
    width: 100% !important;
 }
+.select2-container .select2-choice .select2-arrow b{
+   background-image: none !important;
+}
 //navigation view
 #content-core .navigation-view-menu{
    width: 47.75%;
@@ -388,6 +397,9 @@ h2.navigation-view-menu-title:hover + .navigation-view-menu-description{
 }
 #content #aboveContentContact .schedule{
    margin: 1em 0;
+}
+#portal-columns #content #belowContentContact .related-contact{
+   width: 100%;
 }
 //footer
 #footer-sitemap div.footer-sitemap-item {
