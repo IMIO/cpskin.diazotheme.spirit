@@ -271,11 +271,16 @@ h1, h2, h3, h4, h5, h6, #portal-globalnav li a {
 }
 /*   sub menu   */
 .portal-globalnav-cpskinmenu a:hover,
+.portal-globalnav-cpskinmenu a:focus,
 .portal-globalnav-cpskinmenu-tabs a:hover,
 .portal-globalnav-cpskinmenu .sfHover > span > a{
     background: @theme;
     color:@front !important;
     border-radius: 0;
+}
+
+#visual-portal-wrapper .portal-globalnav-cpskinmenu a:focus{
+    outline: thin none;
 }
 #nav-wrapper ul.navTreeLevel0 {
     background: @nav-background;
@@ -335,7 +340,7 @@ ul.navTreeLevel0 li.sfHover a{
     position: absolute;
     right: 0;
     top: 150px;
-    z-index: 1;
+    z-index: 9;
 }
 #hidden-search{
     float: left;
@@ -417,11 +422,6 @@ dl.actionMenu.activated dt a{
 }
 //Bloc zoom par défaut
 
-#content .zoom a {
-    color: white;
-    text-shadow: 0 0 30px #000;
-}
-
 #accueil .bloc-document .zoom {
     float: left;
     position: relative;
@@ -458,6 +458,7 @@ dl.actionMenu.activated dt a{
 }
 #content .zoom a {
     color: #fff;
+    text-shadow: 0 0 30px #000;
 }
 #accueil .bloc-document .zoom:first-child .bloc:first-child .texte {
     margin-top: -100%;
@@ -718,6 +719,12 @@ dl.actionMenu.activated dt a{
 .slider-carousel .flexslider:hover .flex-prev{
     left:0;
 }
+
+#slider-a-la-une .flex-caption > h2 {
+    line-height: 1.15em;
+    margin-bottom: 0.5em;
+}
+
 #slider-a-la-une.flexslider .flex-caption{
     box-sizing: border-box;
     height: 300px;
@@ -725,6 +732,24 @@ dl.actionMenu.activated dt a{
     opacity: 1;
     padding: 2em;
     width: 25%;
+    position: relative;
+}
+
+#slider-a-la-une.flexslider .flex-caption p a {
+    line-height: 2em;
+}
+
+#slider-a-la-une.flexslider .flex-caption p a::before {
+    content: "Lire la suite";
+    position: absolute;
+    display: block;
+    background: #d7004e;
+    bottom: 0;
+    z-index: 1;
+    padding: 1.25em;
+    color: white;
+    font-weight: bold;
+    font-size: 80%;
 }
 
 #slider-a-la-une.flexslider .flex-caption::after {
@@ -733,7 +758,7 @@ dl.actionMenu.activated dt a{
     width: 100%;
     position: absolute;
     bottom: 0;
-    height: 6.5em;
+    height: 8.5em;
     left: 0;
 }
 
@@ -903,7 +928,6 @@ dl.actionMenu.activated dt a{
 #content .zone-icones h3 a,
 #content .zone-icones h3 a:hover{
     color: #d7004e;
-    font-size: 125%;
     font-weight: bold;
 }
 
@@ -1047,7 +1071,7 @@ dl.actionMenu.activated dt a{
     display: none;
 }
 //navigation view
-.navigation-view-menu {
+.template-cpskin_navigation_view_with_leadimage .navigation-view-menu {
     float: left;
     margin-bottom: 1.5%;
     margin-right: 1.5%;
@@ -1055,13 +1079,18 @@ dl.actionMenu.activated dt a{
     width: 31.75%;
 }
 
-.navigation-view-menu .leadimage-navigation {
+.template-cpskin_navigation_view_with_leadimage .navigation-view-menu .leadimage-navigation {
     width: 100%;
     max-width:100%;
 }
 
-.navigation-view-menu-description:hover, 
-h2.navigation-view-menu-title:hover + .navigation-view-menu-description {
+.template-cpskin_navigation_view_with_leadimage .navigationLeadImage{
+    padding-top:100%;
+    background-size: cover;
+}
+
+.template-cpskin_navigation_view_with_leadimage .navigation-view-menu-description:hover, 
+.template-cpskin_navigation_view_with_leadimage h2.navigation-view-menu-title:hover + .navigation-view-menu-description {
     background: rgba(0, 0, 0, 0.8) none repeat scroll 0 0;
     color: white !important;
     height: 70%;
@@ -1070,8 +1099,8 @@ h2.navigation-view-menu-title:hover + .navigation-view-menu-description {
     visibility: visible;
 }
 
-.navigation-view-menu-description, 
-h2.navigation-view-menu-title + .navigation-view-menu-description {
+.template-cpskin_navigation_view_with_leadimage .navigation-view-menu-description, 
+.template-cpskin_navigation_view_with_leadimage h2.navigation-view-menu-title + .navigation-view-menu-description {
     bottom: 0;
     box-sizing: border-box;
     color: transparent;
@@ -1082,14 +1111,14 @@ h2.navigation-view-menu-title + .navigation-view-menu-description {
     transition: background 0.5s, padding 1s ease 0s;
 }
 
-a:hover h2 {
+.template-cpskin_navigation_view_with_leadimage a:hover h2 {
     background: black none repeat scroll 0 0;
     bottom: 70%;
     height: 30%;
     position: absolute;
 }
 
-h2.navigation-view-menu-title {
+.template-cpskin_navigation_view_with_leadimage h2.navigation-view-menu-title {
     background: rgba(0, 0, 0, 0.8) none repeat scroll 0 0;
     bottom: 0;
     box-sizing: border-box;
@@ -1101,6 +1130,19 @@ h2.navigation-view-menu-title {
     padding: 0.15em 0.5em !important;
     position: absolute;
     width: 100%;
+}
+
+.template-cpskin_navigation_view .navigation-view-menus > a, .template-cpskin_navigation_view .navigation-view-direct-access > a {
+    background: #f1efef none repeat scroll 0 0;
+    box-sizing: border-box;
+    float: left;
+    height: 8em;
+    margin-bottom: 1em;
+    margin-right: 1em;
+    min-width: 14em;
+    padding: 1em;
+    position: relative;
+    width: 23%;
 }
 //control panel
 .template-overview-controlpanel.main-homepage #portal-columns {
