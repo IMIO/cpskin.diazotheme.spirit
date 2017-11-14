@@ -2,10 +2,11 @@ Changelog
 =========
 
 
-0.1.6 (unreleased)
+0.1.6 (2017-11-14)
 ------------------
 
-- Nothing changed yet.
+- Change css for mobile, navigation and footer static.
+  [mgennart]
 
 
 0.1.5 (2017-10-20)
