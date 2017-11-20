@@ -18,11 +18,24 @@ body {
 .main-homepage #top-logo-slogan-actions-inner #search-wrapper{
     top:100px;
 }
+ul.navTreeLevel0 li a {
+    padding: 1.4em 0.75em !important;
+}
 .select2-container .select2-choice .select2-arrow b{
    background-image: none !important;
 }
 #portal-footer-wrapper #footer-social > div{
     max-width: 100%;
+}
+#content-core h2.navigation-view-menu-title {
+    font-size: 1em;
+}
+.template-cpskin_navigation_view_with_leadimage .navigation-view-menu-description:hover,
+.template-cpskin_navigation_view_with_leadimage h2.navigation-view-menu-title:hover+.navigation-view-menu-description{
+   visibility: hidden;
+}
+.template-cpskin_navigation_view_with_leadimage a:hover h2{
+   bottom: 0;
 }
 @media (orientation : portrait){
     //navigation
@@ -136,11 +149,6 @@ body {
         padding: 1em;
         background: #d7004e;
         color: #ffffff;
-    }
-    .main-homepage .icone-container {
-        display: flex;
-        flex-flow: wrap;
-        margin: 1em 0;
     }
     .main-homepage .icone-inner {
         display: block;
@@ -292,9 +300,6 @@ body {
     //navigation view
     #content-core .navigation-view-menu{
        width: 47.75%;
-    }
-    #content-core h2.navigation-view-menu-title {
-        font-size: 1em;
     }
     .navigation-view-menu-description:hover,
     h2.navigation-view-menu-title:hover + .navigation-view-menu-description{
