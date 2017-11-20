@@ -1,3 +1,6 @@
+
+
+
 //header
 #portal-logo {
     text-align: center;
@@ -180,7 +183,7 @@ dl.portlet ul.navTreeLevel1 .navTreeItem {
 
 #portal-columns #portal-column-one .portletNavigationTree dd ul.navTreeLevel1 li a {
     padding-left: 2em !important;
-    background: #f5f5f5;
+    background: #f7f7f7;
 }
 
 #portal-columns #portal-column-one .portletNavigationTree dd ul.navTreeLevel2{
@@ -250,12 +253,12 @@ ul.navTreeLevel1 {
 .zoom-1, .zoom-2 {
     display: block;
 }
-.main-homepage #nav-wrapper {
-    top: 20em;
+.main-homepage.template-folderview #nav-wrapper {
+    top: 18em;
 }
 
-.main-homepage #portal-columns {
-    top: -10em;
+.main-homepage.template-folderview #portal-columns {
+    top: -5em;
 }
 //a trier
 .bloc-document.zoom-1, .bloc-document.zoom-2 {
@@ -335,6 +338,11 @@ button[data-select2-open] {
 
 #cpskin-banner {
     z-index: 1;
+}
+
+div#top-banner {
+    max-height: 610px;
+    overflow: hidden;
 }
 
 .sc_social_bookmarks_wrapper {
@@ -495,6 +503,10 @@ fieldset#form-groups-related_contacts,
 .bloc-item {
     min-height: 360px;
 }
+.section-je-trouve .bloc-item {
+    min-height: 0;
+}
+
 //footer
 .footer-sitemap-item{
    display:none;
@@ -574,7 +586,7 @@ font-size:95%;
     height: auto;
 }
 .bloc-adresse img:last-child {
-    width: 36%;
+    width: 65%;
     margin-left: 5%;
 }
 
@@ -595,3 +607,13 @@ font-size:95%;
 .subsection-services-communaux-annuaire-services .photoAlbumEntryWrapper img {
     display: none;
 }
+// Annuaire
+.template-facetednavigation_view.portaltype-directory .organization-logo {
+    display: none;
+}
+
+.portaltype-organization #contact-label,
+.portaltype-organization #other-contacts .contact-photo {
+    display: none;
+}
+
