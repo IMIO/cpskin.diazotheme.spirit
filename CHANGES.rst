@@ -2,10 +2,11 @@ Changelog
 =========
 
 
-0.1.7 (unreleased)
+0.1.7 (2017-11-20)
 ------------------
 
-- Nothing changed yet.
+- Change css for mobile
+  [mgennart]
 
 
 0.1.6 (2017-11-14)
