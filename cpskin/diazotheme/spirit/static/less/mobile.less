@@ -1,4 +1,8 @@
 // general
+body{
+   padding: 0 !important;
+   overflow-x: hidden;
+}
 #portal-columns {
    padding-right: 0;
 }
@@ -34,6 +38,10 @@
 }
 .top-menu-action dd{
    left: -240%;
+}
+//homepage
+.main-homepage.template-folderview #portal-top::after{
+   z-index: -1;
 }
 // bloc zoom
 #accueil .bloc-document .zoom{
@@ -135,7 +143,7 @@
 #advanced-breadcrumbs {
     color: #34495e !important;
 }
-.main-homepage #nav-wrapper,
+.main-homepage.template-folderview #nav-wrapper,
 #nav-wrapper{
     z-index: 3;
     margin: 0;
@@ -210,9 +218,6 @@
 }
 .main-homepage #portal-columns {
     padding-top: 0;
-}
-body {
-    padding: 0 !important;
 }
 .main-homepage #portal-top::after{
    display: none;
