@@ -7,7 +7,10 @@ h1, h2, h3, h4, h5, h6, #portal-globalnav li a {
     position: relative;
     z-index: inherit;
 }
-.main-homepage.template-folderview #portal-top{
+.portaltype-plone-site.userrole-authenticated #portal-top {
+    height: 780px;
+}
+.main-homepage #portal-top{
     position: relative;
 }
 .main-homepage.template-folderview #portal-top::after {
@@ -677,26 +680,19 @@ dl.actionMenu.activated dt a{
 }
 .agenda .results {
     background-color: #ffffff;
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
     margin-bottom: 50px;
     padding-left: 0;
     width: 100%;
 }
-.agenda .results ul:before {
-    content: "";
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    border-top: 1px solid #ccc;
-    border-bottom: 1px solid #ccc;
-    width: 300%;
-    left: -100%;
-}
-
 .agenda .results ul {
     display: flex;
     justify-content: space-between;
 }
-
+#content .agenda li{
+    margin: 0;
+}
 //Agenda
 .agenda .titre-rss,
 .agenda .titre-rss a {
@@ -705,6 +701,9 @@ dl.actionMenu.activated dt a{
 }
 .agenda .bloc-rss {
     display: none;
+}
+.agenda .titre h2{
+    color: @black;
 }
 .agenda .results ul .bloc-item {
     float: none;
@@ -801,20 +800,18 @@ dl.actionMenu.activated dt a{
 #slider-a-la-une.flexslider .flex-caption p a {
     line-height: 2em;
 }
-
-#slider-a-la-une.flexslider .flex-caption p a::before {
-    content: "Lire la suite";
-    position: absolute;
-    display: block;
-    background: #d7004e;
-    bottom: 0;
-    z-index: 1;
-    padding: 1.25em;
-    color: white;
-    font-weight: bold;
-    font-size: 80%;
+#content #accueil .flexslider .slides>li{
+    position: relative;
 }
-
+#slider-a-la-une .read-next-link{
+    display: block;
+    position: absolute;
+    bottom: 0;
+    margin-left: 2em;
+    padding: 1em;
+    background: #d7004e;
+    color: #ffffff;
+}
 #slider-a-la-une.flexslider .flex-caption::after {
     content: "";
     background: linear-gradient(to bottom,transparent ,#000, #000);
@@ -985,6 +982,41 @@ dl.actionMenu.activated dt a{
     flex-flow: column nowrap;
     margin: 20px;
     right: 0;
+}
+// section-evenements subsection-agenda
+// pagination
+.faceted-results div .pagination.listingBar:first-child{
+    display: none;
+}
+#faceted-results div.listingBar{
+    float: right;
+    margin-right: -0.75em;
+}
+#content #faceted-results .listingBar a,
+#content #faceted-results .listingBar a:last-child,
+#faceted-form #center-content-area #faceted-results .listingBar a:hover:last-child{
+    border: none;
+}
+#faceted-form #center-content-area #faceted-results .listingBar a:hover{
+    border-bottom: none;
+    border-top: none;
+    border-left: none;
+    border-right: 1px solid #dedede;
+    color: @pagination-color-current !important;
+}
+.pagination.listingBar .current{
+    color: @pagination-color-current;
+    border-right: 1px solid #dedede;
+    padding: 0.25em 0.5em;
+    font-size: 1.5em;
+}
+#content #faceted-results .listingBar a{
+    color: @black;
+    border-right: 1px solid #dedede;
+    font-size: 1.5em;
+}
+#content #faceted-results .listingBar .next{
+    display: none;
 }
 //icone
 .icone-container {
