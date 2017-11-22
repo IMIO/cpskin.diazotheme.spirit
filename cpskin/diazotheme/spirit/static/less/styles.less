@@ -534,16 +534,16 @@ dl.actionMenu.activated dt a{
     display: none !important;
 }
 
-.zoom-1::after {
-    background: @slider-background;
+.zoom-1::after,
+.zoom-2::after{
+    background: #f2f2f2;
     content: "";
-    display: block;
-    height: calc(50%);
-    left: -50%;
+    left: -100%;
     position: absolute;
-    top: 36%;
-    width: calc(200%);
+    top: 29em;
+    width: 300%;
     z-index: -1;
+    bottom: -52em;
 }
 .zoom-1,
 .zoom-2{
