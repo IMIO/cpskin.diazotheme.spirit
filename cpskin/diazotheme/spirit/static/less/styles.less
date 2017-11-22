@@ -293,7 +293,6 @@ h1, h2, h3, h4, h5, h6, #portal-globalnav li a {
     border-top: 0.5em solid @theme;
     margin-top: -3.2em;
     max-width: calc(100% - 17.8%);
-    text-transform: uppercase;
     width: 100%;
     z-index: 2;
 }
@@ -1039,10 +1038,18 @@ dl.actionMenu.activated dt a{
 
 .event.summary.details > li {
     border-width: 1px 1px 0px 1px;
-    padding: 1em;
+    padding: 0.75em 1em;
     margin-bottom: 0px !important;
     border-color: #f2f2f2;
     border-style: solid;
+}
+
+.event_contacts a {
+    display: block;
+}
+
+.event.summary.details > li:last-child {
+    border-width: 1px;
 }
 
 //zone multimedia
@@ -1248,16 +1255,22 @@ dl.actionMenu.activated dt a{
 }
 
 .template-cpskin_navigation_view .navigation-view-menus > a, .template-cpskin_navigation_view .navigation-view-direct-access > a {
-    background: black;
+    background: #202020;
     box-sizing: border-box;
     float: left;
-    height: 6em;
+    height: 8em;
     margin-bottom: 1em;
     margin-right: 1em;
     min-width: 14em;
     padding: 1em 2em 1em 1em;
     position: relative;
+    width: 47.75%;
+}
+
+.template-cpskin_navigation_view .width-full .navigation-view-menus > a,
+.template-cpskin_navigation_view .width-full .navigation-view-direct-access > a{
     width: 31.75%;
+    height: 6em;
 }
 
 .template-cpskin_navigation_view .navigation-view-menus > a::after {
