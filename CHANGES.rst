@@ -2,11 +2,23 @@ Changelog
 =========
 
 
-0.1.8 (unreleased)
+0.1.10 (unreleased)
+-------------------
+
+- Nothing changed yet.
+
+
+0.1.9 (2017-11-22)
 ------------------
 
 - Nothing changed yet.
 
+
+0.1.8 (2017-11-22)
+------------------
+
+- Change css for mobile and event view.
+  [mgennart]
 
 0.1.7 (2017-11-20)
 ------------------
