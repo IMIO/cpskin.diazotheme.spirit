@@ -1,5 +1,7 @@
 
-
+#content a:link, dl.portlet a:link {
+    color: #d7004e;
+}
 
 //header
 #portal-logo {
@@ -190,9 +192,19 @@ dl.portlet ul.navTreeLevel1 .navTreeItem {
 }
 
 #portal-columns #portal-column-one .portletNavigationTree dd ul.navTreeLevel1 li a {
-    padding-left: 2em !important;
+    padding-left: 2.5em !important;
     background: #f7f7f7;
 }
+
+#portal-column-one .navTreeLevel1 a::before {
+    content: "⤷";
+    margin-right: 0.25em;
+    margin-left: -1.25em;
+    font-size: 120%;
+    float: left;
+    margin-top: -0.1em;
+}
+
 
 #portal-columns #portal-column-one .portletNavigationTree dd ul.navTreeLevel2{
     padding-top:0;
