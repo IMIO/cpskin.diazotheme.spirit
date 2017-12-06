@@ -125,7 +125,6 @@ dl.portletNavigationTree dt.portletHeader a{
 #right-actions-viewlet-inner>a {
     height: 1em;
     padding: 1em;
-    display: inline-block;
     width: 1em;
     margin-top: 0.25em;
     margin-bottom: 0;
@@ -138,7 +137,7 @@ dl.portletNavigationTree dt.portletHeader a{
 #right-actions-viewlet-inner>a::after{
    background:#000;
    color: white;
-   left:0;
+   left:0.25em;
    margin-left:0 !important;
    font-size:100% !important;
    padding:1em !important;
@@ -147,7 +146,7 @@ dl.portletNavigationTree dt.portletHeader a{
 
 
 #right-actions-viewlet #other-actions li a:before{
-    margin:0;
+    margin:0 0 0 0.25em;
     padding: 1em;
     color: white;
 }
@@ -163,14 +162,18 @@ dl.portletNavigationTree dt.portletHeader a{
 .icon-sendtomanager::before {
     background: #d7004e;
 }
-#social-share::after{
+#right-actions-viewlet #other-actions #social-share::after{
     color:  #fff;
     margin-top: 0.25em;
-    margin-left: 0;
-    padding: 1em;
+    margin-left: 0.25em;
+    padding: 0.75em;
     background: #d7004e;
     width: 1em;
 }
+#right-actions-viewlet #other-actions #social-share-container {
+    right: 2em;
+}
+
 //Columns
 div.width-1\:4 {
     width: 26.75%;
@@ -300,6 +303,7 @@ ul.navTreeLevel1 {
 
 #hidden-search {
     margin-top: -1.3em !important;
+    height: 0px !important;
 }
 
 ul.navTreeLevel0 {
@@ -440,7 +444,7 @@ fieldset#form-groups-related_contacts,
 .schedule-widget-day .title {
     box-sizing: border-box;
     font-weight: normal;
-    min-width: 76px;
+    min-width: 85px;
     padding-left: 0.75em;
 }
 
