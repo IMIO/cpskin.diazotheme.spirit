@@ -2,10 +2,10 @@ Changelog
 =========
 
 
-0.1.11 (unreleased)
+0.1.11 (2017-12-07)
 -------------------
 
-- Nothing changed yet.
+- Add css for mini site and drop viewlet mini site
 
 
 0.1.10 (2017-11-23)
