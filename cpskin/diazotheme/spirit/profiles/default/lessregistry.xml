@@ -29,6 +29,16 @@
     compression="none"
     expression="python:here.restrictedTraverse('@@currentTheme')() == 'cpskin.diazotheme.spirit'"
     applyPrefix="True"
+    insert-before="++theme++cpskin.diazotheme.spirit/less/minisites.less" />
+  
+  <stylesheet title="cpskin.diazotheme.spirit LESS Liege mini site"
+    id="++theme++cpskin.diazotheme.spirit/less/minisites.less"
+    media="all"
+    enabled="1"
+    rendering="link"
+    compression="none"
+    expression="python:here.restrictedTraverse('@@currentTheme')() == 'cpskin.diazotheme.spirit'"
+    applyPrefix="True"
     insert-before="++theme++cpskin.diazotheme.spirit/less/mobile.less" />
  
  

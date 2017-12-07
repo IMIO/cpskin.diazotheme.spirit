@@ -1,6 +1,7 @@
 
-#content a:link, dl.portlet a:link {
+#content a:link, #visual-portal-wrapper dl.portlet a:link {
     color: #d7004e;
+    background: transparent;
 }
 
 //header
@@ -17,8 +18,9 @@ dl.portletNavigationTree dt.portletHeader a{
     color:white;
 }
 
-#portal-column-one .portletNavigationTree dd ul li a {
+#visual-portal-wrapper #portal-column-one .portletNavigationTree dd ul li a {
     background: @bg-nav-fac;
+    color: @black;
     border-top: 1px solid white;
     border-bottom:0px solid white;
 }
@@ -84,7 +86,11 @@ dl.portletNavigationTree dt.portletHeader a{
     display:none !important;
 }
 // Other-action
-#other-actions {
+#right-actions-viewlet #right-actions-viewlet-inner {
+    top: 1em;
+    padding-top: 0;
+}
+#right-actions-viewlet-inner #other-actions {
     padding-top: 0;
 }
 
@@ -114,7 +120,7 @@ dl.portletNavigationTree dt.portletHeader a{
     margin-left: 0em;
 }
 
-#right-actions-viewlet-inner a{
+#right-actions-viewlet #right-actions-viewlet-inner a{
     top:0;
 }
 
@@ -154,7 +160,9 @@ dl.portletNavigationTree dt.portletHeader a{
 #right-actions-viewlet .sc_social_bookmarks li a.icon-Facebook::before {
     background: #3b5998;
 }
-
+#other-actions #social-share-container {
+    bottom: -15em;
+}
 .icon-print:before {
     background: #d7004e;
 }
@@ -411,8 +419,6 @@ fieldset#form-groups-related_contacts,
     float: right;
     width:50%;
 }
-
-
 .schedule > div {
     float: right;
 }

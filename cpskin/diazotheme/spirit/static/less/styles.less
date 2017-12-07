@@ -713,6 +713,7 @@ dl.actionMenu.activated dt a{
 }
 #content .agenda li{
     margin: 0;
+    padding: 2% 1% 1% 0;
 }
 //Agenda
 .agenda .titre-rss,
@@ -802,7 +803,9 @@ dl.actionMenu.activated dt a{
 .slider-carousel .flexslider:hover .flex-prev{
     left:0;
 }
-
+#content #accueil #slider-a-la-une.flexslider .slides > li{
+    display: inline-block !important;
+}
 #slider-a-la-une .flex-caption > h2 {
     line-height: 1.15em;
     margin-bottom: 0.5em;
@@ -866,6 +869,7 @@ dl.actionMenu.activated dt a{
 
 #faceted-form #top-area {
     background: #f2f2f2;
+    padding-bottom: 4em;
 }
 
 .portaltype-directory .faceted-widget.section-search form {
@@ -899,6 +903,7 @@ dl.actionMenu.activated dt a{
 #faceted-form .widget-fieldset legend {
     font-weight: normal;
     font-size: 100% !important;
+    float: left;
 }
 #faceted-form .section-public-cible,
 #faceted-form .section-tarification {
@@ -934,7 +939,8 @@ dl.actionMenu.activated dt a{
     background: @background;
 }
 #faceted-form .select2-container .select2-choice .select2-arrow b::before {
-    content: "+";
+    content: "\e848";
+    font-family: fontello;
     line-height: 40px;
 }
 #faceted-form .widget-fieldset li {
