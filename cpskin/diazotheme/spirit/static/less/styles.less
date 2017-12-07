@@ -1,6 +1,9 @@
 h1, h2, h3, h4, h5, h6, #portal-globalnav li a {
     font-family: abel;
 }
+#content a:hover, dl.portlet a:hover {
+    color: @theme !important;
+}
 #portal-header {
     margin: 0 auto;
     max-width: 1920px;
@@ -711,10 +714,6 @@ dl.actionMenu.activated dt a{
     display: flex;
     justify-content: space-between;
 }
-#content .agenda li{
-    margin: 0;
-    padding: 2% 1% 1% 0;
-}
 //Agenda
 .agenda .titre-rss,
 .agenda .titre-rss a {
@@ -727,13 +726,13 @@ dl.actionMenu.activated dt a{
 .agenda .titre h2{
     color: @black;
 }
-.agenda .results ul .bloc-item {
+#content .agenda .results ul .bloc-item {
     float: none;
     min-height: calc(155px);
     padding: 1.5em;
     width: 33%;
     float: none;
-    margin-bottom: 0;
+    margin: 0;
 }
 .agenda .results ul .bloc-item:nth-child(1),
 .agenda .results ul .bloc-item:nth-child(2) {
@@ -803,9 +802,6 @@ dl.actionMenu.activated dt a{
 .slider-carousel .flexslider:hover .flex-prev{
     left:0;
 }
-#content #accueil #slider-a-la-une.flexslider .slides > li{
-    display: inline-block !important;
-}
 #slider-a-la-une .flex-caption > h2 {
     line-height: 1.15em;
     margin-bottom: 0.5em;
@@ -826,6 +822,7 @@ dl.actionMenu.activated dt a{
 }
 #content #accueil .flexslider .slides>li{
     position: relative;
+    display: inline-block;
 }
 #slider-a-la-une .read-next-link{
     display: block;

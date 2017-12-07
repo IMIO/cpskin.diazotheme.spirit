@@ -24,6 +24,9 @@ dl.portletNavigationTree dt.portletHeader a{
     border-top: 1px solid white;
     border-bottom:0px solid white;
 }
+dl.portlet.portletNavigationTree a:hover {
+    color: #333 !important;
+}
 
 //Annuaire
 
@@ -42,7 +45,16 @@ dl.portletNavigationTree dt.portletHeader a{
     float: left;
     width: 100%;
 }
+.coordinates .logo {
+    background: #f1f1f1;
+    padding: 0.5em;
+    margin: 0.5em 0;
+}
 
+.coordinates .logo img {
+    height: 4em;
+    width: auto;
+}
 .activity {
     clear: both;
 }
@@ -93,37 +105,29 @@ dl.portletNavigationTree dt.portletHeader a{
 #right-actions-viewlet-inner #other-actions {
     padding-top: 0;
 }
-
 #right-actions-viewlet{
    right:1.5em;
 }
-
 #right-actions-viewlet-inner{
    top:1em;
    padding-top:0;
 }
-
 #right-actions-viewlet-inner>a::before{
     display:none;
 }
-
 #other-actions div:first-child::after {
     border-right: 0px solid gray;
 }
-
 #other-actions div:first-child::before {
     content: "";
 }
-
 #right-actions-viewlet [class^="icon-"]::before,
 #right-actions-viewlet [class*=" icon-"]::before {
     margin-left: 0em;
 }
-
 #right-actions-viewlet #right-actions-viewlet-inner a{
     top:0;
 }
-
 #right-actions-viewlet-inner .iconifiedDocumentActions ul{
    margin:0;
 }
@@ -135,11 +139,11 @@ dl.portletNavigationTree dt.portletHeader a{
     margin-top: 0.25em;
     margin-bottom: 0;
 }
-
-#right-actions-viewlet .icons_only a, #right-actions-viewlet .iconifiedDocumentActions a{
+#right-actions-viewlet .icons_only a,
+#right-actions-viewlet .iconifiedDocumentActions a{
     margin-top: 0.25em;
+    position: relative;
 }
-
 #right-actions-viewlet-inner>a::after{
    background:#000;
    color: white;
@@ -150,10 +154,9 @@ dl.portletNavigationTree dt.portletHeader a{
    width:1em;
 }
 
-
-#right-actions-viewlet #other-actions li a:before{
+#viewlet-above-content #right-actions-viewlet #other-actions li a:before{
     margin:0 0 0 0.25em;
-    padding: 1em;
+    padding: 0.75em;
     color: white;
 }
 
@@ -181,7 +184,25 @@ dl.portletNavigationTree dt.portletHeader a{
 #right-actions-viewlet #other-actions #social-share-container {
     right: 2em;
 }
-
+#viewlet-social-like.vertical > div {
+    float: left !important;
+    clear: both;
+    margin-bottom: 0.5em;
+    height: 1.5em;
+}
+.iconifiedDocumentActions a{
+    position: relative;
+}
+.iconifiedDocumentActions a img {
+    display: block;
+}
+.iconifiedDocumentActions ul li a img {
+    position: absolute;
+    left: 0;
+    opacity: 0;
+    top: 0;
+    width:100%;
+}
 //Columns
 div.width-1\:4 {
     width: 26.75%;
@@ -206,7 +227,6 @@ dl.portlet ul.navTreeLevel1 .navTreeItem {
     padding-left: 2.5em !important;
     background: #f7f7f7;
 }
-
 #portal-column-one .navTreeLevel1 a::before {
     content: "⤷";
     margin-right: 0.25em;
@@ -216,7 +236,6 @@ dl.portlet ul.navTreeLevel1 .navTreeItem {
     margin-top: -0.1em;
 }
 
-
 #portal-columns #portal-column-one .portletNavigationTree dd ul.navTreeLevel2{
     padding-top:0;
 }
@@ -224,7 +243,9 @@ dl.portlet ul.navTreeLevel1 .navTreeItem {
 #portal-columns #portal-column-one .portletNavigationTree dd ul.navTreeLevel2 li a {
     padding-left: 3em !important;
 }
-
+#portal-columns #portal-column-one aside .portletNavigationTree dd ul.navTreeLevel1 li a {
+    padding-left: 2.5em !important;
+}
 #portal-columns #portal-column-one .portletNavigationTree dd ul li a {
     padding: 1em !important;
     border-top: 2px solid white; 
@@ -271,14 +292,27 @@ ul.navTreeLevel1 {
 .galleria {
     box-shadow: 0 0 0 0 #aaa;
 }
-
 .galleria-info-text {
     background-color: #fff;
 }
-
 #fancybox-overlay {
     background: white none repeat scroll 0 0!important;
     opacity: 1 !important;
+}
+.galleria-container {
+    padding-top: 2em;
+}
+.galleria-info {
+    top: -2em !important;
+}
+.galleria-info-close{
+   display:none !important;
+}
+.galleria-info-title {
+    text-align: center !important;
+}
+.galleria-info-text {
+    background-color: #fff !important;
 }
 //homepage
 .zoom-1, .zoom-2 {
@@ -647,4 +681,7 @@ font-size:95%;
 .portaltype-organization #other-contacts .contact-photo {
     display: none;
 }
-
+//ckeditor
+.template-babel_edit #fieldset-default{
+     height:auto !important;
+}

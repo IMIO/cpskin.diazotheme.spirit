@@ -120,5 +120,6 @@
         <drop css:content="#portal-breadcrumbs"/>
         <drop css:content="#cpskin-slogan" />
         <drop css:content="#container-minisite-globalnav" />
+        <drop css:content="#viewlet-minisite"/>
     </rules>
 </rules>
