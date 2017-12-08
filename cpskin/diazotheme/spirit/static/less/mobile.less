@@ -92,6 +92,21 @@ body{
 .agenda .results ul .bloc-item a {
     text-align: center;
 }
+.agenda .bigimage:nth-child(2n),
+.agenda .bloc-item:nth-child(2n) {
+    padding-left: 1.5em !important;
+}
+.main-homepage #content .agenda .results ul{
+    padding: 0;
+}
+.agenda .bloc-item a {
+    display: inline-block;
+}
+.main-homepage .agenda .voir-tout {
+    margin-top: -2em;
+    top: 0;
+    margin-bottom: 0.5em;
+}
 // Agenda vue
 .section-evenements.subsection-agenda .faceted-top-widgets,
 .collection-event .faceted-top-widgets{
@@ -311,7 +326,7 @@ body{
 }
 .main-homepage .agenda .results ul .bloc-item h3 {
     margin-top: 0;
-    padding-left: 0.5em;
+    padding-left: 1em;
     text-align: left;
 }
 .main-homepage .agenda .results ul .bloc-item .day-month{
@@ -528,6 +543,12 @@ h2.navigation-view-menu-title:hover + .navigation-view-menu-description{
 #minisite-logo{
    width: 100%;
 }
+#minisite-actions{
+   width: 100%;
+}
+#minisite-actions ul{
+   display: flex;
+}
 body.subsection-culture-musees-la-boverie #minisite-logo,
 body.subsection-kultur-museen-la-boverie #minisite-logo,
 body.subsection-cultuur-musea-la-boverie #minisite-logo,
@@ -582,4 +603,13 @@ body.subsection-culture-museums-la-boverie #slider-a-la-une.flexslider .flex-cap
 #accueil .partner-1 img{
    height: auto !important;
    width: 100% !important;
+}
+.template-folderview.subsection-culture-musees-la-boverie #portal-column-two div,
+.template-folderview.subsection-kultur-museen-la-boverie #portal-column-two div,
+.template-folderview.subsection-cultuur-musea-la-boverie #portal-column-two div,
+.template-folderview.subsection-culture-museums-la-boverie #portal-column-two div{
+   margin: 0 0 0 8%;
+}
+.portletStaticText.portlet-static-acces-droit {
+    margin-bottom: 10% !important;
 }

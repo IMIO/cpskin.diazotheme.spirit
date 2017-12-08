@@ -2,11 +2,11 @@ Changelog
 =========
 
 
-0.1.14 (unreleased)
+0.1.14 (2017-12-08)
 -------------------
 
-- Nothing changed yet.
-
+- Change css for mobile in mini site.
+  [mgennart]
 
 0.1.13 (2017-12-08)
 -------------------
