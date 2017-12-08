@@ -4,6 +4,17 @@ h1, h2, h3, h4, h5, h6, #portal-globalnav li a {
 #content a:hover, dl.portlet a:hover {
     color: @theme !important;
 }
+figure.image {
+    display: inline-block;
+}
+figure.image img {
+    max-width: 100%;
+}
+figure.image figcaption {
+    text-align: center;
+    color: #b3b3b3;
+    margin-bottom: 0.5em;
+}
 #portal-header {
     margin: 0 auto;
     max-width: 1920px;
@@ -1287,7 +1298,20 @@ dl.actionMenu.activated dt a{
     visibility: visible;
     width:100%;
 }
-
+.navigation-view-menu-description::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    height: 2.5em;
+    left: 0;
+    opacity: 0;
+}
+.navigation-view-menu-description:hover::after,
+.template-cpskin_navigation_view_with_leadimage h2.navigation-view-menu-title:hover + .navigation-view-menu-description::after{
+    background: linear-gradient(to bottom,transparent ,#000000);
+    opacity: 0.75;
+}
 .template-cpskin_navigation_view_with_leadimage .navigation-view-menu-description, 
 .template-cpskin_navigation_view_with_leadimage h2.navigation-view-menu-title + .navigation-view-menu-description {
     background: rgba(0, 0, 0, 0) none repeat scroll 0 0;
@@ -1323,7 +1347,7 @@ dl.actionMenu.activated dt a{
     width: 100%;
 }
 
-.template-cpskin_navigation_view .navigation-view-menus > a, .template-cpskin_navigation_view .navigation-view-direct-access > a {
+.template-cpskin_navigation_view #content .navigation-view-menus > a, .template-cpskin_navigation_view #content .navigation-view-direct-access > a {
     background: #202020;
     box-sizing: border-box;
     float: left;
@@ -1334,6 +1358,9 @@ dl.actionMenu.activated dt a{
     padding: 1em 2em 1em 1em;
     position: relative;
     width: 47.75%;
+}
+.section-contact.template-cpskin_navigation_view #content .navigation-view-menus > a, .section-contact.template-cpskin_navigation_view #content .navigation-view-direct-access > a {
+    height: 5em;
 }
 
 .template-cpskin_navigation_view .width-full .navigation-view-menus > a,
