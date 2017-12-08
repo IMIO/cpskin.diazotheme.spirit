@@ -320,7 +320,6 @@ ul.navTreeLevel1 li a{
 }
 ul.navTreeLevel1{
     max-width: 100%;
-    text-transform: lowercase;
 }
 ul.navTreeLevel0 li.sfHover a{
     color: #333;
@@ -739,8 +738,8 @@ dl.actionMenu.activated dt a{
 }
 #content .agenda .results ul .bloc-item {
     float: none;
-    min-height: calc(155px);
-    padding: 1.5em;
+    min-height: calc(130px);
+    padding: 1.5em 1.5em 0.75em 1.5em;
     width: 33%;
     float: none;
     margin: 0;
@@ -998,6 +997,9 @@ dl.actionMenu.activated dt a{
 }
 .collection-event .event-entry .pagecaption {
     width: 50% !important;
+    padding-top: 1em;
+    box-sizing: border-box;
+    text-align: center;
 }
 .collection-event .event-entry .pagecaption h3 {
     margin-top: calc(@size-day-month + 20px);
@@ -1080,6 +1082,10 @@ dl.actionMenu.activated dt a{
 #content .zone-icones h3 a:hover{
     color: #d7004e;
     font-weight: bold;
+}
+
+#content .icone-inner h3:hover + p a {
+    color: #d7004e;
 }
 
 #content .zone-icones p a{
