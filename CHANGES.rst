@@ -2,17 +2,30 @@ Changelog
 =========
 
 
-0.1.12 (unreleased)
+0.1.14 (unreleased)
 -------------------
 
 - Nothing changed yet.
 
 
+0.1.13 (2017-12-08)
+-------------------
+
+- Change bottom for .zoom-1::after and.zoom-2::after.
+  [mgennart]
+
+
+0.1.12 (2017-12-08)
+-------------------
+
+- Change css for mini site in mobile.
+  [mgennart]
+
 0.1.11 (2017-12-07)
 -------------------
 
 - Add css for mini site and drop viewlet mini site
-
+  [mgennart]
 
 0.1.10 (2017-11-23)
 -------------------
