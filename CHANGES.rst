@@ -2,7 +2,7 @@ Changelog
 =========
 
 
-0.1.12 (unreleased)
+0.1.12 (2017-12-08)
 -------------------
 
 - Change css for mini site in mobile.
