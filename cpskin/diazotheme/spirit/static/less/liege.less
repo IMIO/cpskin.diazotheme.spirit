@@ -3,6 +3,56 @@
     color: #d7004e;
     background: transparent;
 }
+#content a[href*=".pdf"] {
+    padding-right: 1em;
+}
+
+#content a[href*=".pdf"]::after {
+    content: "\f1c1";
+    font-family: fontello;
+    position: absolute;
+    margin-left: 0.5em;
+}
+
+.highlightedSearchTerm {
+    background-color: transparent;
+}
+
+.section-albums.template-facetednavigation_view #faceted-results .eea-preview-items {
+    display: flex;
+    flex-wrap: wrap;
+}
+.section-albums.template-facetednavigation_view #faceted-results .photoAlbumEntry{
+    width: 18%;
+    border-radius: 0;
+    margin: 3% 1% 1em;
+}
+.section-albums.template-facetednavigation_view #faceted-results .photoAlbumEntryWrapper {
+    float: left;
+    margin-right: 0;
+    width: 100%;
+}
+.section-albums.template-facetednavigation_view #faceted-results .photoAlbumEntry a{
+    padding: 0;
+}
+
+.section-albums.template-facetednavigation_view #faceted-results .photoAlbumEntry a,
+.section-albums.template-facetednavigation_view #faceted-results .photoAlbumEntry .photoAlbumEntryTitle{
+    width: 100% !important;
+}
+.section-albums.template-facetednavigation_view #faceted-results .photoAlbumEntry a:hover::after{
+    display: none;
+}
+.section-albums.template-facetednavigation_view .photoAlbumEntry img{
+    border-radius: 0;
+}
+.section-albums.template-facetednavigation_view .photoAlbumEntry a::before{
+    display: none;
+}
+
+.section-albums.template-facetednavigation_view .photoAlbumEntryWrapper{
+    height: auto;
+}
 
 //header
 #portal-logo {
@@ -98,6 +148,9 @@ dl.portlet.portletNavigationTree a:hover {
     display:none !important;
 }
 // Other-action
+.portaltype-formfolder .iconifiedDocumentActions {
+    display: none;
+}
 #right-actions-viewlet #right-actions-viewlet-inner {
     top: 1em;
     padding-top: 0;
@@ -236,6 +289,12 @@ dl.portlet ul.navTreeLevel1 .navTreeItem {
     margin-top: -0.1em;
 }
 
+#portal-column-one .navTreeLevel2 a::before{
+        content: "°";
+        margin-top: 0.25em;
+        margin-left: -1em;
+}
+
 #portal-columns #portal-column-one .portletNavigationTree dd ul.navTreeLevel2{
     padding-top:0;
 }
@@ -245,6 +304,10 @@ dl.portlet ul.navTreeLevel1 .navTreeItem {
 }
 #portal-columns #portal-column-one aside .portletNavigationTree dd ul.navTreeLevel1 li a {
     padding-left: 2.5em !important;
+}
+#portal-columns #portal-column-one aside .portletNavigationTree dd ul.navTreeLevel2 li a {
+    padding-left: 2.5em !important;
+    background: transparent;
 }
 #portal-columns #portal-column-one .portletNavigationTree dd ul li a {
     padding: 1em !important;
