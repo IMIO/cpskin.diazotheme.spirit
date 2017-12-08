@@ -5,7 +5,8 @@ Changelog
 0.1.13 (unreleased)
 -------------------
 
-- Nothing changed yet.
+- Change bottom for .zoom-1::after and.zoom-2::after.
+  [mgennart]
 
 
 0.1.12 (2017-12-08)
