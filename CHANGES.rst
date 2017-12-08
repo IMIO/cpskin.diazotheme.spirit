@@ -5,14 +5,14 @@ Changelog
 0.1.12 (unreleased)
 -------------------
 
-- Nothing changed yet.
-
+- Change css for mini site in mobile.
+  [mgennart]
 
 0.1.11 (2017-12-07)
 -------------------
 
 - Add css for mini site and drop viewlet mini site
-
+  [mgennart]
 
 0.1.10 (2017-11-23)
 -------------------
