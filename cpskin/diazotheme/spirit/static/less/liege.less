@@ -259,9 +259,13 @@ dl.portlet ul.navTreeLevel1 .navTreeItem {
     outline: medium none;
 }
 
-ul.navTreeLevel0 li a{
+#nav-wrapper ul.navTreeLevel0 li a{
     padding: 1.4em 1.75em !important;
     margin: 0;
+}
+
+.sf-menu ul.navTreeLevel1{
+    padding-top: 0;
 }
 
 .sf-menu ul.navTreeLevel1.has_direct_access {
@@ -586,9 +590,9 @@ fieldset#form-groups-related_contacts,
     padding: 2em;
     margin-bottom: 22%;
 }
-#footer-sitemap a,
+#portal-footer-wrapper #footer-sitemap a,
 #footer-sitemap h3 {
-    color: #fff;
+    color: @front;
 }
 #footer-sitemap h3{
     font-size:110%;
@@ -658,7 +662,7 @@ font-size:95%;
 .bloc-suivre {
     padding-bottom: 1em;
 }
-#footer-social {
+#portal-footer-wrapper #footer-social {
     margin: 0 auto;
     max-width: calc(32.8333333333%);
     position: static;
