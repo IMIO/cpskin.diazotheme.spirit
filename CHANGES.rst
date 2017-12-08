@@ -2,7 +2,7 @@ Changelog
 =========
 
 
-0.1.13 (unreleased)
+0.1.13 (2017-12-08)
 -------------------
 
 - Change bottom for .zoom-1::after and.zoom-2::after.
