@@ -2,11 +2,11 @@ Changelog
 =========
 
 
-0.1.15 (unreleased)
+0.1.15 (2017-12-11)
 -------------------
 
-- Nothing changed yet.
-
+- Change rules for mini site action in mini site mode
+  [mgennart]
 
 0.1.14 (2017-12-08)
 -------------------

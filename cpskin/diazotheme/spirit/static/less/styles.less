@@ -4,6 +4,12 @@ h1, h2, h3, h4, h5, h6, #portal-globalnav li a {
 #content a:hover, dl.portlet a:hover {
     color: @theme !important;
 }
+
+.sf-menu ul.navTreeLevel1.has_direct_access,
+.direct_access .firstItem {
+    padding-top: 0;
+}
+
 figure.image {
     display: inline-block;
 }
@@ -14,6 +20,7 @@ figure.image figcaption {
     text-align: center;
     color: #b3b3b3;
     margin-bottom: 0.5em;
+    font-size:90%;
 }
 #portal-header {
     margin: 0 auto;
@@ -295,8 +302,8 @@ figure.image figcaption {
 .portal-globalnav-cpskinmenu a:focus,
 .portal-globalnav-cpskinmenu-tabs a:hover,
 .portal-globalnav-cpskinmenu .sfHover > span > a{
-    background: @theme;
-    color:@front !important;
+    background: @nav-background;
+    color:@theme !important;
     border-radius: 0;
 }
 
@@ -328,7 +335,7 @@ ul.navTreeLevel0 li.sfHover a{
 .sf-menu ul.navTreeLevel2,
 .sf-menu ul.navTreeLevel3{
     background: @nav-background;
-    border-top: 0.1em solid #ebebeb !important;
+    border-top: 0em solid #ebebeb !important;
 }
 .sf-menu ul.direct_access{
     background: @nav-background !important;
@@ -338,9 +345,10 @@ ul.navTreeLevel0 li.sfHover a{
     color:@theme;
     margin-left: -0.75em;
     margin-right: 0.25em;
+    font-weight: bold;
 }
 .sf-menu .direct_access li a:hover::before{
-    color:@front;
+    color:@theme;
 }
 /*   top-actions   */
 #top-actions-actions > div,
@@ -599,10 +607,11 @@ dl.actionMenu.activated dt a{
     padding: 0.5em;
 }
 .slider-multiple .carousel.flexslider ul > li .flex-caption > h2 {
-    font-size: 1em;
-    line-height: 2em;
+    font-size: 1.1em;
+    line-height: 1.25em;
     padding-left: 1em;
     padding-right: 1em;
+    padding-top: 1.5em;
 }
 .slider-multiple .carousel.flexslider ul > li .read-next-link {
     display: none;
@@ -738,14 +747,35 @@ dl.actionMenu.activated dt a{
 }
 #content .agenda .results ul .bloc-item {
     float: none;
-    min-height: calc(130px);
-    padding: 1.5em 1.5em 0.75em 1.5em;
+    min-height: calc(145px);
+    padding: 1.5em 1.5em 0.75em 1.5em !important;
     width: 33%;
     float: none;
     margin: 0;
 }
-#visual-portal-wrapper .agenda .results ul .bloc-item:nth-child(1),
-#visual-portal-wrapper .agenda .results ul .bloc-item:nth-child(2) {
+
+.section-je-suis .width-full .bloc-item {
+    width: calc(33.33%);
+}
+
+.template-folderview.main-homepage .bloc-item .description {
+    display: none;
+}
+
+.template-folderview.main-homepage .bloc-item .indexview-categories {
+    top: 1em;
+    text-transform: uppercase;
+    font-size: 90%;
+    padding-left: 0.25em;
+    color: @theme;
+}
+
+.bloc-item .indexview-categories {
+    float: left;
+    margin-left: 8em;
+}
+.agenda .results ul .bloc-item:nth-child(1),
+.agenda .results ul .bloc-item:nth-child(2) {
     border-right: 1px solid #ccc;
     padding: 1.5em 1.5em 0.75em 1.5em !important;
 }
@@ -777,11 +807,8 @@ dl.actionMenu.activated dt a{
 }
 
 .agenda .results ul .bloc-item h3 {
-    display: table-cell;
-    height: 6em !important;
-    padding-left: 7em;
-    vertical-align: middle;
-    width: 11em;
+    clear: left;
+    padding-top: 0.5em;
 }
 
 .agenda .results ul .bloc-item .documentByLine {
@@ -799,11 +826,11 @@ dl.actionMenu.activated dt a{
     position: relative;
 }
 
-.slider-carousel:after {
+.slider-carousel::after {
     content: "";
     position: absolute;
     top: -2em;
-    bottom: -2.5em;
+    bottom: -34.5em;
     background: #f2f2f2;
     width: 300%;
     left: -100%;
@@ -883,7 +910,8 @@ dl.actionMenu.activated dt a{
     padding-bottom: 4em;
 }
 
-.portaltype-directory .faceted-widget.section-search form {
+.portaltype-directory .faceted-widget.section-search form,
+.collection-event .faceted-widget.section-search form{
     margin-top: 0em;
 }
 
@@ -999,16 +1027,25 @@ dl.actionMenu.activated dt a{
     width: 50% !important;
     margin-right: 0 !important;
 }
+
+.indexview-categories {
+    position: relative;
+    top: 9em;
+    margin-left: 50%;
+    text-transform: uppercase;
+    font-size: 90%;
+    padding-left: 1em;
+}
 .collection-event .event-entry .pagecaption {
     width: 50% !important;
     padding-top: 1em;
     box-sizing: border-box;
-    text-align: center;
 }
 .collection-event .event-entry .pagecaption h3 {
     margin-top: calc(@size-day-month + 20px);
-    padding: 0.5em;
+    padding: 1em 1em 1em 0.75em;
     font-size: 1.2em;
+    line-height: 1em;
 }
 .collection-event .event-entry .documentByLine {
     color: @theme;
@@ -1021,7 +1058,7 @@ dl.actionMenu.activated dt a{
     justify-content: center;
     display: flex;
     flex-flow: column nowrap;
-    margin: 20px;
+    margin: 0 20px 20px 20px;
     right: 0;
 }
 // section-evenements subsection-agenda
@@ -1334,6 +1371,7 @@ dl.actionMenu.activated dt a{
     padding: 2em 1em 0;
     position: absolute;
     transition: background 0.5s, padding 1s ease 0s;
+    width:100%;
 }
 
 .template-cpskin_navigation_view_with_leadimage a:hover h2 {
