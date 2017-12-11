@@ -7,14 +7,14 @@
     color: #fff;
 }
 #content a[href*=".pdf"] {
-    padding-right: 1em;
+    padding-right: 1.3em;
 }
 
 #content a[href*=".pdf"]::after {
     content: "\f1c1";
     font-family: fontello;
     position: absolute;
-    margin-left: 0.5em;
+    margin-left: 0.3em;
 }
 
 .highlightedSearchTerm {
@@ -154,6 +154,10 @@ dl.portlet.portletNavigationTree a:hover {
 .portaltype-formfolder .iconifiedDocumentActions {
     display: none;
 }
+#viewlet-above-content #right-actions-viewlet .icons_only a,
+#viewlet-above-content #right-actions-viewlet .iconifiedDocumentActions a{
+    margin-top: 0.25em;
+}
 #right-actions-viewlet #right-actions-viewlet-inner {
     top: 1em;
     padding-top: 0;
@@ -162,11 +166,14 @@ dl.portlet.portletNavigationTree a:hover {
     padding-top: 0;
 }
 #right-actions-viewlet{
-   right:1.5em;
+   right:1.5em !important;
 }
 #right-actions-viewlet-inner{
    top:1em;
    padding-top:0;
+}
+#right-actions-viewlet #right-actions-viewlet-inner > a{
+    margin-bottom: 0em;
 }
 #right-actions-viewlet-inner>a::before{
     display:none;
@@ -211,8 +218,8 @@ dl.portlet.portletNavigationTree a:hover {
 }
 
 #viewlet-above-content #right-actions-viewlet #other-actions li a:before{
-    margin:0 0 0 0.25em;
-    padding: 0.75em;
+    margin:0em;
+    padding: 1em;
     color: white;
 }
 
@@ -232,8 +239,8 @@ dl.portlet.portletNavigationTree a:hover {
 #right-actions-viewlet #other-actions #social-share::after{
     color:  #fff;
     margin-top: 0.25em;
-    margin-left: 0.25em;
-    padding: 0.75em;
+    margin-left: 0em;
+    padding: 1em;
     background: #d7004e;
     width: 1em;
 }
@@ -309,7 +316,7 @@ dl.portlet ul.navTreeLevel1 .navTreeItem {
     padding-left: 2.5em !important;
 }
 #portal-columns #portal-column-one aside .portletNavigationTree dd ul.navTreeLevel2 li a {
-    padding-left: 2.5em !important;
+    padding-left: 3.75em !important;
     background: transparent;
 }
 #portal-columns #portal-column-one .portletNavigationTree dd ul li a {
