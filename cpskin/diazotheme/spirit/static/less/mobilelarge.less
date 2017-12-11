@@ -13,6 +13,9 @@ body {
 #top-logo-slogan-actions-inner #search-wrapper {
     top: 6em;
 }
+.in-minisite-out-portal #top-logo-slogan-actions-inner #search-wrapper {
+    top: 4.5em;
+}
 #top-logo {
     margin-left: 0em;
 }
@@ -45,7 +48,36 @@ ul.event.summary.details{
 #portal-footer-wrapper #footer-social > div{
     max-width: 100%;
 }
+#right-actions-viewlet{
+    right: 1.5em;
+}
+//mini site
+#minisite-actions{
+    width: 100%;
+}
+.subsection-culture-musees-la-boverie .bloc-item,
+.subsection-kultur-museen-la-boverie .bloc-item,
+.subsection-cultuur-musea-la-boverie .bloc-item,
+.subsection-culture-museums-la-boverie .bloc-item{
+    min-height: 14.5em;
+}
+body.subsection-culture-musees-la-boverie #minisite-logo,
+body.subsection-kultur-museen-la-boverie #minisite-logo,
+body.subsection-cultuur-musea-la-boverie #minisite-logo,
+body.subsection-culture-museums-la-boverie #minisite-logo {
+    margin-top: 0.2em;
+    width: 22%;
+}
+.subsection-culture-musees-la-boverie #minisite-globalnav ,
+.subsection-kultur-museen-la-boverie #minisite-globalnav ,
+.subsection-cultuur-musea-la-boverie #minisite-globalnav ,
+.subsection-culture-museums-la-boverie #minisite-globalnav{
+    width: 63%;
+}
 @media (orientation : portrait){
+    #portal-columns #portal-column-content{
+        float: right;
+    }
     //navigation
     body.main-homepage.template-folderview #nav-wrapper{
         width: 740px;
@@ -278,9 +310,7 @@ ul.event.summary.details{
         top: 0;
     }
     //content
-    div.cell {
-        float: right;
-    }
+   
     #portal-column-one{
         margin-right: 1%;
     }
@@ -328,6 +358,7 @@ ul.event.summary.details{
         max-width: calc(45%);
         top: -4em;
     }
+    
 }
 
 @media (orientation: landscape){
@@ -398,6 +429,13 @@ ul.event.summary.details{
     //annuaire
     #content-core .contact-entry {
         width: 23.5% !important;
+    }
+    //mini site
+    .subsection-culture-musees-la-boverie .bloc-item,
+    .subsection-kultur-museen-la-boverie .bloc-item,
+    .subsection-cultuur-musea-la-boverie .bloc-item,
+    .subsection-culture-museums-la-boverie .bloc-item{
+        min-height: 14.5em;
     }
 
 }
