@@ -1,7 +1,14 @@
 // mini site la boverie
 
 //header
-
+.in-minisite-out-portal #minisite-actions ,
+.in-minisite-out-portal #top-actions{
+  display: inline-block;
+  vertical-align: middle;
+}
+.in-minisite-out-portal #minisite-actions {
+  width: 82%;
+}
 #accueil .partenaires-1 img, 
 #accueil .partners-1 img,
 #accueil .partner-1 img   {
@@ -84,11 +91,17 @@
 .subsection-culture-museums-la-boverie #minisite-actions ul{
   padding: 1%;
 }
-.subsection-culture-musees-la-boverie .bloc-rss,
-.subsection-culture-musees-la-boverie #portal-languageselector{
-display:none;
-}
 
+.in-minisite-out-portal.subsection-culture-musees-la-boverie .bloc-rss,
+.in-minisite-out-portal.subsection-culture-musees-la-boverie #portal-languageselector{
+    display:none;
+}
+.in-minisite-in-portal #minisite-actions a[href$="de"],
+.in-minisite-in-portal #minisite-actions a[href$="en"],
+.in-minisite-in-portal #minisite-actions a[href$="nl"],
+.in-minisite-in-portal #minisite-actions a[href$="fr"]{
+    display: none;
+}
 .subsection-culture-musees-la-boverie [id="minisite-logo-nav"]{
     max-width:1450px;
 }
