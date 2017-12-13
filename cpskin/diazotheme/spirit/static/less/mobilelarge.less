@@ -160,6 +160,10 @@ body.subsection-culture-museums-la-boverie #minisite-logo {
     .agenda .results ul .bloc-item a {
         text-align: center;
     }
+    #visual-portal-wrapper .agenda .results ul .bloc-item:nth-child(1),
+    #visual-portal-wrapper .agenda .results ul .bloc-item:nth-child(2){
+        border-right: none;
+    }
     //homepage
     body.main-homepage #portal-top::after {
         height: calc(308%);
@@ -253,12 +257,9 @@ body.subsection-culture-museums-la-boverie #minisite-logo {
     }
     .main-homepage .agenda .results ul .bloc-item h3 {
         margin-top: 0;
-        padding-left: 0.5em;
+        padding-left: 7.5em;
         text-align: left;
-    }
-    .main-homepage .agenda .results ul .bloc-item .day-month{
-        position: relative;
-        float: left;
+        max-width: 70%;
     }
     .main-homepage .lead-image-wrapper a img{
         width: 100%;
@@ -424,7 +425,7 @@ body.subsection-culture-museums-la-boverie #minisite-logo {
     .main-homepage .zoom-1::after,
     .main-homepage .zoom-2::after{
         top: 11.8em;
-        bottom: -51em;
+        bottom: 3em;
     }
     //annuaire
     #content-core .contact-entry {

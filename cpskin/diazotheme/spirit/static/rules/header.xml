@@ -84,6 +84,19 @@
     <rules if="$isinminisitemode">
         <replace css:content-children="#portal-header">
             <xsl:copy-of select="./*[@id='messagesviewlet']"/>
+            <xsl:if test="not($ms_horizontal_navigation_any_mode)">
+              <div id="top-actions">
+              <div id="top-actions-inner">
+                  <div id="top-actions-wrapper">
+                      <div id="top-actions-actions">
+                          <div id="top-languages">
+                              <xsl:copy-of select="//*[@id='portal-languageselector']" />
+                          </div>
+                      </div>
+                  </div>
+              </div>
+              </div>
+            </xsl:if>
             <div id="top-logo-slogan-actions">
                 <div id="top-logo-slogan-actions-inner">
                     <div id="search-wrapper">
@@ -99,6 +112,17 @@
                 <xsl:if test="$ms_horizontal_navigation_any_mode">
                   <div class="container-minisite-globalnav-logo">
                     <xsl:copy-of select="//*[@id='minisite-actions']"/>
+                    <div id="top-actions">
+                    <div id="top-actions-inner">
+                      <div id="top-actions-wrapper">
+                            <div id="top-actions-actions">
+                                <div id="top-languages">
+                                    <xsl:copy-of select="//*[@id='portal-languageselector']" />
+                                </div>
+                            </div>
+                        </div>
+                      </div>
+                    </div>
                     <div id="minisite-navigation-inner">
                       <div id="minisite-logo-nav">
                           <xsl:copy-of select="//*[@id='minisite-logo']" />

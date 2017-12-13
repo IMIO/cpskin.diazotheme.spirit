@@ -101,11 +101,16 @@ body{
 }
 .agenda .bloc-item a {
     display: inline-block;
+    width: 100%;
 }
 .main-homepage .agenda .voir-tout {
     margin-top: -2em;
     top: 0;
     margin-bottom: 0.5em;
+}
+#visual-portal-wrapper .agenda .results ul .bloc-item:nth-child(1),
+#visual-portal-wrapper .agenda .results ul .bloc-item:nth-child(2){
+   border-right: none;
 }
 // Agenda vue
 .section-evenements.subsection-agenda .faceted-top-widgets,
@@ -326,12 +331,12 @@ body{
 }
 .main-homepage .agenda .results ul .bloc-item h3 {
     margin-top: 0;
-    padding-left: 1em;
+    padding-left: 7.3em;
     text-align: left;
+    max-width: 70%;
 }
 .main-homepage .agenda .results ul .bloc-item .day-month{
-    position: relative;
-    float: left;
+    margin-top: -2em;
 }
 .main-homepage .lead-image-wrapper a img{
     width: 100%;
