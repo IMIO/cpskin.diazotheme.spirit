@@ -106,6 +106,12 @@
     max-width:1450px;
 }
 
+.in-minisite-out-portal #portal-breadcrumbs,
+.in-minisite-out-portal #portal-breadcrumbs,
+.in-minisite-out-portal #portal-breadcrumbs,
+.in-minisite-out-portal #portal-breadcrumbs{
+  display: none;
+}
 
 .subsection-culture-musees-la-boverie #portal-top #cpskin-banner,
 .subsection-kultur-museen-la-boverie #portal-top #cpskin-banner,
@@ -154,8 +160,10 @@ float:right;
     border-radius:12px;
 }
 
-body.subsection-culture-musees-la-boverie #visual-portal-wrapper, body.subsection-kultur-museen-la-boverie #visual-portal-wrapper,
-body.subsection-cultuur-musea-la-boverie #visual-portal-wrapper, body.subsection-culture-museums-la-boverie #visual-portal-wrapper {
+body.subsection-culture-musees-la-boverie #visual-portal-wrapper,
+body.subsection-kultur-museen-la-boverie #visual-portal-wrapper,
+body.subsection-cultuur-musea-la-boverie #visual-portal-wrapper,
+body.subsection-culture-museums-la-boverie #visual-portal-wrapper {
     background-image: none;
     background-size: 100% 100%;
 }
@@ -178,7 +186,6 @@ body.subsection-cultuur-musea-la-boverie #visual-portal-wrapper, body.subsection
     color: white !important;
     display:block;
 }
-
 .subsection-culture-musees-la-boverie .slider-carousel:after,
 .subsection-kultur-museen-la-boverie .slider-carousel:after,
 .subsection-cultuur-musea-la-boverie .slider-carousel:after,
@@ -190,16 +197,22 @@ body.subsection-cultuur-musea-la-boverie #visual-portal-wrapper, body.subsection
 .subsection-kultur-museen-la-boverie #slider-a-la-une.flexslider .flex-caption,
 .subsection-cultuur-musea-la-boverie #slider-a-la-une.flexslider .flex-caption,
 .subsection-culture-museums-la-boverie #slider-a-la-une.flexslider .flex-caption{
-  height: 180px;
+  height: 145px;
   margin: 0;
   padding: 0.5em 2em;
   width: 100%;
+}
+.subsection-culture-musees-la-boverie .slider-carousel .flex-caption p,
+.subsection-kultur-museen-la-boverie .slider-carousel .flex-caption p,
+.subsection-cultuur-musea-la-boverie .slider-carousel .flex-caption p,
+.subsection-culture-museums-la-boverie .slider-carousel .flex-caption p{
+  display: none;
 }
 .subsection-culture-musees-la-boverie #slider-a-la-une.flexslider .flex-caption::after,
 .subsection-kultur-museen-la-boverie #slider-a-la-une.flexslider .flex-caption::after,
 .subsection-cultuur-musea-la-boverie #slider-a-la-une.flexslider .flex-caption::after,
 .subsection-culture-museums-la-boverie #slider-a-la-une.flexslider .flex-caption::after{
-  height: 5.2em;
+  display: none;
 }
 .subsection-culture-musees-la-boverie #slider-a-la-une .read-next-link,
 .subsection-kultur-museen-la-boverie #slider-a-la-une .read-next-link,
