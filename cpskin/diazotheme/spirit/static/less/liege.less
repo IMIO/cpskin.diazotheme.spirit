@@ -1,5 +1,6 @@
 
-#content a:link, #visual-portal-wrapper dl.portlet a:link {
+#content a:link, #visual-portal-wrapper dl.portlet a:link,
+#content a:visited, dl.portlet a:visited{
     color: #d7004e;
     background: transparent;
 }
@@ -61,6 +62,11 @@
 #portal-logo {
     text-align: center;
 }
+
+#visual-portal-wrapper a#portal-logo:focus,
+#visual-portal-wrapper a#portal-logo:focus img{
+    outline: none;
+}
 .portletNavigationTree .portletHeader {
     background: @theme;
     padding: 1em;
@@ -87,11 +93,12 @@ dl.portlet.portletNavigationTree a:hover {
     display: none;
 }
 
-.template-facetednavigation_view .organization-entry, body.template-facetednavigation_view .contact-entry {
-    background: white none repeat scroll 0 0;
+body.template-facetednavigation_view #content .organization-entry, body.template-facetednavigation_view #content .contact-entry {
+    background: #f2f2f2 none repeat scroll 0 0;
     border: 1px solid @bg-nav-fac;
     height: 14em;
-    box-shadow: 2px 2px 4px #f1efef;
+    position: relative;
+    padding: 1em 1em 1em 0.3em;
 }
 .coordinates{
     margin-bottom:2em;
@@ -115,20 +122,37 @@ dl.portlet.portletNavigationTree a:hover {
 .subsection-services-communaux-travaux-infos-travaux .photoAlbumEntryWrapper img {
     display: none;
 }
+.section-annuaire #content > header {
+    padding-left: 1em;
+}
+
+.section-annuaire .eea-preview-items {
+    padding-left: 1em;
+}
 
 .section-annuaire.portaltype-organization #portal-columns, .section-annuaire.portaltype-person #portal-columns {
     max-width: 1200px;
-}
-
-.template-facetednavigation_view .organization-entry, body.template-facetednavigation_view .contact-entry {
-    background: #f7f7f7 !important;
 }
 
 .template-facetednavigation_view .organization-title, .template-facetednavigation_view .contact-title,
 .template-facetednavigation_view .organization-entry .contact-info, .template-facetednavigation_view .contact-entry .contact-info {
     margin-left: 1em;
 }
+.template-facetednavigation_view .contact-selection {
+    float: right;
+    margin-right: -0.5em;
+    margin-top: 0;
+}
 
+.contacts-facetednav-actions {
+    right: 0.5em;
+    top: 2.5em;
+    position: absolute;
+}
+.contacts-facetednav-action {
+    display: block;
+    margin-bottom: 0.5em;
+}
 .contact-entry {
     margin-right: 1.5% !important;
     width: 18.5% !important;
@@ -324,6 +348,11 @@ dl.portlet ul.navTreeLevel1 .navTreeItem {
     border-top: 2px solid white; 
 }
 //vie politique
+
+.template-cpskin_navigation_view_with_leadimage.subsection-vie-politique-conseil-communal-membres-conseil-communal h2.navigation-view-menu-title {
+    height: 14%;
+    font-size: 1.25em;
+}
 .subsection-vie-politique-conseil-communal .photoAlbumEntry img {
     display: none;
 }
@@ -401,8 +430,12 @@ dl.portlet ul.navTreeLevel1 .navTreeItem {
 }
 //a trier
 .bloc-document.zoom-1, .bloc-document.zoom-2 {
-    margin: 0 auto;
-    max-width: 1000px;
+    width:100%;
+}
+
+.bloc-document.zoom-1 #form-widgets-text, .bloc-document.zoom-2 #form-widgets-text{
+        margin: 0 auto;
+        max-width: 1000px;
 }
 
 #content #flex #carousel-actualites .flex-viewport .flex-caption h2 a {
