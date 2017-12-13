@@ -1,5 +1,5 @@
 h1, h2, h3, h4, h5, h6, #portal-globalnav li a {
-    font-family: abel;
+    font-family: Abel;
 }
 #content a:hover, dl.portlet a:hover {
     color: @theme !important;
@@ -126,7 +126,7 @@ figure.image figcaption {
     margin-left: auto;
 }
 #portal-breadcrumbs {
-    margin:2em auto 0;
+    margin:1.5em auto 0.5em;
     width: @width-content;
 }
 #portal-breadcrumbs,
@@ -447,11 +447,18 @@ dl.actionMenu.activated dt a{
 }
 //Bloc zoom par défaut
 
-#accueil .bloc-document .zoom {
+#accueil .bloc-document.zoom-1 .zoom {
     float: left;
     position: relative;
     width: 50%;
-    margin: 4em 0;
+    margin: 0 0 0 0;
+}
+
+#accueil .bloc-document.zoom-2 .zoom {
+    float: left;
+    position: relative;
+    width: 50%;
+    margin: 0 0 4em 0;
 }
 #accueil .bloc-document .bloc {
     overflow: hidden;
@@ -1323,6 +1330,10 @@ dl.actionMenu.activated dt a{
     margin-right: 1.5%;
     position: relative;
     width: 31.75%;
+}
+
+.template-cpskin_navigation_view_with_leadimage .width-full.position-0 .navigation-view-menu {
+    width: 23.5%;
 }
 
 .template-cpskin_navigation_view_with_leadimage .navigation-view-menu .leadimage-navigation {
