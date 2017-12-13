@@ -2,11 +2,11 @@ Changelog
 =========
 
 
-0.1.16 (unreleased)
+0.1.16 (2017-12-13)
 -------------------
 
-- Nothing changed yet.
-
+- Change slider et delete breadcrumbs for mini site.
+  [mgennart]
 
 0.1.15 (2017-12-11)
 -------------------
