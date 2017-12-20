@@ -2,11 +2,11 @@ Changelog
 =========
 
 
-0.1.17 (unreleased)
+0.1.17 (2017-12-20)
 -------------------
 
-- Nothing changed yet.
-
+- Add id visual-portal-wrapper to other actions.
+  [mgennart]
 
 0.1.16 (2017-12-13)
 -------------------
