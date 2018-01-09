@@ -2,11 +2,11 @@ Changelog
 =========
 
 
-0.1.18 (unreleased)
+0.1.18 (2018-01-09)
 -------------------
 
-- Nothing changed yet.
-
+- Change css for top-menu-actions.
+  [mgennart]
 
 0.1.17 (2017-12-20)
 -------------------
