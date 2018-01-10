@@ -2,10 +2,11 @@ Changelog
 =========
 
 
-0.1.19 (unreleased)
+0.1.19 (2018-01-10)
 -------------------
 
-- Nothing changed yet.
+- Change display for #faceted-form .widget-fieldset form.
+  [mgennart]
 
 
 0.1.18 (2018-01-09)
