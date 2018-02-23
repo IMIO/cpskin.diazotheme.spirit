@@ -2,10 +2,11 @@ Changelog
 =========
 
 
-0.1.20 (unreleased)
+0.1.20 (2018-02-23)
 -------------------
 
-- Nothing changed yet.
+- Add css for navigation in english.
+  [mgennart]
 
 
 0.1.19 (2018-01-10)
