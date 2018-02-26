@@ -2,11 +2,11 @@ Changelog
 =========
 
 
-0.1.21 (unreleased)
+0.1.21 (2018-02-26)
 -------------------
 
-- Nothing changed yet.
-
+- Change css for event to mini site
+  [mgennart]
 
 0.1.20 (2018-02-23)
 -------------------
