@@ -1,22 +1,105 @@
 //HOMEPAGE
-//projects and steps
-#accueil .bloc-2,
-#accueil .bloc-3{
-    clear: none;
-    float: left;
-    width: 50%;
+#nav-wrapper {
+    display: none;
 }
-.bloc-2 .titre-rss,
-.bloc-2 .results,
-.bloc-3 .titre-rss,
-.bloc-3 .results{
-    background-color: transparent;
+#accueil {
+    display: flex;
+    flex-flow: row wrap;
 }
-.width-full .bloc-2 .bloc-item,
-.width-full .bloc-3 .bloc-item {
+#accueil > div {
+    flex: 1 1 auto;
+}
+#cpskin-slogan-titre{
+    display: block;
+}
+.bloc-2,
+.bloc-3{
+    flex: 1 2 auto !important;
+    max-width: 50%;
+}
+.homepage-titre-rss {
+    margin-bottom: 1em;
+}
+h2 a {
+    font-family: Open Sans;
+    color: @black !important;
+}
+.homepage-results .homepage-standard-results{
+    margin-left: 0 !important;
+}
+.homepage-bloc-item {
+    list-style: none;
+    margin-bottom: 1.5em !important;
+    position: relative;
+}
+.bloc-2 .homepage-bloc-item {
+    padding-left: 30px;
+}
+.homepage-bloc-item-title h3{
+    color: @theme !important;
+    font-weight: 600;
+}
+.homepage-bloc-item-title,
+.homepage-bloc-item-more {
+    display: inline-block;
+}
+.homepage-bloc-item-title{
+    width: 70%;
+}
+.homepage-bloc-item-more {
+    background-color: #000000 !important;
+    font-weight: 400;
+    font-size: 0.8em;
+    width: auto;
+    text-align: center;
+}
+.homepage-bloc-item-more a{
+    padding: 0.1em 1em;
+    color: #ffffff !important;
+}
+.homepage-bloc-item-description {
+    font-family: Abel;
+}
+.bloc-2 .homepage-bloc-item::before {
+    content: "\e848";
+    font-family: fontello;
+    background-color: #000000;
+    height: 20px;
+    width: 20px;
+    display: inline-block;
+    color: #ffffff;
+    text-align: center;
+    position: absolute;
+    left: 0;
+    top: 8px;
+}
+.slider_multiple_link{
+    color: #000 !important;
+}
+#content #flex #carousel-index.flexslider a,
+#content #flex #carousel-index.flexslider #content #flex a:hover,
+#content #flex #carousel-index.flexslider a:link {
+    color: #000 !important;
+}
+#top-banner #top-description {
+    position: absolute;
     width: 100%;
+    text-align: center;
+    top: 40%;
+    color: #000;
+    display: block !important;
 }
-.bloc-2  .bloc-item,
-.bloc-3  .bloc-item {
-    min-height: auto;
+#top-banner #cpskin-slogan-titre {
+    display: block;
+    text-transform: uppercase;
+    font-size: 2em;
+    font-weight: 400;
+}
+#top-banner #cpskin-slogan-titre:after{
+    content:"";
+    display: block;
+    border-bottom: 2px solid @black;
+}
+#top-banner #cpskin-slogan-description {
+    font-size: 1em;
 }

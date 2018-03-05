@@ -64,6 +64,9 @@
                   </div>
                 </xsl:if>
                 <div id="top-banner">
+                  <div id="top-description">
+                      <xsl:copy-of select="//*[@id='cpskin-slogan']/*" />
+                  </div>
                   <xsl:copy-of select="//*[@id='cpskin-banner']/img" />
                 </div>
                 <xsl:copy-of select="//*[@id='portal-breadcrumbs']" />
