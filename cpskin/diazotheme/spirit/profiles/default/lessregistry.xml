@@ -68,7 +68,7 @@
     enabled="0"
     rendering="link"
     compression="none"
-    expression="python:here.restrictedTraverse('@@currentTheme')() == 'cpskin.diazotheme.reinventons'"
+    expression="python:here.restrictedTraverse('@@currentTheme')() == 'cpskin.diazotheme.spirit'"
     applyPrefix="True"
     insert-after="portal_resources/cpskin/minisites.less" />
  
