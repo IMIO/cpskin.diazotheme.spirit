@@ -103,3 +103,20 @@ h2 a {
 #top-banner #cpskin-slogan-description {
     font-size: 1em;
 }
+.slider-carousel::after{
+    display: none;
+}
+.slider-multiple{
+    position: relative;
+}
+.slider-multiple::after {
+    content: "";
+    position: absolute;
+    top: -3em;
+    bottom: 0;
+    background: #f2f2f2;
+    width: 300%;
+    left: -100%;
+    z-index: -1;
+    height: 104%;
+}
