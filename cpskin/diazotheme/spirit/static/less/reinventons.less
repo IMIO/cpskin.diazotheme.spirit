@@ -160,32 +160,29 @@ h2 a {
     height: 104%;
 }
 // PROJECTS
-#content .timeline{
+#content .timeline {
+    margin: 4em 0;
+}
+#content .timeline-line {
   padding-left: 0;
   display: flex;
 }
-#content .timeline li {
+#content .timeline-line li {
   display: flex;
   align-items: center;
   list-style-type: none;
 }
-#content .timeline li {
+#content .timeline-line li {
   flex: 1 0 auto;
   flex-flow: row wrap;
 }
-.break{
-  flex-basis: 100%;
-  width: 0px;
-  height: 0px;
-  overflow: hidden;
-}
-#content .timeline .step {
+#content .timeline-line .step {
     background-color: @theme;
     width: 2em;
     height: 2em;
     padding: 0.5em;
 }
-#content .timeline .step > div {
+#content .timeline-line .step > div {
     z-index: 2;
     position: relative;
     display: inline-block;
@@ -195,29 +192,29 @@ h2 a {
     font-size: 80%;
     line-height: 1.2em;
 }
-#content .timeline li::before,
-#content .timeline li::after {
+#content .timeline-line li::before,
+#content .timeline-line li::after {
     content: "";
     flex: 1;
-    display: block; /* IE10 fix */
+    display: block;
 }
-#content .timeline li:first-child::after,
-#content .timeline li+li::before,
-#content .timeline li+li::after {
+#content .timeline-line li:first-child::after,
+#content .timeline-line li+li::before,
+#content .timeline-line li+li::after {
     border-bottom: 2px solid @theme;
 }
-#content .timeline li:last-child::after {
+#content .timeline-line li:last-child::after {
     border-bottom: 2px solid transparent;
 }
-#content .timeline .current ~ li {
+#content .timeline-line .current ~ li {
     opacity: 0.3;
 }
-#content .timeline .current::after,
-#content .timeline .current ~ li::before,
-#content .timeline .current ~ li::after {
+#content .timeline-line .current::after,
+#content .timeline-line .current ~ li::before,
+#content .timeline-line .current ~ li::after {
     border-bottom-style: dotted;
 }
-#content .timeline .current::after{
+#content .timeline-line .current::after{
     margin-right: -2px;
     opacity: 0.3;
 }
@@ -231,7 +228,27 @@ h2 a {
     text-align: center;
     margin: 0 1em;
 }
-#content .timeline-text li.current span{
+#content .timeline-text li div{
+    margin-top: 1em;
+    font-size: 80%;
+}
+#content .timeline-text li.current div{
     border-bottom: 4px solid @theme;
     padding-bottom: 0.5em;
+}
+.portaltype-project #content label {
+    font-weight: normal;
+    font-size: 1.2em;
+    color: @theme;
+}
+.portaltype-project #content .field {
+    margin-bottom: 3em;
+}
+.portaltype-project #content #slider {
+    width:"100%";
+}
+.portaltype-project #content #slider .img{
+    width:"100%";
+    height: "200px";
+    border: 2px solid red;
 }
