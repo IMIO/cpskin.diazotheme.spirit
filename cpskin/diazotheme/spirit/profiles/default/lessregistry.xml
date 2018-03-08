@@ -72,6 +72,15 @@
     applyPrefix="True"
     insert-after="portal_resources/cpskin/minisites.less" />
  
+ <stylesheet title="cpskin.diazotheme.spirit LESS producteurs locaux"
+    id="++theme++cpskin.diazotheme.spirit/less/producteur.less"
+    media="all"
+    enabled="1"
+    rendering="link"
+    compression="none"
+    expression="python:here.restrictedTraverse('@@currentTheme')() == 'cpskin.diazotheme.spirit'"
+    applyPrefix="True"
+    insert-after="portal_resources/cpskin/reinventons.less" />
 
 
 </object>
