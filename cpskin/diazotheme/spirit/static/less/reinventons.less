@@ -76,10 +76,13 @@ h2 a {
 .slider_multiple_link{
     color: #000 !important;
 }
-#content #flex #carousel-index.flexslider a,
-#content #flex #carousel-index.flexslider #content #flex a:hover,
-#content #flex #carousel-index.flexslider a:link {
-    color: #000 !important;
+#portal-personaltools-wrapper,
+#portal-siteactions{
+    display: inline-block;
+    font-size: 100%;
+}
+#portal-personaltools-wrapper{
+    float: right;
 }
 #top-banner::before {
     content: "";
@@ -89,6 +92,10 @@ h2 a {
     height: 100%;
     width: 100%;
 }
+#top-banner {
+    position: relative;
+    z-index: 1;
+}
 #top-banner #top-description {
     position: absolute;
     width: 100%;
@@ -97,16 +104,18 @@ h2 a {
     color: #000;
     display: block !important;
 }
-#top-slogan-inner #cpskin-slogan-titre{
+#top-slogan-inner #cpskin-slogan-titre,
+#top-banner #cpskin-slogan-titre,
+#top-banner #cpskin-slogan-description{
     display: none;
 }
-#top-banner #cpskin-slogan-titre {
+.main-homepage #top-banner #cpskin-slogan-titre {
     display: block;
     text-transform: uppercase;
     font-size: 2em;
     font-weight: 400;
 }
-#top-banner #cpskin-slogan-titre::after {
+.main-homepage #top-banner #cpskin-slogan-titre::after {
     content: "";
     display: block;
     border-bottom: 2px solid #000000;
@@ -115,9 +124,23 @@ h2 a {
     margin-right: auto;
     margin-top: 0.5em;
 }
-#top-banner #cpskin-slogan-description {
+.main-homepage #top-banner #cpskin-slogan-description {
+    display: block;
     font-size: 1em;
     margin-top: 3em;
+}
+#top-logo-slogan-actions-inner,
+#nav-wrapper,
+#portal-breadcrumbs,
+#portal-columns,
+#portal-footer-wrapper{
+    z-index: 2;
+    position: relative;
+}
+#content #flex #carousel-index.flexslider a,
+#content #flex #carousel-index.flexslider #content #flex a:hover,
+#content #flex #carousel-index.flexslider a:link {
+    color: #000 !important;
 }
 .slider-carousel::after{
     display: none;
@@ -135,4 +158,80 @@ h2 a {
     left: -100%;
     z-index: -1;
     height: 104%;
+}
+// PROJECTS
+#content .timeline{
+  padding-left: 0;
+  display: flex;
+}
+#content .timeline li {
+  display: flex;
+  align-items: center;
+  list-style-type: none;
+}
+#content .timeline li {
+  flex: 1 0 auto;
+  flex-flow: row wrap;
+}
+.break{
+  flex-basis: 100%;
+  width: 0px;
+  height: 0px;
+  overflow: hidden;
+}
+#content .timeline .step {
+    background-color: @theme;
+    width: 2em;
+    height: 2em;
+    padding: 0.5em;
+}
+#content .timeline .step > div {
+    z-index: 2;
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+    color: #fff;
+    font-size: 80%;
+    line-height: 1.2em;
+}
+#content .timeline li::before,
+#content .timeline li::after {
+    content: "";
+    flex: 1;
+    display: block; /* IE10 fix */
+}
+#content .timeline li:first-child::after,
+#content .timeline li+li::before,
+#content .timeline li+li::after {
+    border-bottom: 2px solid @theme;
+}
+#content .timeline li:last-child::after {
+    border-bottom: 2px solid transparent;
+}
+#content .timeline .current ~ li {
+    opacity: 0.3;
+}
+#content .timeline .current::after,
+#content .timeline .current ~ li::before,
+#content .timeline .current ~ li::after {
+    border-bottom-style: dotted;
+}
+#content .timeline .current::after{
+    margin-right: -2px;
+    opacity: 0.3;
+}
+#content .timeline-text {
+    display: flex;
+    flex-flow: row nowrap;
+    list-style: none;
+}
+#content .timeline-text li {
+    width: 20%;
+    text-align: center;
+    margin: 0 1em;
+}
+#content .timeline-text li.current span{
+    border-bottom: 4px solid @theme;
+    padding-bottom: 0.5em;
 }
