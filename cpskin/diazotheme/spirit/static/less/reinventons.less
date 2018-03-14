@@ -1,21 +1,47 @@
+//HEADER à corriger sur Liège également car flexbox pas compatible
+#top-logo-slogan-actions-inner {
+    display: block;
+    padding: 0;
+}
+#top-logo-slogan {
+    display: inline-block;
+    vertical-align: middle;
+    padding: 0;
+}
+#top-logo {
+    margin-left: 0;
+    margin-top: 0;
+    position: relative;
+    width: 150px;
+    z-index: 1;
+}
+#top-logo-inner {
+    left: 1em;
+}
+#top-slogan {
+    margin-left: 150px;
+    padding: 1em 1em 1em 2em;
+    width: 30%;
+}
+#top-actions {
+    display: inline-block;
+    width: 70%;
+    vertical-align: middle;
+}
+
+
+
 //HOMEPAGE
 #nav-wrapper {
     display: none;
 }
-#accueil {
-    display: flex;
-    flex-flow: row wrap;
-}
-#accueil > div {
-    flex: 1 1 auto;
-}
 #cpskin-slogan-titre{
     display: block;
 }
-.bloc-2,
-.bloc-3{
-    flex: 1 2 auto !important;
-    max-width: 50%;
+.bloc-2, .bloc-3 {
+    width: 49%;
+    display: inline-block;
+    vertical-align: top;
 }
 .homepage-titre-rss {
     margin-bottom: 1em;
@@ -95,6 +121,8 @@ h2 a {
 #top-banner {
     position: relative;
     z-index: 1;
+    width: 100%;
+    display: block;
 }
 #top-banner #top-description {
     position: absolute;
@@ -136,6 +164,9 @@ h2 a {
     margin-left: auto;
     margin-right: auto;
 }
+.main-homepage.template-folderview #portal-columns{
+    top: 2em;
+}
 #top-logo-slogan-actions-inner,
 #nav-wrapper,
 #portal-breadcrumbs,
@@ -148,6 +179,9 @@ h2 a {
 #content #flex #carousel-index.flexslider #content #flex a:hover,
 #content #flex #carousel-index.flexslider a:link {
     color: #000 !important;
+}
+.slider-carousel {
+    display: block;
 }
 .slider-carousel::after{
     display: none;
@@ -167,82 +201,6 @@ h2 a {
     height: 104%;
 }
 // PROJECTS
-#content .timeline {
-    margin: 4em 0;
-}
-#content .timeline-line {
-  padding-left: 0;
-  display: flex;
-}
-#content .timeline-line li {
-  display: flex;
-  align-items: center;
-  list-style-type: none;
-}
-#content .timeline-line li {
-  flex: 1 0 auto;
-  flex-flow: row wrap;
-}
-#content .timeline-line .step {
-    background-color: @theme;
-    width: 2em;
-    height: 2em;
-    padding: 0.5em;
-}
-#content .timeline-line .step > div {
-    z-index: 2;
-    position: relative;
-    display: inline-block;
-    width: 100%;
-    text-align: center;
-    color: #fff;
-    font-size: 80%;
-    line-height: 1.2em;
-}
-#content .timeline-line li::before,
-#content .timeline-line li::after {
-    content: "";
-    flex: 1;
-    display: block;
-}
-#content .timeline-line li:first-child::after,
-#content .timeline-line li+li::before,
-#content .timeline-line li+li::after {
-    border-bottom: 2px solid @theme;
-}
-#content .timeline-line li:last-child::after {
-    border-bottom: 2px solid transparent;
-}
-#content .timeline-line .current ~ li {
-    opacity: 0.3;
-}
-#content .timeline-line .current::after,
-#content .timeline-line .current ~ li::before,
-#content .timeline-line .current ~ li::after {
-    border-bottom-style: dotted;
-}
-#content .timeline-line .current::after{
-    margin-right: -2px;
-    opacity: 0.3;
-}
-#content .timeline-text {
-    display: flex;
-    flex-flow: row nowrap;
-    list-style: none;
-}
-#content .timeline-text li {
-    width: 20%;
-    text-align: center;
-    margin: 0 1em;
-}
-#content .timeline-text li div{
-    margin-top: 1em;
-    font-size: 80%;
-}
-#content .timeline-text li.current div{
-    border-bottom: 4px solid @theme;
-    padding-bottom: 0.5em;
-}
 .portaltype-project #content label {
     font-weight: normal;
     font-size: 1.2em;
@@ -251,14 +209,77 @@ h2 a {
 .portaltype-project #content .field {
     margin-bottom: 3em;
 }
-.portaltype-project #content #slider {
-    width:100%;
-    margin-bottom: 0.5em;
+//Timeline 2
+@max-steps-timeline: 10;
+.style-step(@index) when (@index > 0) {
+    &.steps_@{index}{
+        & {
+            margin: 4em 0;
+        }
+        & li {
+            display: inline-block !important;
+            margin: 0 !important;
+            width: calc((100% / @index) - 1%);
+            text-align: center;
+        }
+        #timeline-line,
+        #timeline-text{
+            margin: 0 0 1em 0 !important;
+        }
+        #timeline-line li{
+            position: relative;
+        }
+        #timeline-text li{
+            vertical-align: top;
+            font-size: 80%;
+            & div{
+                padding: 0 1em;
+            }
+            &.current {
+                border-bottom: 4px solid @theme;
+                padding-bottom: 0.5em;
+            }
+        }
+        .step {
+            display: block;
+            width: 4em;
+            margin-left: auto;
+            margin-right: auto;
+            padding: 0.8em 0;
+            background: @theme;
+            color: #fff;
+            font-size: 80%;
+            line-height: 1.2em;
+        }
+        .step::after {
+            border-top: 2px solid @theme;
+            display: block;
+            position: absolute;
+            content: "";
+            width: 100%;
+            height: 100%;
+            top: 50%;
+        }
+        li.current,
+        li.current ~ li{
+            .step::after{
+                border-top: 2px dotted @theme;
+                opacity: 0.3;
+            }
+        }
+        li.current ~ li{
+            .step{
+                opacity: 0.3;
+            }
+        }
+        & li:last-child .step::after{
+            border: none !important;
+        }
+    }
+    .style-step(@index - 1);
 }
-.portaltype-project #content #slider .img{
-    width:100%;
-    height: 200px;
-    border: 2px solid red;
+.portaltype-project #timeline{
+    .style-step(@max-steps-timeline);
 }
 
 //comment
@@ -378,10 +399,10 @@ form input.dislike-button{
 }
 // Animation end
 
-[id^="button_"]{
+#slider_show [id^="button_"]{
     display: none !important;
 }
-.button a{
+#slider_show .button a{
     height: 15px;
     width: 15px;
     border: 1px solid @theme !important;
@@ -389,16 +410,16 @@ form input.dislike-button{
     display: inline-block;
     margin-top: 1em;
 }
-.button a:hover{
+#slider_show .button a:hover{
     background: @theme !important;
 }
-.button,
-.pagination,
-#start,
-#stop{
+#slider_show .button,
+#slider_show .pagination,
+#slider_show #start,
+#slider_show #stop{
     display: inline !important;
 }
-.slider_content {
+#slider_show .slider_content {
     position: relative;
     width: 100%;
     overflow: hidden;
@@ -443,8 +464,10 @@ form input.dislike-button{
     }
     .position-slide(@index - 1);
 }
-.position-slide(@max-slide);
-#stop a::before{
+#slider_show{
+    .position-slide(@max-slide);
+}
+#slider_show #stop a::before{
     width: 20px;
     height: 20px;
     background: rgba(255, 255, 255, 0.8) !important;
@@ -455,7 +478,7 @@ form input.dislike-button{
     content: "";
     right: 4em;
 }
-#start a::before{
+#slider_show #start a::before{
     width: 20px;
     height: 20px;
     display: block;
@@ -465,26 +488,26 @@ form input.dislike-button{
     content: "play";
     right: 1em;
 }
-#button_stop:target{
+#slider_show #button_stop:target{
     & ~ #slider_images{
         -webkit-animation-play-state: paused;
         -moz-animation-play-state: paused;
         animation-play-state: paused;
     }
 }
-#button_stop:target,
-#button_start:target {
+#slider_show #button_stop:target,
+#slider_show #button_start:target {
     background: red;
     & ~ .sl_command{
         background-image: none !important;
     }
     & ~ #index::after,
     & ~ #counter::after{
-        display: none;
+        visibility: hidden;
     }
 }
 // PAGINATION
-#slider_images{
+#slider_show #slider_images{
     counter-reset: Counter;
     & .slide{
         counter-increment: Counter;
