@@ -1,21 +1,47 @@
+//HEADER à corriger sur Liège également car flexbox pas compatible
+#top-logo-slogan-actions-inner {
+    display: block;
+    padding: 0;
+}
+#top-logo-slogan {
+    display: inline-block;
+    vertical-align: middle;
+    padding: 0;
+}
+#top-logo {
+    margin-left: 0;
+    margin-top: 0;
+    position: relative;
+    width: 150px;
+    z-index: 1;
+}
+#top-logo-inner {
+    left: 1em;
+}
+#top-slogan {
+    margin-left: 150px;
+    padding: 1em 1em 1em 2em;
+    width: 30%;
+}
+#top-actions {
+    display: inline-block;
+    width: 70%;
+    vertical-align: middle;
+}
+
+
+
 //HOMEPAGE
 #nav-wrapper {
     display: none;
 }
-#accueil {
-    display: flex;
-    flex-flow: row wrap;
-}
-#accueil > div {
-    flex: 1 1 auto;
-}
 #cpskin-slogan-titre{
     display: block;
 }
-.bloc-2,
-.bloc-3{
-    flex: 1 2 auto !important;
-    max-width: 50%;
+.bloc-2, .bloc-3 {
+    width: 49%;
+    display: inline-block;
+    vertical-align: top;
 }
 .homepage-titre-rss {
     margin-bottom: 1em;
@@ -95,6 +121,8 @@ h2 a {
 #top-banner {
     position: relative;
     z-index: 1;
+    width: 100%;
+    display: block;
 }
 #top-banner #top-description {
     position: absolute;
@@ -136,6 +164,9 @@ h2 a {
     margin-left: auto;
     margin-right: auto;
 }
+.main-homepage.template-folderview #portal-columns{
+    top: 2em;
+}
 #top-logo-slogan-actions-inner,
 #nav-wrapper,
 #portal-breadcrumbs,
@@ -148,6 +179,9 @@ h2 a {
 #content #flex #carousel-index.flexslider #content #flex a:hover,
 #content #flex #carousel-index.flexslider a:link {
     color: #000 !important;
+}
+.slider-carousel {
+    display: block;
 }
 .slider-carousel::after{
     display: none;
