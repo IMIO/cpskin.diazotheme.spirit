@@ -261,8 +261,39 @@ h2 a {
     border: 2px solid red;
 }
 
-
-
+//comment
+.thumbs-up::before,
+.thumbs-down::before{
+    font-family: fontello;
+    position: absolute;
+    z-index: 0;
+    top: -20%;
+}
+.thumbs-up::before{
+    content: "\e85c";
+    left: 0;
+}
+.thumbs-down::before{
+    content: "\e85d";
+    left: 20%;
+}
+.thumbs-up,
+.thumbs-down{
+    position: relative;
+}
+.thumbs-up {
+    margin: 0 0.5em 0 0;
+}
+form input.like-button,
+form input.dislike-button{
+    background: transparent;
+    position: relative;
+}
+.twothumbs-feedback {
+    border: 1px solid #f3f3f3;
+    background-color: #414141;
+    color: #fff;
+}
 // SLIDER
 // MAXIMUM 5 IMAGES car la 6ème doit être identique à la première =>6
 // Animatio start
