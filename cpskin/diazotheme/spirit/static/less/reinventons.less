@@ -299,6 +299,32 @@ h2 a {
     background-repeat: no-repeat;
     background-size: cover;
 }
+.portaltype-project #facette{
+    display: grid;
+    width: 100%;
+    grid-template-columns: calc(25% - 1em) calc(25% - 1em) calc(25% - 1em) calc(25% - 1em);
+    grid-gap: 1em;
+    margin-bottom: 4em;
+}
+.portaltype-project #facette .project{
+    border: 1px solid #ddd;
+}
+.portaltype-project #facette .project .titre {
+    background: #d7004e;
+    padding: 0.5em;
+    color: #fff;
+    font-size: 0.9em;
+}
+.portaltype-project #facette .project .image {
+    width: 100%;
+    padding-bottom: 50%;
+}
+.portaltype-project #facette .project .description {
+    font-family: open sans;
+    font-size: 1em;
+    font-weight: normal;
+    padding: 1em 0.5em;
+}
 
 //comment
 .thumbs-up::before,
@@ -332,201 +358,6 @@ form input.dislike-button{
     border: 1px solid #f3f3f3;
     background-color: #414141;
     color: #fff;
-}
-// SLIDER
-// MAXIMUM 5 IMAGES car la 6ème doit être identique à la première =>6
-// Animatio start
-@max-slide: 6;
-@slide_width: 100%;
-@slide_height: 200px;
-
-@-webkit-keyframes animation_1 {.frames_1();}
-@-moz-keyframes animation_1 {.frames_1();}
-@-ms-keyframes animation_1 {.frames_1();}
-@-o-keyframes animation_1 {.frames_1();}
-@keyframes animation_1 {.frames_1();}
-.frames_1() {
-    0% {right: 0%}
-    100% {right: 0%;}
-}
-@-webkit-keyframes animation_2 {.frames_2();}
-@-moz-keyframes animation_2 {.frames_2();}
-@-ms-keyframes animation_2 {.frames_2();}
-@-o-keyframes animation_2 {.frames_2();}
-@keyframes animation_2 {.frames_2();}
-.frames_2() {
-    0% {right: 0%}
-    45% {right: 0%}
-    50% {right: 100%}
-    95% {right: 100%}
-    100% {right: 200%;}
-}
-@-webkit-keyframes animation_3 {.frames_3();}
-@-moz-keyframes animation_3 {.frames_3();}
-@-ms-keyframes animation_3 {.frames_3();}
-@-o-keyframes animation_3 {.frames_3();}
-@keyframes animation_3 {.frames_3();}
-.frames_3() {
-    0% {right: 0%}
-    28% {right: 0%}
-    33% {right: 100%}
-    61% {right: 100%}
-    66% {right: 200%}
-    95% {right: 200%}
-    100% {right: 300%;}
-}
-@-webkit-keyframes animation_4 {.frames_4();}
-@-moz-keyframes animation_4 {.frames_4();}
-@-ms-keyframes animation_4 {.frames_4();}
-@-o-keyframes animation_4 {.frames_4();}
-@keyframes animation_4 {.frames_4();}
-.frames_4() {
-    0% {right: 0%}
-    20% {right: 0%}
-    25% {right: 100%}
-    45% {right: 100%}
-    50% {right: 200%}
-    70% {right: 200%}
-    75% {right: 300%}
-    95% {right: 300%}
-    100% {right: 400%;}
-}
-@-webkit-keyframes animation_5 {.frames_5();}
-@-moz-keyframes animation_5 {.frames_5();}
-@-ms-keyframes animation_5 {.frames_5();}
-@-o-keyframes animation_5 {.frames_5();}
-@keyframes animation_5 {.frames_5();}
-.frames_5() {
-    0% {right: 0%}
-    15% {right: 0%}
-    20% {right: 100%}
-    35% {right: 100%}
-    40% {right: 200%}
-    55% {right: 200%}
-    60% {right: 300%}
-    75% {right: 300%}
-    80% {right: 400%;}
-    95% {right: 400%;}
-    100% {right: 500%;}
-}
-.animation(@arguments) {
-    -webkit-animation: @arguments;
-    -moz-animation: @arguments;
-    -o-animation: @arguments;
-    animation: @arguments;
-}
-.position-slide(@index) when (@index > 2) {
-    [id^="button_"]{
-        display: none !important;
-    }
-    .button a{
-        height: 15px;
-        width: 15px;
-        border: 1px solid @theme !important;
-        border-radius: 50px;
-        display: inline-block;
-        margin-top: 1em;
-    }
-    .button a:hover{
-        background: @theme !important;
-    }
-    .button,
-    .pagination,
-    #start,
-    #stop{
-        display: inline !important;
-    }
-    .slider_content {
-        position: relative;
-        width: 100%;
-        overflow: hidden;
-        text-align: center;
-    }
-    .slider_content #slider_images.elements_@{index}{
-        margin-bottom: 0 !important;
-        position: relative;
-        width: @slide_width;
-        height: @slide_height;
-        z-index: 1;
-        .animation(animation_@{index} 10s linear infinite);
-        transition: left 2s;
-    }
-
-    .slider_content #slider_images #slide_@{index} {
-        position: absolute;
-        height: 100%;
-        width: 100%;
-        top: 0;
-        background-position: center !important;
-        background-repeat: no-repeat !important;
-        background-size: cover !important;
-        left: (@index * 100%) - 100%;
-    }
-
-    #button_@{index}{
-        &:target {
-            & ~ #index::after {
-                content: "@{index}";
-            }
-            & ~ #slider_images{
-                -webkit-animation-play-state: paused;
-                -moz-animation-play-state: paused;
-                animation-play-state: paused;
-                left: -((@index * 100%) - 100%);
-                transition: left 1s;
-            }
-        }
-    }
-    #stop a::before{
-        width: 20px;
-        height: 20px;
-        background: rgba(255, 255, 255, 0.8) !important;
-        display: block;
-        position: absolute;
-        top: 1em;
-        z-index: 3;
-        content: "";
-        right: 4em;
-    }
-    #start a::before{
-        width: 20px;
-        height: 20px;
-        display: block;
-        position: absolute;
-        top: 1em;
-        z-index: 3;
-        content: "play";
-        right: 1em;
-    }
-    #button_stop:target{
-        & ~ #slider_images{
-            -webkit-animation-play-state: paused;
-            -moz-animation-play-state: paused;
-            animation-play-state: paused;
-        }
-    }
-    #button_stop:target,
-    #button_start:target {
-        background: red;
-        & ~ .sl_command{
-            background-image: none !important;
-        }
-        & ~ #index::after,
-        & ~ #counter::after{
-            visibility: hidden;
-        }
-    }
-    #slider_images{
-        counter-reset: Counter;
-        & .slide{
-            counter-increment: Counter;
-        }
-        @Counter : counter(Counter);
-        & ~ #counter::after{
-            content: "/ " @Counter;
-        }
-    }
-    .position-slide(@index - 1);
 }
 .faceted-projects-ungrouped-view {
     display: none;
@@ -659,7 +490,15 @@ form input.dislike-button{
         }
     }
 }
-
-// 600
+@media screen and (max-width: 768px) {
+    .portaltype-project #facette{
+        grid-template-columns: calc(50% - 1em) calc(50% - 1em);
+    }
+}
+@media screen and (max-width: 1024px) {
+    .portaltype-project #facette{
+        grid-template-columns: calc(33.33% - 1em) calc(33.33% - 1em) calc(33.33% - 1em);
+    }
+}
 // 768
 // 1024
