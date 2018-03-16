@@ -291,6 +291,14 @@ h2 a {
 .portaltype-project #timeline{
     .style-step(@max-steps-timeline);
 }
+.portaltype-project .img_project {
+    width: 100%;
+    margin-bottom: 2em;
+    padding-bottom: 30%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
 
 //comment
 .thumbs-up::before,
@@ -407,36 +415,33 @@ form input.dislike-button{
     -o-animation: @arguments;
     animation: @arguments;
 }
-// Animation end
-
-#slider_show [id^="button_"]{
-    display: none !important;
-}
-#slider_show .button a{
-    height: 15px;
-    width: 15px;
-    border: 1px solid @theme !important;
-    border-radius: 50px;
-    display: inline-block;
-    margin-top: 1em;
-}
-#slider_show .button a:hover{
-    background: @theme !important;
-}
-#slider_show .button,
-#slider_show .pagination,
-#slider_show #start,
-#slider_show #stop{
-    display: inline !important;
-}
-#slider_show .slider_content {
-    position: relative;
-    width: 100%;
-    overflow: hidden;
-    text-align: center;
-}
-
-.position-slide(@index) when (@index > 0) {
+.position-slide(@index) when (@index > 2) {
+    [id^="button_"]{
+        display: none !important;
+    }
+    .button a{
+        height: 15px;
+        width: 15px;
+        border: 1px solid @theme !important;
+        border-radius: 50px;
+        display: inline-block;
+        margin-top: 1em;
+    }
+    .button a:hover{
+        background: @theme !important;
+    }
+    .button,
+    .pagination,
+    #start,
+    #stop{
+        display: inline !important;
+    }
+    .slider_content {
+        position: relative;
+        width: 100%;
+        overflow: hidden;
+        text-align: center;
+    }
     .slider_content #slider_images.elements_@{index}{
         margin-bottom: 0 !important;
         position: relative;
@@ -472,102 +477,104 @@ form input.dislike-button{
             }
         }
     }
+    #stop a::before{
+        width: 20px;
+        height: 20px;
+        background: rgba(255, 255, 255, 0.8) !important;
+        display: block;
+        position: absolute;
+        top: 1em;
+        z-index: 3;
+        content: "";
+        right: 4em;
+    }
+    #start a::before{
+        width: 20px;
+        height: 20px;
+        display: block;
+        position: absolute;
+        top: 1em;
+        z-index: 3;
+        content: "play";
+        right: 1em;
+    }
+    #button_stop:target{
+        & ~ #slider_images{
+            -webkit-animation-play-state: paused;
+            -moz-animation-play-state: paused;
+            animation-play-state: paused;
+        }
+    }
+    #button_stop:target,
+    #button_start:target {
+        background: red;
+        & ~ .sl_command{
+            background-image: none !important;
+        }
+        & ~ #index::after,
+        & ~ #counter::after{
+            visibility: hidden;
+        }
+    }
+    #slider_images{
+        counter-reset: Counter;
+        & .slide{
+            counter-increment: Counter;
+        }
+        @Counter : counter(Counter);
+        & ~ #counter::after{
+            content: "/ " @Counter;
+        }
+    }
     .position-slide(@index - 1);
 }
-#slider_show{
-    .position-slide(@max-slide);
+.faceted-projects-ungrouped-view {
+    display: none;
 }
-#slider_show #stop a::before{
-    width: 20px;
-    height: 20px;
-    background: rgba(255, 255, 255, 0.8) !important;
-    display: block;
-    position: absolute;
-    top: 1em;
-    z-index: 3;
-    content: "";
-    right: 4em;
-}
-#slider_show #start a::before{
-    width: 20px;
-    height: 20px;
-    display: block;
-    position: absolute;
-    top: 1em;
-    z-index: 3;
-    content: "play";
-    right: 1em;
-}
-#slider_show #button_stop:target{
-    & ~ #slider_images{
-        -webkit-animation-play-state: paused;
-        -moz-animation-play-state: paused;
-        animation-play-state: paused;
-    }
-}
-#slider_show #button_stop:target,
-#slider_show #button_start:target {
-    background: red;
-    & ~ .sl_command{
-        background-image: none !important;
-    }
-    & ~ #index::after,
-    & ~ #counter::after{
-        visibility: hidden;
-    }
-}
-// PAGINATION
-#slider_show #slider_images{
-    counter-reset: Counter;
-    & .slide{
-        counter-increment: Counter;
-    }
-    @Counter : counter(Counter);
-    & ~ #counter::after{
-        content: "/ " @Counter;
-    }
-}
+// #slider_show{
+//     .position-slide(@max-slide);
+// }
 //VIEW FACETED PROJECT
-.width-full .faceted-projects-ungrouped-view .event-entry {
-    width: calc((100% - 4%) / 3);
-}
-.width-full .faceted-projects-ungrouped-view .event-entry:nth-child(3n) {
-    margin-right: 0;
-}
-.faceted-projects-ungrouped-view .pageleadImage {
-    border-bottom: 1.5em solid @theme;
-    padding-bottom: 66%;
-}
-.faceted-projects-ungrouped-view .pagecaption{
-    border: 1px solid #f2f2f2;
-    border-top: none;
-    box-sizing: border-box;
-    padding: 0.5em;
-}
-.faceted-projects-ungrouped-view .pagecaption h3{
-    font-family: open sans;
-    font-size: 1em;
-    font-weight: normal;
-}
-#content .faceted-sorting-widget .widget-fieldset {
-    margin-top: 1.5em;
-}
-#visual-portal-wrapper #faceted-form .faceted-sorting-widget form {
-    flex-flow: column;
-}
-#content .faceted-sorting-widget select{
-    border-top-left-radius: 7px;
-    border-bottom-left-radius: 7px;
-    background: #ffffff !important;
-    height: 35px;
-    border: none !important;
-    line-height: 35px;
-    color: gray;
-    padding: 0.2em 1em;
-    font-size: 0.9em;
-}
+// .width-full .faceted-projects-ungrouped-view .event-entry {
+//     width: calc((100% - 4%) / 3);
+// }
+// .width-full .faceted-projects-ungrouped-view .event-entry:nth-child(3n) {
+//     margin-right: 0;
+// }
+// .faceted-projects-ungrouped-view .pageleadImage {
+//     border-bottom: 1.5em solid @theme;
+//     padding-bottom: 66%;
+// }
+// .faceted-projects-ungrouped-view .pagecaption{
+//     border: 1px solid #f2f2f2;
+//     border-top: none;
+//     box-sizing: border-box;
+//     padding: 0.5em;
+// }
+// .faceted-projects-ungrouped-view .pagecaption h3{
+//     font-family: open sans;
+//     font-size: 1em;
+//     font-weight: normal;
+// }
+// #content .faceted-sorting-widget .widget-fieldset {
+//     margin-top: 1.5em;
+// }
+// #visual-portal-wrapper #faceted-form .faceted-sorting-widget form {
+//     flex-flow: column;
+// }
+// #content .faceted-sorting-widget select{
+//     border-top-left-radius: 7px;
+//     border-bottom-left-radius: 7px;
+//     background: #ffffff !important;
+//     height: 35px;
+//     border: none !important;
+//     line-height: 35px;
+//     color: gray;
+//     padding: 0.2em 1em;
+//     font-size: 0.9em;
+// }
 
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 600px) {
     // Timeline
     .portaltype-project #timeline{
         & #timeline-line{
