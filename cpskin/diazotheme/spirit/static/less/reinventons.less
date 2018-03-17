@@ -324,14 +324,14 @@ h2 a {
     .facet(@index + 1, @columns, @column + 1);
 }
 .portaltype-project #facet_view{
-    @columns: 4;
+    @columns: 3;
     .facet(1, @columns, 1);
 
     display: grid;
     display: -ms-grid;
     width: 100%;
-    grid-template-columns: calc(25% - 1em) calc(25% - 1em) calc(25% - 1em) calc(25% - 1em);
-    -ms-grid-columns: 25% 25% 25% 25%;
+    -ms-grid-columns: 33.33% 33.33% 33.33%;
+    grid-template-columns: calc(33.33% - 1em) calc(33.33% - 1em) calc(33.33% - 1em);
     grid-gap: 1em;
     margin-bottom: 4em;
 
@@ -480,14 +480,6 @@ form input.dislike-button{
                 }
             }
         }
-    }
-}
-@media screen and (max-width: 1024px) {
-    .portaltype-project #facet_view{
-        -ms-grid-columns: 33.33% 33.33% 33.33%;
-        grid-template-columns: calc(33.33% - 1em) calc(33.33% - 1em) calc(33.33% - 1em);
-        @columns: 3;
-        .facet(1, @columns, 1);
     }
 }
 @media screen and (max-width: 768px) {
