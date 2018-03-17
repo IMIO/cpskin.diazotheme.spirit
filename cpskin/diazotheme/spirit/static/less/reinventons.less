@@ -299,31 +299,66 @@ h2 a {
     background-repeat: no-repeat;
     background-size: cover;
 }
-.portaltype-project #facette{
+
+// Fix rows and column grid for ie9, ie10 browser:
+.rows-facet(@rows, @min-range, @max-range) when(@min-range =< @max-range) {
+    .item_@{min-range}{
+        grid-row: @rows;
+        -ms-grid-row: @rows;
+    }
+    .rows-facet(@rows, @min-range + 1, @max-range);
+}
+.columns-facet(@index, @column) {
+    .item_@{index}{
+        grid-column: @column;
+        -ms-grid-column: @column;
+    }
+}
+.set-columns(@columns, @column) when(@column > @columns){
+    @column: 1;
+}
+.facet(@index, @columns, @column) when(@index < 50) {
+    .rows-facet(@index, (@index * @columns) - (@columns - 1), @index * @columns);
+    .set-columns(@columns, @column);
+    .columns-facet(@index, @column);
+    .facet(@index + 1, @columns, @column + 1);
+}
+.portaltype-project #facet_view{
+    @columns: 4;
+    .facet(1, @columns, 1);
+
     display: grid;
+    display: -ms-grid;
     width: 100%;
     grid-template-columns: calc(25% - 1em) calc(25% - 1em) calc(25% - 1em) calc(25% - 1em);
+    -ms-grid-columns: 25% 25% 25% 25%;
     grid-gap: 1em;
     margin-bottom: 4em;
-}
-.portaltype-project #facette .project{
-    border: 1px solid #ddd;
-}
-.portaltype-project #facette .project .titre {
-    background: #d7004e;
-    padding: 0.5em;
-    color: #fff;
-    font-size: 0.9em;
-}
-.portaltype-project #facette .project .image {
-    width: 100%;
-    padding-bottom: 50%;
-}
-.portaltype-project #facette .project .description {
-    font-family: open sans;
-    font-size: 1em;
-    font-weight: normal;
-    padding: 1em 0.5em;
+
+    .project{
+        border: 1px solid #ddd;
+        display: block;
+    }
+    .project .title {
+        background: @theme;
+        padding: 0.1em 0.5em;
+        color: #ffffff;
+        font-size: 1em;
+    }
+    .project .image {
+        width: 100%;
+        padding-bottom: 50%;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+    .project .description {
+        font-family: open sans;
+        font-size: 0.8em;
+        font-weight: normal;
+        padding: 1em 0.5em;
+        line-height: 1.2em;
+    }
 }
 
 //comment
@@ -362,48 +397,6 @@ form input.dislike-button{
 .faceted-projects-ungrouped-view {
     display: none;
 }
-// #slider_show{
-//     .position-slide(@max-slide);
-// }
-//VIEW FACETED PROJECT
-// .width-full .faceted-projects-ungrouped-view .event-entry {
-//     width: calc((100% - 4%) / 3);
-// }
-// .width-full .faceted-projects-ungrouped-view .event-entry:nth-child(3n) {
-//     margin-right: 0;
-// }
-// .faceted-projects-ungrouped-view .pageleadImage {
-//     border-bottom: 1.5em solid @theme;
-//     padding-bottom: 66%;
-// }
-// .faceted-projects-ungrouped-view .pagecaption{
-//     border: 1px solid #f2f2f2;
-//     border-top: none;
-//     box-sizing: border-box;
-//     padding: 0.5em;
-// }
-// .faceted-projects-ungrouped-view .pagecaption h3{
-//     font-family: open sans;
-//     font-size: 1em;
-//     font-weight: normal;
-// }
-// #content .faceted-sorting-widget .widget-fieldset {
-//     margin-top: 1.5em;
-// }
-// #visual-portal-wrapper #faceted-form .faceted-sorting-widget form {
-//     flex-flow: column;
-// }
-// #content .faceted-sorting-widget select{
-//     border-top-left-radius: 7px;
-//     border-bottom-left-radius: 7px;
-//     background: #ffffff !important;
-//     height: 35px;
-//     border: none !important;
-//     line-height: 35px;
-//     color: gray;
-//     padding: 0.2em 1em;
-//     font-size: 0.9em;
-// }
 
 @media screen and (max-width: 600px) {
     // Timeline
@@ -434,7 +427,6 @@ form input.dislike-button{
                         left: 50%;
                     }
                 }
-
                 &.current{
                     .step::after{
                         border-left: 2px dotted @theme;
@@ -490,15 +482,28 @@ form input.dislike-button{
         }
     }
 }
-@media screen and (max-width: 768px) {
-    .portaltype-project #facette{
-        grid-template-columns: calc(50% - 1em) calc(50% - 1em);
-    }
-}
 @media screen and (max-width: 1024px) {
-    .portaltype-project #facette{
+    .portaltype-project #facet_view{
+        -ms-grid-columns: 33.33% 33.33% 33.33%;
         grid-template-columns: calc(33.33% - 1em) calc(33.33% - 1em) calc(33.33% - 1em);
+        @columns: 3;
+        .facet(1, @columns, 1);
     }
 }
-// 768
-// 1024
+@media screen and (max-width: 768px) {
+    .portaltype-project #facet_view{
+        -ms-grid-columns: 50% 50%;
+        grid-template-columns: calc(50% - 1em) calc(50% - 1em);
+        @columns: 2;
+        .facet(1, @columns, 1);
+    }
+
+}
+@media screen and (max-width: 600px) {
+    .portaltype-project #facet_view{
+        -ms-grid-columns: 100%;
+        grid-template-columns: 100%;
+        @columns: 1;
+        .facet(1, @columns, 1);
+    }
+}
