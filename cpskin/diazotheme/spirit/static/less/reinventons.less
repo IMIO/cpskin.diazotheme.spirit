@@ -323,7 +323,7 @@ h2 a {
     .columns-facet(@index, @column);
     .facet(@index + 1, @columns, @column + 1);
 }
-.portaltype-project #facet_view{
+.template-facetednavigation_view #project_facet_view{
     @columns: 3;
     .facet(1, @columns, 1);
 
@@ -483,7 +483,7 @@ form input.dislike-button{
     }
 }
 @media screen and (max-width: 768px) {
-    .portaltype-project #facet_view{
+    .template-facetednavigation_view #project_facet_view{
         -ms-grid-columns: 50% 50%;
         grid-template-columns: calc(50% - 1em) calc(50% - 1em);
         @columns: 2;
@@ -492,7 +492,7 @@ form input.dislike-button{
 
 }
 @media screen and (max-width: 600px) {
-    .portaltype-project #facet_view{
+    .template-facetednavigation_view #project_facet_view{
         -ms-grid-columns: 100%;
         grid-template-columns: 100%;
         @columns: 1;
