@@ -5,7 +5,8 @@ Changelog
 0.1.23 (unreleased)
 -------------------
 
-- Nothing changed yet.
+- Adapt style for projects facet view
+  [amariscal, mpeeters]
 
 
 0.1.22 (2018-03-16)
