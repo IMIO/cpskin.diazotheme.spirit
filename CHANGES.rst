@@ -2,7 +2,7 @@ Changelog
 =========
 
 
-0.1.23 (unreleased)
+0.1.23 (2018-03-18)
 -------------------
 
 - Adapt style for projects facet view
