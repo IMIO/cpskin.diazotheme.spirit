@@ -2,11 +2,11 @@ Changelog
 =========
 
 
-0.1.24 (unreleased)
+0.1.24 (2018-03-18)
 -------------------
 
-- Nothing changed yet.
-
+- Adapt style for view organization.
+  [mgennart]
 
 0.1.23 (2018-03-18)
 -------------------
