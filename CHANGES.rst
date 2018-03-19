@@ -2,7 +2,7 @@ Changelog
 =========
 
 
-0.1.24 (2018-03-18)
+0.1.24 (2018-03-19)
 -------------------
 
 - Adapt style for view organization.
