@@ -409,17 +409,14 @@ h2 a {
 .thumbs-up::before,
 .thumbs-down::before{
     font-family: fontello;
-    position: absolute;
     z-index: 0;
-    top: -20%;
+    display: inline-block;
 }
 .thumbs-up::before{
     content: "\e85c";
-    left: 0;
 }
 .thumbs-down::before{
     content: "\e85d";
-    left: 20%;
 }
 .thumbs-up,
 .thumbs-down{
@@ -431,7 +428,9 @@ h2 a {
 form input.like-button,
 form input.dislike-button{
     background: transparent;
-    position: relative;
+    position: absolute;
+    left: 0;
+    width: 100%;
 }
 .twothumbs-feedback {
     border: 1px solid #f3f3f3;
