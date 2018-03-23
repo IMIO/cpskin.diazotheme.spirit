@@ -389,7 +389,7 @@ h2 a {
     .columns-facet(@index, @column);
     .facet(@index + 1, @columns, @column + 1);
 }
-.template-facetednavigation_view #project_facet_view{
+#project_facet_view{
     @columns: 3;
     .facet(1, @columns, 1);
 
@@ -405,11 +405,23 @@ h2 a {
         border: 1px solid #ddd;
         display: block;
     }
+    &.news .project{
+        border: none;
+    }
+    .project .date_project{
+        padding: 0.1em 0.5em;
+        color: gray;
+    }
     .project .title {
         background: @theme;
         padding: 0.1em 0.5em;
         color: #ffffff;
         font-size: 1em;
+    }
+    &.news .project .title {
+        background: transparent;
+        color: @black;
+        font-weight: bold;
     }
     .project .image {
         width: 100%;
@@ -424,6 +436,11 @@ h2 a {
         font-weight: normal;
         padding: 1em 0.5em;
         line-height: 1.2em;
+    }
+    &.news .project .description {
+        color: gray;
+        font-size: 1em;
+        padding: 0 0.5em;
     }
 }
 
@@ -548,7 +565,7 @@ form input.dislike-button{
     }
 }
 @media screen and (max-width: 768px) {
-    .template-facetednavigation_view #project_facet_view{
+    #project_facet_view{
         -ms-grid-columns: 50% 50%;
         grid-template-columns: calc(50% - 1em) calc(50% - 1em);
         @columns: 2;
@@ -557,7 +574,7 @@ form input.dislike-button{
 
 }
 @media screen and (max-width: 600px) {
-    .template-facetednavigation_view #project_facet_view{
+    #project_facet_view{
         -ms-grid-columns: 100%;
         grid-template-columns: 100%;
         @columns: 1;
