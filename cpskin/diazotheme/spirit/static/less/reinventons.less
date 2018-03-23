@@ -205,6 +205,9 @@ h2 a {
     height: 104%;
 }
 // LIST PROJECTS
+#faceted-form #top-area {
+    padding: 0.5em 0 0 0;
+}
 .faceted-widget.faceted-text-widget .widget-fieldset .searchButton {
     border: none !important;
 }
@@ -329,25 +332,22 @@ h2 a {
             &:first-child{
                 padding-left: 0;
             }
-            a{
-                color: @black;
-                position: relative;
-                &.current{
-                    color: @theme;
-                }
-                &::after {
-                    display: block;
-                    content: "";
-                    border-right: 2px solid @black;
-                    width: auto;
-                    height: 90%;
-                    position: absolute;
-                    top: 5%;
-                    left: 100%;
-                    padding-left: 1em;
-                }
+            color: @black;
+            position: relative;
+            &.current{
+                color: @theme;
             }
-            &:last-child a::after{
+            &::after {
+                display: block;
+                content: "";
+                border-right: 2px solid @black;
+                width: auto;
+                height: 90%;
+                position: absolute;
+                top: 5%;
+                left: 100%;
+            }
+            &:last-child::after{
                 display: none;
             }
         }
@@ -356,13 +356,11 @@ h2 a {
         margin-left: 0;
         margin-bottom: 4em;
         li{
-            display:none;
+            display: none;
             font-size: 1em;
             font-family: Abel;
-            &:target{
-                & + li{
-                    display: block;
-                }
+            &.current{
+                display: block;
             }
         }
     }
