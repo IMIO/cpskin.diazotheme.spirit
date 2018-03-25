@@ -5,7 +5,11 @@ Changelog
 0.1.25 (unreleased)
 -------------------
 
-- Nothing changed yet.
+- Add style for news in project
+  [amariscal]
+
+- Update style for project view
+  [amariscal, mpeeters]
 
 
 0.1.24 (2018-03-19)
