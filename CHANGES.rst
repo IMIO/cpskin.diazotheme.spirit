@@ -2,7 +2,7 @@ Changelog
 =========
 
 
-0.1.25 (unreleased)
+0.1.25 (2018-03-25)
 -------------------
 
 - Add style for news in project
