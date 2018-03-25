@@ -367,6 +367,11 @@ h2 a {
         }
     }
 }
+#portal-column-content #viewlet-below-content .reply,
+#portal-column-content #viewlet-below-content .discussion,
+#portal-column-content #viewlet-below-content #commenting {
+    display: none;
+}
 
 // Fix rows and column grid for ie9, ie10 browser:
 .rows-facet(@rows, @min-range, @max-range) when(@min-range =< @max-range) {
