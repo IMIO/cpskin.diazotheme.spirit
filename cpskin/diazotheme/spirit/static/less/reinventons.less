@@ -435,35 +435,39 @@ h2 a {
             color: #000;
         }
     }
-    &.news .project{
-        border: none;
-        .date_project {
-            color: gray;
-            transition: color 0.2s;
-        }
-        .title {
-            background: transparent;
-            color: @black;
-            font-weight: bold;
-            transition: color 0.2s;
-        }
-        .description {
-            color: gray;
-            font-size: 1em;
-            padding: 0 0.5em;
-            margin-bottom: 1em;
-        }
-        &:hover{
+    &.news{
+        a:hover{
             background: #f2f2f2;
             transition: background 0.2s;
-            .title,
+        }
+        .project{
+            border: none;
             .date_project {
-                color: @theme;
+                color: gray;
                 transition: color 0.2s;
             }
-            .description{
+            .title {
+                background: transparent;
                 color: @black;
+                font-weight: bold;
                 transition: color 0.2s;
+            }
+            .description {
+                color: gray;
+                font-size: 1em;
+                padding: 0 0.5em;
+                margin-bottom: 1em;
+            }
+            &:hover{
+                .title,
+                .date_project {
+                    color: @theme;
+                    transition: color 0.2s;
+                }
+                .description{
+                    color: @black;
+                    transition: color 0.2s;
+                }
             }
         }
     }
