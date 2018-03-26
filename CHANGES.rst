@@ -5,7 +5,8 @@ Changelog
 0.1.27 (unreleased)
 -------------------
 
-- Nothing changed yet.
+- Update style for thumbs
+  [mpeeters]
 
 
 0.1.26 (2018-03-26)
