@@ -2,7 +2,7 @@ Changelog
 =========
 
 
-0.1.26 (unreleased)
+0.1.26 (2018-03-26)
 -------------------
 
 - Reuse the default design from Liege for reinventonsliege
