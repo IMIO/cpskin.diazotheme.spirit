@@ -5,7 +5,8 @@ Changelog
 0.1.26 (unreleased)
 -------------------
 
-- Nothing changed yet.
+- Reuse the default design from Liege for reinventonsliege
+  [mpeeters]
 
 
 0.1.25 (2018-03-25)
