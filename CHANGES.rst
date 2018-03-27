@@ -5,6 +5,9 @@ Changelog
 0.1.27 (unreleased)
 -------------------
 
+- Increase height for project images
+  [mpeeters]
+
 - Update style for thumbs
   [mpeeters]
 
