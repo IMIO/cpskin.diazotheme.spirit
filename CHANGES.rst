@@ -2,7 +2,7 @@ Changelog
 =========
 
 
-0.1.27 (unreleased)
+0.1.27 (2018-03-27)
 -------------------
 
 - Increase height for project images
