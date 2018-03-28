@@ -199,6 +199,12 @@
     #content .card-index .download::before {
         background: @theme-creafarm;
     }
+    #content .card-index {
+        border-color: @theme-creafarm;
+    }
+    #content .card-index .detail{
+        color: @theme-creafarm;
+    }
     #text_with_button ul {
         margin-left: 0;
     }
@@ -251,6 +257,12 @@
     #content .card-index .download::before {
         background: @theme-potager;
     }
+    #content .card-index {
+        border-color: @theme-potager;
+    }
+    #content .card-index .detail{
+        color: @theme-potager;
+    }
 }
 //Acheter local
 .subsection-commerce-alimentation-locale-acheter-local{
@@ -274,6 +286,12 @@
     }
     #content .card-index .download::before {
         background: @theme-acheter-local;
+    }
+    #content .card-index {
+        border-color: @theme-acheter-local;
+    }
+    #content .card-index .detail{
+        color: @theme-acheter-local;
     }
 }
 //PROFESSIONEL
@@ -299,26 +317,36 @@
     #content .card-index .download::before {
         background: @theme-professionnel;
     }
+    #content .card-index {
+        border-color: @theme-professionnel;
+    }
+    #content .card-index .detail{
+        color: @theme-professionnel;
+    }
 }
 //CARD-INDEX
 .card-index {
-    border: 1px solid @theme-creafarm;
+    border: 1px solid;
     box-sizing: border-box;
     margin: 2em 0;
     padding: 1em;
+}
+.card-index.no-border {
+    border: none;
 }
 #content .card-index ol {
     display: inline-block;
     margin: 0 0em 0 1em;
     width: 30%;
 }
+#content .card-index.columns-2 ol {
+    width: 47%;
+}
 .card-index ol li {
     list-style: none;
 }
 #content .card-index li{
     margin-bottom: 0.75em;
-    display: inline-block;
-    vertical-align: top;
 }
 .card-index span {
     font-family: "Abel";
@@ -327,14 +355,14 @@
 }
 .card-index .detail {
     display: block;
-    color: @theme-creafarm;
 }
 #content .card-index .download {
     color: #000000;
-    display: block;
     font-family: "Abel";
     font-weight: bold;
     padding: 1em 0 0 0;
+    display: inline-block;
+    vertical-align: top;
 }
 #content .card-index .download::before {
     content: "\E83A";
@@ -353,6 +381,9 @@
     display: inline-block;
     max-width: 32%;
     margin: 0 0.7em 0 0;
+}
+.card-index-image.columns-4 img {
+    max-width: 23%;
 }
 .card-index-image img:last-child {
     margin: 0;
