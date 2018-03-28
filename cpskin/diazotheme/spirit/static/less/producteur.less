@@ -199,6 +199,34 @@
     #content .card-index .download::before {
         background: @theme-creafarm;
     }
+    #text_with_button ul {
+        margin-left: 0;
+    }
+    #text_with_button ul li {
+        list-style: none;
+        position: relative;
+        padding: 0 1em;
+        position: relative;
+    }
+    #text_with_button .button.current {
+        background: @theme-creafarm;
+        color: #fff;
+    }
+    #text_with_button .button::before {
+        content: "";
+        background: @theme-creafarm;
+        height: 100%;
+        width: 10px;
+        position: absolute;
+        left: 0;
+    }
+    #text_with_button .text {
+        display: none;
+    }
+    #text_with_button .text.current {
+        margin-bottom: 2em;
+        display: block;
+    }
 }
 //POTAGER
 .subsection-commerce-alimentation-locale-potager{
@@ -276,7 +304,7 @@
 .card-index {
     border: 1px solid @theme-creafarm;
     box-sizing: border-box;
-    margin: 0 0 2em 0;
+    margin: 2em 0;
     padding: 1em;
 }
 #content .card-index ol {
@@ -289,6 +317,8 @@
 }
 #content .card-index li{
     margin-bottom: 0.75em;
+    display: inline-block;
+    vertical-align: top;
 }
 .card-index span {
     font-family: "Abel";
