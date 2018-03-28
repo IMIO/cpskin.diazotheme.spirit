@@ -35,7 +35,8 @@
     #minisite-globalnav a{
         color: #fff;
     }
-    h2{
+    h2,
+    h3{
         color: @theme;
     }
     //ALIMENTATION LOCALE
@@ -72,8 +73,8 @@
     #portaltab-professionnels.selected a {
         border-bottom: 2px dashed @theme-professionnel;
     }
-    //Facet
 
+    // Fix rows and column grid for ie9, ie10 browser:
     .rows-facet(@rows, @min-range, @max-range) when(@min-range =< @max-range) {
         .item_@{min-range}{
             grid-row: @rows;
@@ -97,7 +98,7 @@
         .facet(@index + 1, @columns, @column + 1);
     }
     #facet_view{
-        @columns: 3;
+        @columns: 4;
         .facet(1, @columns, 1);
 
         display: grid;
@@ -107,32 +108,71 @@
         grid-template-columns: 25% 25% 25% 25%;
         grid-gap: 1em;
         margin: 4em 0;
+        box-sizing: border-box;
 
         .project{
             border: 1px solid #ddd;
             display: block;
+
+            .date_project{
+                padding: 0.1em 0.5em;
+                color: gray;
+            }
+
+            .title {
+                color: #333;
+                font-size: 0.8em;
+                font-weight: normal;
+            }
+
+            .image {
+                width: 100%;
+                padding-bottom: 50%;
+                background-size: cover;
+                background-position: center;
+                background-repeat: no-repeat;
+                background-image: url(https://www.gettyimages.ca/gi-resources/images/Homepage/Hero/UK/CMS_Creative_164657191_Kingfisher.jpg);
+            }
+            .description {
+                font-family: open sans;
+                font-size: 0.8em;
+                font-weight: bold;
+                padding: 0.3em 0;
+                line-height: 1.2em;
+                color: #000;
+            }
+            .text{
+                padding: 0.5em;
+            }
         }
-        .project .text{
-            padding: 0.5em;
+        &.columns-2{
+            -ms-grid-columns: 50% 50%;
+            grid-template-columns: 50% 50%;
+            @columns: 2;
+            .facet(1, @columns, 1);
         }
-        .project .title {
-            color: #333;
-            font-size: 0.8em;
-            font-weight: normal;
-        }
-        .project .image {
-            width: 100%;
-            padding-bottom: 50%;
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
-        }
-        .project .description {
-            font-family: open sans;
-            font-size: 0.8em;
-            font-weight: bold;
-            line-height: 1.2em;
-            padding: 0.3em 0;
+        &.vertical{
+            .image {
+                width: 50%;
+                padding-bottom: 50%;
+                float: left;
+            }
+            .text{
+                width: 50%;
+                box-sizing: border-box;
+                float: left;
+                display: flex;
+                flex-flow: column;
+                height: 100%;
+            }
+            h3 {
+                font-family: Abel;
+            }
+            .text > div{
+                margin: auto;
+                width: 100%;
+                text-align: left;
+            }
         }
     }
 }
@@ -146,7 +186,8 @@
         color: @theme-creafarm !important;
     }
     //CONTENT
-    #content h2{
+    #content h2,
+    #content h3{
         color: @theme-creafarm;
     }
     #visual-portal-wrapper #other-actions [class^="icon-"]::before {
@@ -169,7 +210,8 @@
         color: @theme-potager !important;
     }
     //CONTENT
-    #content h2{
+    #content h2,
+    #content h3{
         color: @theme-potager;
     }
     #visual-portal-wrapper #other-actions [class^="icon-"]::before {
@@ -192,7 +234,8 @@
         color: @theme-acheter-local !important;
     }
     //CONTENT
-    #content h2{
+    #content h2,
+    #content h3{
         color: @theme-acheter-local;
     }
     #visual-portal-wrapper #other-actions [class^="icon-"]::before {
@@ -215,7 +258,8 @@
         color: @theme-professionnel !important;
     }
     //CONTENT
-    #content h2{
+    #content h2,
+    #content h3{
         color: @theme-professionnel;
     }
     #visual-portal-wrapper #other-actions [class^="icon-"]::before {
@@ -269,7 +313,7 @@
     margin: 0 0.5em 0 0;
     padding: 0.5em;
 }
-#visual-portal-wrapper .card-index-presentation h2{
+#visual-portal-wrapper .creafarm h2{
     color: @theme-creafarm;
 }
 .card-index-image {
@@ -282,4 +326,22 @@
 }
 .card-index-image img:last-child {
     margin: 0;
+}
+
+@media screen and (max-width: 768px) {
+    #project_facet_view{
+        -ms-grid-columns: 50% 50%;
+        grid-template-columns: calc(50% - 1em) calc(50% - 1em);
+        @columns: 2;
+        .facet(1, @columns, 1);
+    }
+
+}
+@media screen and (max-width: 600px) {
+    #project_facet_view{
+        -ms-grid-columns: 100%;
+        grid-template-columns: 100%;
+        @columns: 1;
+        .facet(1, @columns, 1);
+    }
 }
