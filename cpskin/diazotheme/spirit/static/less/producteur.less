@@ -35,6 +35,11 @@
     #minisite-globalnav a{
         color: #fff;
     }
+    h2{
+        color: @theme;
+    }
+    //ALIMENTATION LOCALE
+    //
     //CREAFARM
     //navigation
     #portaltab-creafarm a:hover{
@@ -67,7 +72,69 @@
     #portaltab-professionnels.selected a {
         border-bottom: 2px dashed @theme-professionnel;
     }
-    
+    //Facet
+
+    .rows-facet(@rows, @min-range, @max-range) when(@min-range =< @max-range) {
+        .item_@{min-range}{
+            grid-row: @rows;
+            -ms-grid-row: @rows;
+        }
+        .rows-facet(@rows, @min-range + 1, @max-range);
+    }
+    .columns-facet(@index, @column) {
+        .item_@{index}{
+            grid-column: @column;
+            -ms-grid-column: @column;
+        }
+    }
+    .set-columns(@columns, @column) when(@column > @columns){
+        @column: 1;
+    }
+    .facet(@index, @columns, @column) when(@index < 50) {
+        .rows-facet(@index, (@index * @columns) - (@columns - 1), @index * @columns);
+        .set-columns(@columns, @column);
+        .columns-facet(@index, @column);
+        .facet(@index + 1, @columns, @column + 1);
+    }
+    #facet_view{
+        @columns: 3;
+        .facet(1, @columns, 1);
+
+        display: grid;
+        display: -ms-grid;
+        width: 100%;
+        -ms-grid-columns: 25% 25% 25% 25%;
+        grid-template-columns: 25% 25% 25% 25%;
+        grid-gap: 1em;
+        margin: 4em 0;
+
+        .project{
+            border: 1px solid #ddd;
+            display: block;
+        }
+        .project .text{
+            padding: 0.5em;
+        }
+        .project .title {
+            color: #333;
+            font-size: 0.8em;
+            font-weight: normal;
+        }
+        .project .image {
+            width: 100%;
+            padding-bottom: 50%;
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+        .project .description {
+            font-family: open sans;
+            font-size: 0.8em;
+            font-weight: bold;
+            line-height: 1.2em;
+            padding: 0.3em 0;
+        }
+    }
 }
 //CREAFARM
 .subsection-commerce-alimentation-locale-creafarm{
