@@ -2,7 +2,7 @@ Changelog
 =========
 
 
-0.1.28 (unreleased)
+0.1.28 (2018-03-29)
 -------------------
 
 - Add style for comments
