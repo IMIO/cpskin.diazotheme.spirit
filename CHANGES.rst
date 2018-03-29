@@ -5,7 +5,8 @@ Changelog
 0.1.29 (unreleased)
 -------------------
 
-- Nothing changed yet.
+- Reduce the text size for comments
+  [mpeeters]
 
 
 0.1.28 (2018-03-29)
