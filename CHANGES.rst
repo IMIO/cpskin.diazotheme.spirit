@@ -5,7 +5,14 @@ Changelog
 0.1.28 (unreleased)
 -------------------
 
-- Nothing changed yet.
+- Add style for comments
+  [mpeeters]
+
+- Fix homepage slider
+  [mpeeters]
+
+- Add style for new `Alimentation Locale` subsite
+  [amariscal]
 
 
 0.1.27 (2018-03-27)
