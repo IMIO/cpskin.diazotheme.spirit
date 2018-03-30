@@ -5,7 +5,8 @@ Changelog
 0.1.30 (unreleased)
 -------------------
 
-- Nothing changed yet.
+- Minor fix for reinventons liege
+  [amariscal]
 
 
 0.1.29 (2018-03-30)
