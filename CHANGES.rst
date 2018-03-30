@@ -2,7 +2,7 @@ Changelog
 =========
 
 
-0.1.30 (unreleased)
+0.1.30 (2018-03-30)
 -------------------
 
 - Minor fix for reinventons liege
