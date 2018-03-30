@@ -2,7 +2,7 @@ Changelog
 =========
 
 
-0.1.29 (unreleased)
+0.1.29 (2018-03-30)
 -------------------
 
 - Reduce the text size for comments
