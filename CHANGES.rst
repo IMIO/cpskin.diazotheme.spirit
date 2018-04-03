@@ -5,7 +5,8 @@ Changelog
 0.1.31 (unreleased)
 -------------------
 
-- Nothing changed yet.
+- Minor improvements for reinventons liege
+  [mpeeters]
 
 
 0.1.30 (2018-03-30)
