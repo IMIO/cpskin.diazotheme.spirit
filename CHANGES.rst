@@ -2,7 +2,7 @@ Changelog
 =========
 
 
-0.1.31 (unreleased)
+0.1.31 (2018-04-03)
 -------------------
 
 - Minor improvements for reinventons liege
