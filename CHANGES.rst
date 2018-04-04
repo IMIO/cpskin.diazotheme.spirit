@@ -2,7 +2,7 @@ Changelog
 =========
 
 
-0.1.32 (unreleased)
+0.1.32 (2018-04-04)
 -------------------
 
 - Fix links for documents on `Alimentation Locale`
