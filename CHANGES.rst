@@ -5,7 +5,11 @@ Changelog
 0.1.32 (unreleased)
 -------------------
 
-- Nothing changed yet.
+- Fix links for documents on `Alimentation Locale`
+  [mpeeters]
+
+- Adapt style for project details
+  [amariscal]
 
 
 0.1.31 (2018-04-03)
