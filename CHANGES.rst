@@ -2,7 +2,7 @@ Changelog
 =========
 
 
-0.1.33 (unreleased)
+0.1.33 (2018-04-07)
 -------------------
 
 - Improve css for homepage
