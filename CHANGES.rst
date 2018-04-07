@@ -5,7 +5,8 @@ Changelog
 0.1.33 (unreleased)
 -------------------
 
-- Nothing changed yet.
+- Improve css for homepage
+  [mpeeters]
 
 
 0.1.32 (2018-04-04)
