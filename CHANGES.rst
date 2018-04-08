@@ -2,7 +2,7 @@ Changelog
 =========
 
 
-0.1.34 (unreleased)
+0.1.34 (2018-04-08)
 -------------------
 
 - Add style for labels for `Alimentation Locale`
