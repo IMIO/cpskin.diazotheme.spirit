@@ -5,7 +5,8 @@ Changelog
 0.1.34 (unreleased)
 -------------------
 
-- Nothing changed yet.
+- Add style for labels for `Alimentation Locale`
+  [mpeeters]
 
 
 0.1.33 (2018-04-07)
