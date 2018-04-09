@@ -5,7 +5,8 @@ Changelog
 0.1.35 (unreleased)
 -------------------
 
-- Nothing changed yet.
+- Fix display for `Alimentation Locale`
+  [Aurore]
 
 
 0.1.34 (2018-04-08)

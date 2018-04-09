@@ -111,8 +111,8 @@
         display: grid;
         display: -ms-grid;
         width: 100%;
-        -ms-grid-columns: 25% 25% 25% 25%;
-        grid-template-columns: 25% 25% 25% 25%;
+        -ms-grid-columns: 1fr 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
         grid-gap: 1em;
         margin: 4em 0;
         box-sizing: border-box;
@@ -367,6 +367,11 @@
 }
 .card-index ol li {
     list-style: none;
+    -webkit-hyphens: auto;
+    -moz-hyphens: auto;
+    -ms-hyphens: auto;
+    -o-hyphens: auto;
+    hyphens: auto;
 }
 #content .card-index li{
     margin-bottom: 0.75em;
@@ -383,9 +388,10 @@
     color: #000000;
     font-family: "Abel";
     font-weight: bold;
-    padding: 1em 0 0 0;
+    padding: 1em 0 0 2.5em;
     display: inline-block;
     vertical-align: top;
+    position: relative;
 }
 #content .card-index .download::before {
     content: "\E83A";
@@ -393,6 +399,9 @@
     font-family: fontello;
     margin: 0 0.5em 0 0;
     padding: 0.5em;
+    position: absolute;
+    top: 0;
+    left: 0;
 }
 #visual-portal-wrapper .creafarm h2{
     color: @theme-creafarm;
@@ -413,18 +422,18 @@
 }
 
 @media screen and (max-width: 768px) {
-    #project_facet_view{
-        -ms-grid-columns: 50% 50%;
-        grid-template-columns: calc(50% - 1em) calc(50% - 1em);
+    #facet_view{
+        -ms-grid-columns: 1fr 1fr !important;
+        grid-template-columns: 1fr 1fr !important;
         @columns: 2;
         .facet(1, @columns, 1);
     }
 
 }
 @media screen and (max-width: 600px) {
-    #project_facet_view{
-        -ms-grid-columns: 100%;
-        grid-template-columns: 100%;
+    #facet_view{
+        -ms-grid-columns: 1fr !important;
+        grid-template-columns: 1fr !important;
         @columns: 1;
         .facet(1, @columns, 1);
     }
