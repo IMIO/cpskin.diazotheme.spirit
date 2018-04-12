@@ -44,7 +44,10 @@
     }
     #content .card-index a[href*=".pdf"]::after{
         content: none;
-	margin-left: 0;
+        margin-left: 0;
+    }
+    .faceted-widget.faceted-text-widget .widget-fieldset .searchButton{
+        border: none !important;
     }
     //ALIMENTATION LOCALE
     //
@@ -408,14 +411,16 @@
 }
 .card-index-image {
     margin: 2em 0;
+    width: calc(100% + 0.7em);
 }
 .card-index-image img {
     display: inline-block;
-    max-width: 32%;
-    margin: 0 0.7em 0 0;
+    width: 33.33%;
+    padding: 0 0.7em 0.7em 0;
+    box-sizing: border-box;
 }
 .card-index-image.columns-4 img {
-    max-width: 23%;
+    width: 25%;
 }
 .card-index-image img:last-child {
     margin: 0;
