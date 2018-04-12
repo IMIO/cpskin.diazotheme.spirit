@@ -5,6 +5,9 @@ Changelog
 0.1.35 (unreleased)
 -------------------
 
+- Add an icon for the new card view
+  [mpeeters]
+
 - Fix display for `Alimentation Locale`
   [Aurore]
 
