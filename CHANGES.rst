@@ -2,7 +2,7 @@ Changelog
 =========
 
 
-0.1.35 (unreleased)
+0.1.35 (2018-04-12)
 -------------------
 
 - Add an icon for the new card view
