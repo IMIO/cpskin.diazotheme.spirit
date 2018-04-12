@@ -409,20 +409,22 @@
 #visual-portal-wrapper .creafarm h2{
     color: @theme-creafarm;
 }
-.card-index-image {
+#content .card-index-image {
     margin: 2em 0;
     width: calc(100% + 0.7em);
 }
-.card-index-image img {
+#content .card-index-image a.link-overlay {
     display: inline-block;
     width: 33.33%;
     padding: 0 0.7em 0.7em 0;
     box-sizing: border-box;
+    border-bottom: none !important;
+    float: left;
 }
-.card-index-image.columns-4 img {
+#content .card-index-image.columns-4 a {
     width: 25%;
 }
-.card-index-image img:last-child {
+#content .card-index-image img:last-child {
     margin: 0;
 }
 
