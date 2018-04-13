@@ -5,7 +5,8 @@ Changelog
 0.1.36 (unreleased)
 -------------------
 
-- Nothing changed yet.
+- Change color to button Inscription for `Alimentation Locale`
+  [Aurore]
 
 
 0.1.35 (2018-04-12)
