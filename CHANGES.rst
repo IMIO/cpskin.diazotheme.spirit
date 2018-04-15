@@ -2,7 +2,7 @@ Changelog
 =========
 
 
-0.1.36 (unreleased)
+0.1.36 (2018-04-15)
 -------------------
 
 - Change color to button Inscription for `Alimentation Locale`
