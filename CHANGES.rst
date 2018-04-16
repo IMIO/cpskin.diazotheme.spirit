@@ -2,7 +2,7 @@ Changelog
 =========
 
 
-0.1.37 (unreleased)
+0.1.37 (2018-04-16)
 -------------------
 
 - Remove footer in mini-site mode for `Alimentation Locale`
