@@ -5,7 +5,8 @@ Changelog
 0.1.37 (unreleased)
 -------------------
 
-- Nothing changed yet.
+- Remove footer in mini-site mode for `Alimentation Locale`
+  [mpeeters]
 
 
 0.1.36 (2018-04-15)
