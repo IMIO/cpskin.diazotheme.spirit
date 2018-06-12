@@ -2,11 +2,11 @@ Changelog
 =========
 
 
-0.1.38 (unreleased)
+0.1.38 (2018-06-12)
 -------------------
 
-- Nothing changed yet.
-
+- Change css for .slider-multiple .carousel.
+  [mgennart]
 
 0.1.37 (2018-04-16)
 -------------------
