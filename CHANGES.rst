@@ -5,7 +5,10 @@ Changelog
 0.1.39 (unreleased)
 -------------------
 
-- Add caracter hidden for fix height
+- Add hover on "more button" for reinventons liege
+  [Aurore]
+
+- Add caracter hidden for fix height for reinventons liege
   [Aurore]
 
 - Add style responsive for reinventons liege
