@@ -5,6 +5,9 @@ Changelog
 0.1.39 (unreleased)
 -------------------
 
+- Add caracter hidden for fix height
+  [Aurore]
+
 - Add style responsive for reinventons liege
   [Aurore]
 
