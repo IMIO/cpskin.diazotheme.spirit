@@ -5,7 +5,8 @@ Changelog
 0.1.39 (unreleased)
 -------------------
 
-- Nothing changed yet.
+- Add style responsive for reinventons liege
+  [Aurore]
 
 
 0.1.38 (2018-06-12)
