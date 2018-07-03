@@ -2,11 +2,11 @@ Changelog
 =========
 
 
-0.1.39 (unreleased)
+0.1.39 (2018-07-03)
 -------------------
 
-- Nothing changed yet.
-
+- Change css for footer.
+  [mgennart]
 
 0.1.38 (2018-06-12)
 -------------------
