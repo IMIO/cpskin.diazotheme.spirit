@@ -7,6 +7,14 @@ Changelog
 
 - Change css for footer.
   [mgennart]
+- Add hover on "more button" for reinventons liege
+  [Aurore]
+
+- Add caracter hidden for fix height for reinventons liege
+  [Aurore]
+
+- Add style responsive for reinventons liege
+  [Aurore]
 
 0.1.38 (2018-06-12)
 -------------------
