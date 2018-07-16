@@ -1,12 +1,12 @@
 Changelog
 =========
 
-
-0.1.39 (2018-07-03)
+0.1.40 (unreleased)
 -------------------
 
 - Change css for footer.
   [mgennart]
+
 - Add hover on "more button" for reinventons liege
   [Aurore]
 
@@ -15,6 +15,14 @@ Changelog
 
 - Add style responsive for reinventons liege
   [Aurore]
+
+
+0.1.39 (2018-07-03)
+-------------------
+
+- Change css for .slider-multiple .carousel
+  [mgennart]
+
 
 0.1.38 (2018-06-12)
 -------------------
