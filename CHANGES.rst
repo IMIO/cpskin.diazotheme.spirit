@@ -1,7 +1,7 @@
 Changelog
 =========
 
-0.1.40 (unreleased)
+0.1.40 (2018-07-16)
 -------------------
 
 - Change css for footer.
