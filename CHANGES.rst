@@ -4,7 +4,8 @@ Changelog
 0.1.41 (unreleased)
 -------------------
 
-- Nothing changed yet.
+- Change width for project to homepage
+  [Aurore]
 
 
 0.1.40 (2018-07-16)
