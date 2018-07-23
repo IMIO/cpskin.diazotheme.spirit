@@ -1,7 +1,7 @@
 Changelog
 =========
 
-0.1.41 (unreleased)
+0.1.41 (2018-07-23)
 -------------------
 
 - Change width for project to homepage
