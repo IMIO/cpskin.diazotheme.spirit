@@ -428,21 +428,119 @@
 }
 #content .card-index-image {
     margin: 2em 0;
-    width: calc(100% + 0.7em);
+    width: 100%;
+    font-size: 0;
 }
-#content .card-index-image a.link-overlay {
+#content .card-index-image > * {
+    font-size: 1rem;
+}
+#content .card-index-image a.image-overlay {
     display: inline-block;
-    width: 33.33%;
-    padding: 0 0.7em 0.7em 0;
+    width: calc(100% / 3);
     box-sizing: border-box;
-    border-bottom: none !important;
-    float: left;
+    padding-bottom: 0.5rem;
+}
+#content .card-index-image a.image-overlay:nth-child(3n+1) {
+    padding-right: 0.1rem;
+    text-align: left;
+}
+#content .card-index-image a.image-overlay:nth-child(3n+2) {
+    padding-right: 0.05rem;
+    padding-left: 0.05rem;
+    text-align: center;
+}
+#content .card-index-image a.image-overlay:nth-child(3n+3) {
+    padding-left: 0.1rem;
+    text-align: right;
+}
+#content .card-index-image .content-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    width: 100vw;
+    height: 100vh;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+#content .card-index-image .hidden {
+    display: none;
+}
+#content .card-index-image .overlay-action{
+    display: flex;
+    margin-bottom: 0.5rem;
+    & > div {
+        display: inline-block;
+        color: #ffffff;
+        background-color: #fd9864;
+        width: 3rem;
+        height: 3rem;
+        text-align: center;
+        line-height: 3rem;
+        font-size: 0;
+        cursor: pointer;
+        &::after{
+            font-family: fontello;
+            font-size: 1.5rem;
+        }
+        &.overlay-close::after{
+            content: "\e810";
+        }
+        &.overlay-previous::after{
+            content: "\e845";
+        }
+        &.overlay-next::after{
+            content: "\e846";
+        }
+    }
+}
+#content .card-index-image .invisible {
+    pointer-events: none;
+    &::after{
+        color: transparent !important;
+    }
+}
+#content .card-index-image .overlay-image-active {
+    width: 80vw;
+    text-align: center;
+    height: 70vh;
+    .image-overlay-active {
+        max-width: 100%;
+        max-height: 100%;
+        object-fit: contain;
+    }
 }
 #content .card-index-image.columns-4 a {
     width: 25%;
 }
-#content .card-index-image img:last-child {
-    margin: 0;
+div.overlay {
+    text-align: center;
+    width: 100vw !important;
+    height: 100vh !important;
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    display: flex !important;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    div.close{
+        position: relative;
+        transform: translateY(100%);
+    }
+    img.pb-image{
+        box-shadow: none;
+        object-fit: contain;
+        width: 70vw;
+        height: 80vh;
+        background-color: transparent;
+        border: none;
+    }
 }
 
 @media screen and (max-width: 768px) {
@@ -452,7 +550,9 @@
         @columns: 2;
         .facet(1, @columns, 1);
     }
-
+    .bloc-collection .bloc-item{
+        min-height: auto;
+    }
 }
 @media screen and (max-width: 600px) {
     #facet_view{
@@ -460,6 +560,9 @@
         grid-template-columns: 1fr !important;
         @columns: 1;
         .facet(1, @columns, 1);
+    }
+    #top-logo-slogan-actions-inner{
+        min-height: 130px;
     }
 }
 .in-minisite-out-portal.subsection-commerce-alimentation-locale #footer-sitemap {

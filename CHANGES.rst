@@ -4,7 +4,8 @@ Changelog
 0.1.42 (unreleased)
 -------------------
 
-- Nothing changed yet.
+- Adapt overlay of project for `Alimentation Locale`
+  [Aurore]
 
 
 0.1.41 (2018-07-23)
