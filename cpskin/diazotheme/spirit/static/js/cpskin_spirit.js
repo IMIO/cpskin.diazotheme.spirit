@@ -84,6 +84,15 @@ $(document).ready(function() {
             }
         });
     });
+
+    $('.subsection-commerce-alimentation-locale #minisite-globalnav').each( function(){
+        var menu = $(this);
+        menu.addClass("hidden");
+        menu.after("<div class='menu-button'></div>");
+        $('.menu-button').click(function(){
+            menu.toggleClass('hidden');
+        });
+    });
 });
 
 

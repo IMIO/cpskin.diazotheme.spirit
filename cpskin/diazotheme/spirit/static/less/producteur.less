@@ -550,8 +550,55 @@ div.overlay {
         @columns: 2;
         .facet(1, @columns, 1);
     }
-    .bloc-collection .bloc-item{
+    .image-dummy {
+        text-align: center;
+        max-width: 40vw;
+        margin: auto;
+    }
+    #content #accueil .bloc-collection .bloc-item{
         min-height: auto;
+        width: 50%;
+        margin: 0;
+        padding: 0.5rem;
+        .newsImage{
+            width: 100%;
+            height: auto;
+            max-width: none;
+        }
+    }
+    .in-minisite-out-portal{
+        #top-logo-slogan-actions-inner{
+            display: none;
+        }
+        #minisite-logo-nav {
+            display: flex;
+            justify-content: space-between;
+            #minisite-logo{
+                max-height: 3rem;
+                width: auto;
+                img{
+                    padding: 0;
+                }
+            }
+            #minisite-globalnav{
+                display: flex;
+                flex-direction: column;
+                flex: 0;
+                padding: 0.5rem;
+                margin-left: auto;
+            }
+            #minisite-globalnav.hidden{
+                display: none;
+            }
+            .menu-button::before{
+                content: "☰";
+                display: inline-block;
+                font-size: 3rem;
+                line-height: 2rem;
+                height: 3rem;
+                cursor: pointer;
+            }
+        }
     }
 }
 @media screen and (max-width: 600px) {

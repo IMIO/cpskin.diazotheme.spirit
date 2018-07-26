@@ -4,6 +4,9 @@ Changelog
 0.1.42 (unreleased)
 -------------------
 
+- Adapt homepage for responsive for `Alimentation Locale`
+  [Aurore]
+
 - Adapt overlay of project for `Alimentation Locale`
   [Aurore]
 
