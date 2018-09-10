@@ -1,8 +1,11 @@
 Changelog
 =========
 
-0.1.42 (unreleased)
+0.1.42 (2018-09-10)
 -------------------
+
+- Adapt .event.summary.details for Liege.
+  [mgennart]
 
 - Fix incomplete uninstall profile
   [laulaz]
@@ -12,7 +15,6 @@ Changelog
 
 - Adapt overlay of project for `Alimentation Locale`
   [Aurore]
-
 
 0.1.41 (2018-07-23)
 -------------------
