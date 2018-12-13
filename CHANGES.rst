@@ -4,7 +4,8 @@ Changelog
 0.1.43 (unreleased)
 -------------------
 
-- Nothing changed yet.
+- Add class for collapsable minisite menu : WEB-2865
+  [mgennart]
 
 
 0.1.42 (2018-09-10)

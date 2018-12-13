@@ -6,6 +6,7 @@
         <replace css:content-children="#portal-header">
             <xsl:copy-of select="./*[@id='messagesviewlet']"/>
             <div id="top-logo-slogan-actions">
+              <div class="minisite-collapsable">
                 <div id="top-logo-slogan-actions-inner">
                     <div id="top-logo-slogan">
                         <div id="top-logo">
@@ -42,15 +43,16 @@
                         </a>
                       </div>
                     </div> 
-                </div>
-                <div id="nav-wrapper">
-                    <xsl:copy-of  select="./*[@id='portal-globalnav']"/>
-                    <xsl:apply-templates select="./*[not(@id) or (@id!='portal-personaltools-wrapper'
-                                                              and @id!='portal-logo'
-                                                              and @id!='portal-searchbox'
-                                                              and @id!='portal-languageselector'
-                                                              and @id!='top-menu-actions'
-                                                              and @id!='portal-globalnav')]"/>
+                  </div>
+                  <div id="nav-wrapper">
+                      <xsl:copy-of  select="./*[@id='portal-globalnav']"/>
+                      <xsl:apply-templates select="./*[not(@id) or (@id!='portal-personaltools-wrapper'
+                                                                and @id!='portal-logo'
+                                                                and @id!='portal-searchbox'
+                                                                and @id!='portal-languageselector'
+                                                                and @id!='top-menu-actions'
+                                                                and @id!='portal-globalnav')]"/>
+                  </div>
                 </div>
                 <xsl:if test="$ms_horizontal_navigation_any_mode">
                   <div class="container-minisite-globalnav-logo">
