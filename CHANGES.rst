@@ -1,7 +1,7 @@
 Changelog
 =========
 
-0.1.43 (unreleased)
+0.1.43 (2019-01-08)
 -------------------
 
 - Change css to use the date in slider.
