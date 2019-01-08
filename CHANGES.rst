@@ -4,6 +4,9 @@ Changelog
 0.1.43 (unreleased)
 -------------------
 
+- Change css to use the date in slider.
+  [mgennart]
+
 - Add class for collapsable minisite menu : WEB-2865
   [mgennart]
 
