@@ -4,7 +4,8 @@ Changelog
 0.1.44 (unreleased)
 -------------------
 
-- Nothing changed yet.
+- Overload of the width defined in the custom to Liège for .subsection-commerce-alimentation-locale #facet_view .project : SUP-7683
+  [mgennart]
 
 
 0.1.43 (2019-01-08)
