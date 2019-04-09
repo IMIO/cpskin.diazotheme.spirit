@@ -4,6 +4,9 @@ Changelog
 0.1.44 (unreleased)
 -------------------
 
+- Fix minisite dropdown menu which was hidden : WEB-2976
+  [laulaz]
+
 - Overload of the width defined in the custom to Liège for .subsection-commerce-alimentation-locale #facet_view .project : SUP-7683
   [mgennart]
 

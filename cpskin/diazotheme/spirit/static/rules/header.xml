@@ -61,6 +61,7 @@
                       <div id="minisite-logo-nav">
                           <xsl:copy-of select="//*[@id='minisite-logo']" />
                           <xsl:copy-of select="//*[@id='minisite-globalnav']" />
+                          <xsl:copy-of select="//*[@class='minisite-dropdown-menu']" />
                       </div> 
                   </div>
                   </div>
@@ -132,6 +133,7 @@
                       <div id="minisite-logo-nav">
                           <xsl:copy-of select="//*[@id='minisite-logo']" />
                           <xsl:copy-of select="//*[@id='minisite-globalnav']" />
+                          <xsl:copy-of select="//*[@class='minisite-dropdown-menu']" />
                       </div> 
                   </div>
                   </div>
