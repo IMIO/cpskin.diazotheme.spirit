@@ -1,7 +1,7 @@
 Changelog
 =========
 
-0.1.44 (unreleased)
+0.1.44 (2019-04-10)
 -------------------
 
 - Fix minisite dropdown menu which was hidden : WEB-2976
