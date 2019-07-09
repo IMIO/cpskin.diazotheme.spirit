@@ -1,7 +1,7 @@
 Changelog
 =========
 
-0.1.45 (unreleased)
+0.1.45 (2019-07-09)
 -------------------
 
 - Upload to devpi, missing package.
