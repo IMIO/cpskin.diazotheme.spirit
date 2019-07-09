@@ -4,7 +4,8 @@ Changelog
 0.1.45 (unreleased)
 -------------------
 
-- Nothing changed yet.
+- Upload to devpi, missing package.
+  [bsuttor]
 
 
 0.1.44 (2019-04-10)
