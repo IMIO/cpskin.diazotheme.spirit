@@ -89,7 +89,6 @@
     <!-- Is mini site -->
     <rules if="$isinminisitemode">
         <replace css:content-children="#portal-header">
-            <xsl:copy-of select="//div[@id='gdpr-consent-banner']" />
             <xsl:copy-of select="./*[@id='messagesviewlet']"/>
             <xsl:if test="not($ms_horizontal_navigation_any_mode)">
               <div id="top-actions">
