@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 """Installer for the cpskin.diazotheme.spirit package."""
 
-version = '0.1.47'
+version = '0.1.48.dev0'
 
 from setuptools import find_packages
 from setuptools import setup
