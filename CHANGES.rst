@@ -4,7 +4,8 @@ Changelog
 0.1.48 (unreleased)
 -------------------
 
-- Nothing changed yet.
+- Delete css bad url.
+  [thomlamb]
 
 
 0.1.47 (2022-01-20)
